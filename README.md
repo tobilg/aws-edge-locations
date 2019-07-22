@@ -39,7 +39,7 @@ const invalid = el.lookup('FOO'); // returns false
 const locationCount = el.getLocationCount(); // returns 69
 
 // Get PoP count
-const popCount = el.getPoPCount() // return 176
+const popCount = el.getPoPCount() // returns 176
 ```
 
 ## Data generation

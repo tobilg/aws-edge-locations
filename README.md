@@ -5,8 +5,8 @@ List of AWS CloudFront Edge Location code prefixes including latitude/longitude 
 
 If you're here for the plain data, have a look at
 
-* [List of AWS CloudFront Edge Locations (as CSV)](#-csv-list) 
-* [List of AWS CloudFront Edge Locations (as JSON)](#-json-list)
+* [List of AWS CloudFront Edge Locations (as CSV)](#csv-list) 
+* [List of AWS CloudFront Edge Locations (as JSON)](#json-list)
 
 ## Installation
 To install, you can do the following:

@@ -19,7 +19,11 @@
     "codes",
     "lookup"
   ],
-  "author": "",
+  "author": {
+    "name": "TobiLG",
+    "email": "tobilg@gmail.com",
+    "url": "https://github.com/tobilg"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tobilg/aws-edge-locations/issues"

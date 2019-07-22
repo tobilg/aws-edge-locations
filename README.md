@@ -132,7 +132,7 @@ ZHY,Zhongwei,,China,1,37.572778,105.154444
 
 ### JSON lookup
 
-The CSV version of the data can be found at [dist/edge-locations.json](dist/edge-locations.json).
+The JSON version of the data can be found at [dist/edge-locations.json](dist/edge-locations.json).
 
 ```javascript
 {

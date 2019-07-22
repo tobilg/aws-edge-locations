@@ -54,6 +54,8 @@ Also, there are some manual overrides when it wasn't possible to automatically d
 
 ## Data
 
+This project is considered as in the `alpha` stage, so there's **no guarantee that the data is accurate**. Please feel free to test and give feedback either via creating an [issue](https://github.com/tobilg/aws-edge-locations/issues) or a [pr](https://github.com/tobilg/aws-edge-locations/pulls)
+
 ### CSV list
 
 The CSV version of the data can be found at [dist/edge-locations.csv](dist/edge-locations.csv). The file is using `,` as field separator.

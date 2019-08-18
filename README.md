@@ -36,10 +36,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 69
+const locationCount = el.getLocationCount(); // returns 70
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 176
+const popCount = el.getPoPCount() // returns 177
 ```
 
 ## Data generation

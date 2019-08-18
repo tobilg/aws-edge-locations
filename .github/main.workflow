@@ -1,6 +1,6 @@
 workflow "Run tests" {
   on = "push"
-  resolves = ["Test", "Publish"]
+  resolves = ["Publish"]
 }
 
 action "Install" {
@@ -15,6 +15,13 @@ action "Test" {
   needs = "Install"
   uses = "actions/npm@master"
   args = "test"
+}
+
+# Filter for a new tag
+action "Tag" {
+  needs = "Test"
+  uses = "actions/bin/filter@master"
+  args = "tag"
 }
 
 action "Publish" {

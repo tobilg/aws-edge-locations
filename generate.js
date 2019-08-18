@@ -84,6 +84,8 @@ const airportOverridesData = {
 const writeCSV = locations => {
     const csvPath = path.join(__dirname, 'dist', 'edge-locations.csv');
     const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.count},${e.latitude},${e.longitude}` });
+    // Add header
+    data.unshift('code,city,state,country,count,latitude,longitude');
     fs.writeFileSync(csvPath, data.join(os.EOL), 'utf8');
 }
 

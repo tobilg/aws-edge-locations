@@ -471,6 +471,13 @@
     "latitude": 25.112222,
     "longitude": 56.324167
   },
+  "TLV": {
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "count": 1,
+    "latitude": 32.01139831542969,
+    "longitude": 34.88669967651367
+  },
   "JNB": {
     "city": "Johannesburg",
     "country": "South Africa",

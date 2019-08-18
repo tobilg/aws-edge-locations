@@ -61,6 +61,7 @@ This project is considered as in the `alpha` stage, so there's **no guarantee th
 The CSV version of the data can be found at [dist/edge-locations.csv](dist/edge-locations.csv). The file is using `,` as field separator.
 
 ```csv
+code,city,state,country,count,latitude,longitude
 IAD,Ashburn,Virginia,United States,6,38.9445,-77.4558029
 ATL,Atlanta,Georgia,United States,5,33.6367,-84.428101
 BOS,Boston,Massachusetts,United States,3,42.36429977,-71.00520325
@@ -125,6 +126,7 @@ GRU,Sao Paulo,,Brazil,2,-23.435556,-46.473056
 GIG,Rio de Janeiro,,Brazil,3,-22.8099994659,-43.2505569458
 DXB,Dubai,,United Arab Emirates,1,25.2527999878,55.3643989563
 FJR,Fujairah,,United Arab Emirates,1,25.112222,56.324167
+TLV,Tel Aviv,,Israel,1,32.01139831542969,34.88669967651367
 JNB,Johannesburg,,South Africa,1,-26.1392,28.246
 CPT,Cape Town,,South Africa,1,-33.9648017883,18.6016998291
 PEK,Beijing,,China,1,40.080101013183594,116.58499908447266
@@ -609,6 +611,13 @@ The JSON version of the data can be found at [dist/edge-locations.json](dist/edg
     "count": 1,
     "latitude": 25.112222,
     "longitude": 56.324167
+  },
+  "TLV": {
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "count": 1,
+    "latitude": 32.01139831542969,
+    "longitude": 34.88669967651367
   },
   "JNB": {
     "city": "Johannesburg",

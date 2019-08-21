@@ -14,6 +14,11 @@ const airportOverridesData = {
         "latitude": 37.572778,
         "longitude": 105.154444
     },
+    "toronto": {
+        "code": "YTO",
+        "latitude": 43.6772003174,
+        "longitude": -79.63059997559999
+    },
     "fujairah": {
         "code": "FJR",
         "latitude": 25.112222,

@@ -85,7 +85,7 @@ SLC,Salt Lake City,Utah,United States,1,40.78839874267578,-111.97799682617188
 SJC,San Jose,California,United States,2,37.362598,-121.929001
 SEA,Seattle,Washington,United States,4,47.448889,-122.309444
 IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031
-YYZ,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999
+YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389
 TXL,Berlin,,Germany,2,52.559722,13.287778
 CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329
@@ -324,7 +324,7 @@ The JSON version of the data can be found at [dist/edge-locations.json](dist/edg
     "latitude": 39.7173004,
     "longitude": -86.2944031
   },
-  "YYZ": {
+  "YTO": {
     "city": "Toronto",
     "state": "Ontario",
     "country": "Canada",

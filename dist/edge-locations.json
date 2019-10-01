@@ -233,6 +233,13 @@
     "latitude": 60.317199707031,
     "longitude": 24.963300704956
   },
+  "LIS": {
+    "city": "Lisbon",
+    "country": "Portugal",
+    "count": 1,
+    "latitude": 38.7813,
+    "longitude": -9.13592
+  },
   "LHR": {
     "city": "London",
     "country": "England",
@@ -471,6 +478,13 @@
     "latitude": 25.112222,
     "longitude": 56.324167
   },
+  "BAH": {
+    "city": "Manama",
+    "country": "Bahrain",
+    "count": 1,
+    "latitude": 26.27079963684082,
+    "longitude": 50.63359832763672
+  },
   "TLV": {
     "city": "Tel Aviv",
     "country": "Israel",
@@ -498,6 +512,13 @@
     "count": 1,
     "latitude": 40.080101013183594,
     "longitude": 116.58499908447266
+  },
+  "SZX": {
+    "city": "Shenzhen",
+    "country": "China",
+    "count": 1,
+    "latitude": 22.639299392700195,
+    "longitude": 113.81099700927734
   },
   "PVG": {
     "city": "Shanghai",

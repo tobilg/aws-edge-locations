@@ -20,7 +20,8 @@ describe("# Testing the aws-edge-locations functionality", function() {
                 "country": "United States",
                 "count": 6,
                 "latitude": 38.9445,
-                "longitude": -77.4558029
+                "longitude": -77.4558029,
+                "region": "North America"
             });
             done();
 

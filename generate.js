@@ -122,12 +122,14 @@ const lookupAirport = city => {
     if (matches.length > 1) { // Handle multiple matches
         const tempMatches = [];
         matches.forEach(m => {
-            if (m.name.toLowerCase().indexOf('international')) {
+            if (m.name.toLowerCase().indexOf('international') !== -1) {
                 tempMatches.push(m);
             }
         });
         if (tempMatches.length > 0) { // Multiple matches, take first one, kind of random selection
             match = tempMatches[0];
+        } else { // no "international" tempMatches, fallback to first el of unfiltered matches
+            match = matches[0]
         }
     } else { // Single match
         match = matches[0];

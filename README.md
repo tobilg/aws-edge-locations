@@ -44,6 +44,9 @@ const popCount = el.getPoPCount() // returns 177
 ```
 
 ## Data generation
+---
+#### TL;DR: after installation of `jq` library, run `npm run generate`
+---
 
 To prepare the data regeneration, please run `npm run download-airports && npm run filter-airports`. This step requires an installation of [jq](https://github.com/stedolan/jq/wiki/Installation) on the machine where the commands are run.
 

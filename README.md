@@ -22,6 +22,7 @@ $ npm i aws-edge-locations
 This package can be used to lookup the AWS CloudFront Edge Locations via the three character prefix (the first three characters of the `location` (e.g. `IAD12`) field in the CloudFront logs).
 
 ```javascript
+const AWSEdgeLocations = require('aws-edge-locations');
 const el = new AWSEdgeLocations();
 const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three characters!
 

@@ -88,9 +88,9 @@ const airportOverridesData = {
 
 const writeCSV = locations => {
     const csvPath = path.join(__dirname, 'dist', 'edge-locations.csv');
-    const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.count},${e.latitude},${e.longitude}` });
+    const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.count},${e.latitude},${e.longitude},${e.region}` });
     // Add header
-    data.unshift('code,city,state,country,count,latitude,longitude');
+    data.unshift('code,city,state,country,count,latitude,longitude,region');
     fs.writeFileSync(csvPath, data.join(os.EOL), 'utf8');
 }
 
@@ -104,7 +104,8 @@ const writeJSON = locations => {
             country: location.country,
             count: location.count,
             latitude: location.latitude,
-            longitude: location.longitude
+            longitude: location.longitude,
+            region: location.region
         }
     });
     fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8');
@@ -122,12 +123,14 @@ const lookupAirport = city => {
     if (matches.length > 1) { // Handle multiple matches
         const tempMatches = [];
         matches.forEach(m => {
-            if (m.name.toLowerCase().indexOf('international')) {
+            if (m.name.toLowerCase().indexOf('international') !== -1) {
                 tempMatches.push(m);
             }
         });
         if (tempMatches.length > 0) { // Multiple matches, take first one, kind of random selection
             match = tempMatches[0];
+        } else { // no "international" tempMatches, fallback to first el of unfiltered matches
+            match = matches[0]
         }
     } else { // Single match
         match = matches[0];
@@ -156,7 +159,12 @@ const createLocation = location => {
     } else {
         locationObj.count = 1;
         locationObj.country = temp[1].trim();
-    }    
+    }
+
+    // region is the third detail in string
+    locationObj.region = temp[2].trim();
+
+    // region
     return locationObj;
 }
 
@@ -168,7 +176,6 @@ const run = async () => {
     await page.goto('https://aws.amazon.com/cloudfront/features/?nc1=h_ls')
 
     const data = await page.evaluate(() => {
-
         const result = [];
         // Selector
         const rawLocations = document.evaluate('//*[@id="aws-page-content"]/main/div[1]/div/div/div[@class="lb-rtxt"]/p[*]', document);
@@ -185,6 +192,27 @@ const run = async () => {
         // Remove first and last item
         result.shift();
         result.pop();
+
+        /**
+         * @desc get an array witth regions names, this will be used to group
+         * related locations by region (≠ continent). Regions are extracted
+         * from each set title element, wich ATM is the previous sibling of the
+         * $locationsSets
+         * @returns {Array} - ["North America", "Europe", "Asia", ...]
+         */
+        const extractRegions = () => {
+            const $contentContainer = document
+                .getElementById('Amazon_CloudFront_Infrastructure')
+                .parentElement;
+            const $locationsSets = Array.from($contentContainer.querySelectorAll('.lb-rtxt'))
+                .slice(1, -1); // false positives first and last matches
+            // return only cleaned text string
+            return $locationsSets.map(set => 
+                set.previousElementSibling.textContent.trim()
+            );
+        }
+
+        const regions = extractRegions();
 
         let locations = [];
         let caches = [];
@@ -253,11 +281,18 @@ const run = async () => {
         edgeLocations[7] = `${chinaFix}, China`;
 
         // Generate edge location array
-        edgeLocations.forEach(locationList => {
-            const details = locationList.split('; ');
+        // [0] get each region location set string
+        // [1] append region to each location details string
+        // @todo [0] - I don't think it ever enters here, since split 
+        //  of a string is always an Array?
+        edgeLocations.forEach((locationList, index) => {
+            const details = locationList
+                .split('; ') // [0]
+                .map(l => l.concat(`, ${regions[index]}`)); // [1]
+
             if (Array.isArray(details)) {
                 locations = locations.concat(details);
-            } else {
+            } else { // @todo [0]            
                 locations.push(locationList);
             }
         });

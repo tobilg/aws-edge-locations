@@ -20,7 +20,8 @@ describe("# Testing the aws-edge-locations functionality", function() {
                 "country": "United States",
                 "count": 6,
                 "latitude": 38.9445,
-                "longitude": -77.4558029
+                "longitude": -77.4558029,
+                "region": "North America"
             });
             done();
 
@@ -39,7 +40,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
 
             const el = new AWSEdgeLocations();
 
-            el.getLocationCount().should.eql(70);
+            el.getLocationCount().should.eql(73);
             done();
 
         });
@@ -48,7 +49,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
 
             const el = new AWSEdgeLocations();
 
-            el.getPoPCount().should.eql(177);
+            el.getPoPCount().should.eql(180);
             done();
 
         });

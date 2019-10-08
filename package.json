@@ -1,13 +1,14 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "List of AWS edge location code prefixes",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",
     "filter-airports": "cat data/airport-codes.json  | jq -c '[ .[] | select( .type | contains(\"large_airport\")) ]' > data/large-airports.json",
-    "generate": "npm run download-airports && npm run filter-airports && node generate.js"
+    "generate": "npm run download-airports && npm run filter-airports && node generate.js && npm run browserify",
+    "browserify": "node_modules/.bin/browserify -r ./index.js:aws-edge-locations > dist/aws-edge-locations.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^16.5.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
     "puppeteer": "^1.18.1"

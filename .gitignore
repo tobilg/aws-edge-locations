@@ -62,3 +62,5 @@ typings/
 
 # data
 data/
+
+.DS_Store

@@ -1,3 +1,4 @@
 dist/edge-locations.csv
 data/
 .github/
+.DS_Store

@@ -87,7 +87,7 @@ const airportOverridesData = {
 }
 
 const writeCSV = locations => {
-    const csvPath = path.join(__dirname, 'dist', 'edge-locations.csv');
+    const csvPath = path.join(__dirname, 'dist', 'aws-edge-locations.csv');
     const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.count},${e.latitude},${e.longitude},${e.region}` });
     // Add header
     data.unshift('code,city,state,country,count,latitude,longitude,region');
@@ -95,7 +95,7 @@ const writeCSV = locations => {
 }
 
 const writeJSON = locations => {
-    const jsonPath = path.join(__dirname, 'dist', 'edge-locations.json');
+    const jsonPath = path.join(__dirname, 'dist', 'aws-edge-locations.json');
     const data = {};
     locations.forEach(location => {
         data[location.code] = {

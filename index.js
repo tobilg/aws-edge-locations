@@ -1,7 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const locations = JSON.parse(fs.readFileSync(path.join(__dirname, 'dist', 'edge-locations.json'), 'utf8'));
+const locations = require('./dist/aws-edge-locations.json');
 
 class AWSEdgeLocations {
     constructor() {

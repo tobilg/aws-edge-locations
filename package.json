@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "List of AWS edge location code prefixes",
   "main": "index.js",
+  "browser": "dist/aws-edge-locations.js",
   "scripts": {
     "test": "mocha",
     "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",

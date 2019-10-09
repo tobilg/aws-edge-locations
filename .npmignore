@@ -1,5 +1,3 @@
-dist/aws-edge-locations.csv
-dist/aws-edge-locations.js
 data/
 .github/
 .DS_Store

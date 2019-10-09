@@ -57,6 +57,11 @@ If you copy it in your web project (assuming the file resides in `lib`), you can
 <html>
     <head>
         <script src="lib/aws-edge-locations.js"></script>
+        <!-- 
+          Note: you can also drop it straight from unpkg CDN
+
+          <script src="https://unpkg.com/aws-edge-locations@x.x.x/dist/aws-edge-locations.js"></script> 
+        -->
     </head>
     <body>
         <script>

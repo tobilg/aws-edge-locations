@@ -41,10 +41,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 70
+const locationCount = el.getLocationCount(); // returns 77
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 177
+const popCount = el.getPoPCount() // returns 189
 ```
 
 ### Browser
@@ -109,7 +109,7 @@ HWD,Hayward,California,United States,1,37.658889,-122.121667,North America
 HIO,Hillsboro,Oregon,United States,2,45.540394,-122.949825,North America
 HOU,Houston,Texas,United States,4,29.64539909,-95.27890015,North America
 JAX,Jacksonville,Florida,United States,1,30.49410057067871,-81.68789672851562,North America
-LAX,Los Angeles,California,United States,5,33.94250107,-118.4079971,North America
+LAX,Los Angeles,California,United States,4,33.94250107,-118.4079971,North America
 MIA,Miami,Florida,United States,3,25.79319953918457,-80.29060363769531,North America
 MSP,Minneapolis,Minnesota,United States,1,44.882,-93.221802,North America
 YUL,Montreal,Quebec,Canada,1,45.470556,-73.740833,North America
@@ -125,9 +125,10 @@ IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031,North America
 YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
 TXL,Berlin,,Germany,2,52.559722,13.287778,Europe
+BRU,Brussels,,Belgium,1,50.901401519800004,4.48443984985,Europe
 CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329,Europe
 DUB,Dublin,,Ireland,1,53.421299,-6.27007,Europe
-FRA,Frankfurt am Main,,Germany,8,50.033333,8.570556,Europe
+FRA,Frankfurt am Main,,Germany,10,50.033333,8.570556,Europe
 HEL,Helsinki,,Finland,1,60.317199707031,24.963300704956,Europe
 LIS,Lisbon,,Portugal,1,38.7813,-9.13592,Europe
 LHR,London,,England,9,51.4775,-0.461389,Europe
@@ -156,12 +157,15 @@ KIX,Osaka,,Japan,1,34.42729949951172,135.24400329589844,Asia
 ICN,Seoul,,South Korea,4,37.46910095214844,126.45099639892578,Asia
 SIN,Singapore,,Singapore,3,1.35019,103.994003,Asia
 TPE,Taipei,,Taiwan,3,25.0777,121.233002,Asia
-NRT,Tokyo,,Japan,12,35.7647018433,140.386001587,Asia
+NRT,Tokyo,,Japan,16,35.7647018433,140.386001587,Asia
 MEL,Melbourne,,Australia,1,-37.673302,144.843002,Australia
 PER,Perth,,Australia,1,-31.94029998779297,115.96700286865234,Australia
 SYD,Sydney,,Australia,2,-33.94609832763672,151.177001953125,Australia
-GRU,Sao Paulo,,Brazil,2,-23.435556,-46.473056,South America
+BOG,Bogota,,Colombia,1,4.70159,-74.1469,South America
+EZE,Buenos Aires,,Argentina,1,-34.8222,-58.5358,South America
 GIG,Rio de Janeiro,,Brazil,3,-22.8099994659,-43.2505569458,South America
+SCL,Santiago,,Chile,1,-33.393001556396484,-70.78579711914062,South America
+GRU,Sao Paulo,,Brazil,2,-23.435556,-46.473056,South America
 DXB,Dubai,,United Arab Emirates,1,25.2527999878,55.3643989563,Middle East
 FJR,Fujairah,,United Arab Emirates,1,25.112222,56.324167,Middle East
 BAH,Manama,,Bahrain,1,26.27079963684082,50.63359832763672,Middle East
@@ -274,7 +278,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Los Angeles",
     "state": "California",
     "country": "United States",
-    "count": 5,
+    "count": 4,
     "latitude": 33.94250107,
     "longitude": -118.4079971,
     "region": "North America"
@@ -412,6 +416,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 13.287778,
     "region": "Europe"
   },
+  "BRU": {
+    "city": "Brussels",
+    "country": "Belgium",
+    "count": 1,
+    "latitude": 50.901401519800004,
+    "longitude": 4.48443984985,
+    "region": "Europe"
+  },
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
@@ -431,7 +443,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "FRA": {
     "city": "Frankfurt am Main",
     "country": "Germany",
-    "count": 8,
+    "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
     "region": "Europe"
@@ -663,7 +675,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "NRT": {
     "city": "Tokyo",
     "country": "Japan",
-    "count": 12,
+    "count": 16,
     "latitude": 35.7647018433,
     "longitude": 140.386001587,
     "region": "Asia"
@@ -692,12 +704,20 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 151.177001953125,
     "region": "Australia"
   },
-  "GRU": {
-    "city": "Sao Paulo",
-    "country": "Brazil",
-    "count": 2,
-    "latitude": -23.435556,
-    "longitude": -46.473056,
+  "BOG": {
+    "city": "Bogota",
+    "country": "Colombia",
+    "count": 1,
+    "latitude": 4.70159,
+    "longitude": -74.1469,
+    "region": "South America"
+  },
+  "EZE": {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "count": 1,
+    "latitude": -34.8222,
+    "longitude": -58.5358,
     "region": "South America"
   },
   "GIG": {
@@ -706,6 +726,22 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 3,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
+    "region": "South America"
+  },
+  "SCL": {
+    "city": "Santiago",
+    "country": "Chile",
+    "count": 1,
+    "latitude": -33.393001556396484,
+    "longitude": -70.78579711914062,
+    "region": "South America"
+  },
+  "GRU": {
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "count": 2,
+    "latitude": -23.435556,
+    "longitude": -46.473056,
     "region": "South America"
   },
   "DXB": {

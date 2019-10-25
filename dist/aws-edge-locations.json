@@ -93,7 +93,7 @@
     "city": "Los Angeles",
     "state": "California",
     "country": "United States",
-    "count": 5,
+    "count": 4,
     "latitude": 33.94250107,
     "longitude": -118.4079971,
     "region": "North America"
@@ -231,6 +231,14 @@
     "longitude": 13.287778,
     "region": "Europe"
   },
+  "BRU": {
+    "city": "Brussels",
+    "country": "Belgium",
+    "count": 1,
+    "latitude": 50.901401519800004,
+    "longitude": 4.48443984985,
+    "region": "Europe"
+  },
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
@@ -250,7 +258,7 @@
   "FRA": {
     "city": "Frankfurt am Main",
     "country": "Germany",
-    "count": 8,
+    "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
     "region": "Europe"
@@ -482,7 +490,7 @@
   "NRT": {
     "city": "Tokyo",
     "country": "Japan",
-    "count": 12,
+    "count": 16,
     "latitude": 35.7647018433,
     "longitude": 140.386001587,
     "region": "Asia"
@@ -511,12 +519,20 @@
     "longitude": 151.177001953125,
     "region": "Australia"
   },
-  "GRU": {
-    "city": "Sao Paulo",
-    "country": "Brazil",
-    "count": 2,
-    "latitude": -23.435556,
-    "longitude": -46.473056,
+  "BOG": {
+    "city": "Bogota",
+    "country": "Colombia",
+    "count": 1,
+    "latitude": 4.70159,
+    "longitude": -74.1469,
+    "region": "South America"
+  },
+  "EZE": {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "count": 1,
+    "latitude": -34.8222,
+    "longitude": -58.5358,
     "region": "South America"
   },
   "GIG": {
@@ -525,6 +541,22 @@
     "count": 3,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
+    "region": "South America"
+  },
+  "SCL": {
+    "city": "Santiago",
+    "country": "Chile",
+    "count": 1,
+    "latitude": -33.393001556396484,
+    "longitude": -70.78579711914062,
+    "region": "South America"
+  },
+  "GRU": {
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "count": 2,
+    "latitude": -23.435556,
+    "longitude": -46.473056,
     "region": "South America"
   },
   "DXB": {

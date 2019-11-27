@@ -12,7 +12,7 @@
     "city": "Atlanta",
     "state": "Georgia",
     "country": "United States",
-    "count": 5,
+    "count": 6,
     "latitude": 33.6367,
     "longitude": -84.428101,
     "region": "North America"
@@ -30,7 +30,7 @@
     "city": "Chicago",
     "state": "Illinois",
     "country": "United States",
-    "count": 7,
+    "count": 6,
     "latitude": 41.978611,
     "longitude": -87.904722,
     "region": "North America"
@@ -66,7 +66,7 @@
     "city": "Hillsboro",
     "state": "Oregon",
     "country": "United States",
-    "count": 2,
+    "count": 3,
     "latitude": 45.540394,
     "longitude": -122.949825,
     "region": "North America"
@@ -93,7 +93,7 @@
     "city": "Los Angeles",
     "state": "California",
     "country": "United States",
-    "count": 4,
+    "count": 5,
     "latitude": 33.94250107,
     "longitude": -118.4079971,
     "region": "North America"
@@ -102,7 +102,7 @@
     "city": "Miami",
     "state": "Florida",
     "country": "United States",
-    "count": 3,
+    "count": 4,
     "latitude": 25.79319953918457,
     "longitude": -80.29060363769531,
     "region": "North America"
@@ -129,7 +129,7 @@
     "city": "New York",
     "state": "New York",
     "country": "United States",
-    "count": 3,
+    "count": 2,
     "latitude": 40.63980103,
     "longitude": -73.77890015,
     "region": "North America"
@@ -138,7 +138,7 @@
     "city": "Newark",
     "state": "New Jersey",
     "country": "United States",
-    "count": 5,
+    "count": 7,
     "latitude": 40.692501068115234,
     "longitude": -74.168701171875,
     "region": "North America"
@@ -156,7 +156,7 @@
     "city": "Philadelphia",
     "state": "Pennsylvania",
     "country": "United States",
-    "count": 1,
+    "count": 2,
     "latitude": 39.87189865112305,
     "longitude": -75.24109649658203,
     "region": "North America"
@@ -192,7 +192,7 @@
     "city": "Seattle",
     "state": "Washington",
     "country": "United States",
-    "count": 4,
+    "count": 3,
     "latitude": 47.448889,
     "longitude": -122.309444,
     "region": "North America"
@@ -314,7 +314,7 @@
   "MXP": {
     "city": "Milan",
     "country": "Italy",
-    "count": 1,
+    "count": 3,
     "latitude": 45.6306,
     "longitude": 8.72811,
     "region": "Europe"
@@ -357,6 +357,14 @@
     "count": 1,
     "latitude": 50.1008,
     "longitude": 14.26,
+    "region": "Europe"
+  },
+  "FCO": {
+    "city": "Rome",
+    "country": "Italy",
+    "count": 1,
+    "latitude": 41.8002778,
+    "longitude": 12.2388889,
     "region": "Europe"
   },
   "ARN": {
@@ -426,7 +434,7 @@
   "KUL": {
     "city": "Kuala Lumpur",
     "country": "Malaysia",
-    "count": 1,
+    "count": 2,
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
     "region": "Asia"
@@ -434,7 +442,7 @@
   "BOM": {
     "city": "Mumbai",
     "country": "India",
-    "count": 2,
+    "count": 3,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
     "region": "Asia"
@@ -450,7 +458,7 @@
   "DEL": {
     "city": "New Delhi",
     "country": "India",
-    "count": 5,
+    "count": 4,
     "latitude": 28.5665,
     "longitude": 77.103104,
     "region": "Asia"
@@ -474,7 +482,7 @@
   "SIN": {
     "city": "Singapore",
     "country": "Singapore",
-    "count": 3,
+    "count": 4,
     "latitude": 1.35019,
     "longitude": 103.994003,
     "region": "Asia"
@@ -514,7 +522,7 @@
   "SYD": {
     "city": "Sydney",
     "country": "Australia",
-    "count": 2,
+    "count": 4,
     "latitude": -33.94609832763672,
     "longitude": 151.177001953125,
     "region": "Australia"
@@ -538,7 +546,7 @@
   "GIG": {
     "city": "Rio de Janeiro",
     "country": "Brazil",
-    "count": 3,
+    "count": 2,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
     "region": "South America"

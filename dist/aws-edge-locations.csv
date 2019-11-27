@@ -1,26 +1,26 @@
 code,city,state,country,count,latitude,longitude,region
 IAD,Ashburn,Virginia,United States,6,38.9445,-77.4558029,North America
-ATL,Atlanta,Georgia,United States,5,33.6367,-84.428101,North America
+ATL,Atlanta,Georgia,United States,6,33.6367,-84.428101,North America
 BOS,Boston,Massachusetts,United States,3,42.36429977,-71.00520325,North America
-ORD,Chicago,Illinois,United States,7,41.978611,-87.904722,North America
+ORD,Chicago,Illinois,United States,6,41.978611,-87.904722,North America
 DFW,Dallas/Fort Worth,Texas,United States,6,32.896801,-97.038002,North America
 DEN,Denver,Colorado,United States,2,39.861698150635,-104.672996521,North America
 HWD,Hayward,California,United States,1,37.658889,-122.121667,North America
-HIO,Hillsboro,Oregon,United States,2,45.540394,-122.949825,North America
+HIO,Hillsboro,Oregon,United States,3,45.540394,-122.949825,North America
 HOU,Houston,Texas,United States,4,29.64539909,-95.27890015,North America
 JAX,Jacksonville,Florida,United States,1,30.49410057067871,-81.68789672851562,North America
-LAX,Los Angeles,California,United States,4,33.94250107,-118.4079971,North America
-MIA,Miami,Florida,United States,3,25.79319953918457,-80.29060363769531,North America
+LAX,Los Angeles,California,United States,5,33.94250107,-118.4079971,North America
+MIA,Miami,Florida,United States,4,25.79319953918457,-80.29060363769531,North America
 MSP,Minneapolis,Minnesota,United States,1,44.882,-93.221802,North America
 YUL,Montreal,Quebec,Canada,1,45.470556,-73.740833,North America
-JFK,New York,New York,United States,3,40.63980103,-73.77890015,North America
-EWR,Newark,New Jersey,United States,5,40.692501068115234,-74.168701171875,North America
+JFK,New York,New York,United States,2,40.63980103,-73.77890015,North America
+EWR,Newark,New Jersey,United States,7,40.692501068115234,-74.168701171875,North America
 PAO,Palo Alto,California,United States,1,37.461111,-122.115,North America
-PHL,Philadelphia,Pennsylvania,United States,1,39.87189865112305,-75.24109649658203,North America
+PHL,Philadelphia,Pennsylvania,United States,2,39.87189865112305,-75.24109649658203,North America
 PHX,Phoenix,Arizona,United States,2,33.43429946899414,-112.01200103759766,North America
 SLC,Salt Lake City,Utah,United States,1,40.78839874267578,-111.97799682617188,North America
 SJC,San Jose,California,United States,2,37.362598,-121.929001,North America
-SEA,Seattle,Washington,United States,4,47.448889,-122.309444,North America
+SEA,Seattle,Washington,United States,3,47.448889,-122.309444,North America
 IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031,North America
 YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
@@ -35,12 +35,13 @@ LHR,London,,England,9,51.4775,-0.461389,Europe
 MAD,Madrid,,Spain,2,40.471926,-3.56264,Europe
 MAN,Manchester,,England,2,53.35369873046875,-2.2749500274658203,Europe
 MRS,Marseille,,France,1,43.439271922,5.22142410278,Europe
-MXP,Milan,,Italy,1,45.6306,8.72811,Europe
+MXP,Milan,,Italy,3,45.6306,8.72811,Europe
 MUC,Munich,,Germany,2,48.353802,11.7861,Europe
 OSL,Oslo,,Norway,1,60.193901062012,11.100399971008,Europe
 PMO,Palermo,,Italy,1,38.175999,13.091,Europe
 CDG,Paris,,France,5,49.012798,2.55,Europe
 PRG,Prague,,Czech Republic,1,50.1008,14.26,Europe
+FCO,Rome,,Italy,1,41.8002778,12.2388889,Europe
 ARN,Stockholm,,Sweden,3,59.651901245117,17.918600082397,Europe
 VIE,Vienna,,Austria,1,48.110298156738,16.569700241089,Europe
 WMI,Warsaw,,Poland,1,52.451099,20.6518,Europe
@@ -49,21 +50,21 @@ BLR,Bangalore,,India,3,13.1979,77.706299,Asia
 MAA,Chennai,,India,2,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,3,22.308901,113.915001,Asia
 HYD,Hyderabad,,India,4,17.2313175201,78.4298553467,Asia
-KUL,Kuala Lumpur,,Malaysia,1,2.745579957962,101.70999908447,Asia
-BOM,Mumbai,,India,2,19.0886993408,72.8678970337,Asia
+KUL,Kuala Lumpur,,Malaysia,2,2.745579957962,101.70999908447,Asia
+BOM,Mumbai,,India,3,19.0886993408,72.8678970337,Asia
 MNL,Manila,,Philippines,1,14.5086,121.019997,Asia
-DEL,New Delhi,,India,5,28.5665,77.103104,Asia
+DEL,New Delhi,,India,4,28.5665,77.103104,Asia
 KIX,Osaka,,Japan,1,34.42729949951172,135.24400329589844,Asia
 ICN,Seoul,,South Korea,4,37.46910095214844,126.45099639892578,Asia
-SIN,Singapore,,Singapore,3,1.35019,103.994003,Asia
+SIN,Singapore,,Singapore,4,1.35019,103.994003,Asia
 TPE,Taipei,,Taiwan,3,25.0777,121.233002,Asia
 NRT,Tokyo,,Japan,16,35.7647018433,140.386001587,Asia
 MEL,Melbourne,,Australia,1,-37.673302,144.843002,Australia
 PER,Perth,,Australia,1,-31.94029998779297,115.96700286865234,Australia
-SYD,Sydney,,Australia,2,-33.94609832763672,151.177001953125,Australia
+SYD,Sydney,,Australia,4,-33.94609832763672,151.177001953125,Australia
 BOG,Bogota,,Colombia,1,4.70159,-74.1469,South America
 EZE,Buenos Aires,,Argentina,1,-34.8222,-58.5358,South America
-GIG,Rio de Janeiro,,Brazil,3,-22.8099994659,-43.2505569458,South America
+GIG,Rio de Janeiro,,Brazil,2,-22.8099994659,-43.2505569458,South America
 SCL,Santiago,,Chile,1,-33.393001556396484,-70.78579711914062,South America
 GRU,Sao Paulo,,Brazil,2,-23.435556,-46.473056,South America
 DXB,Dubai,,United Arab Emirates,1,25.2527999878,55.3643989563,Middle East

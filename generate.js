@@ -83,6 +83,11 @@ const airportOverridesData = {
         "code": "ORD",
         "latitude": 41.978611,
         "longitude": -87.904722
+    },
+    "rome": {
+        "code": "FCO",
+        "latitude": 41.8002778,
+        "longitude": 12.2388889
     }
 }
 

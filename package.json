@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "List of AWS edge location code prefixes",
   "main": "index.js",
   "browser": "dist/aws-edge-locations.js",
@@ -37,6 +37,7 @@
     "browserify": "^16.5.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
-    "puppeteer": "^1.18.1"
+    "puppeteer": "^1.18.1",
+    "utf8": "^3.0.0"
   }
 }

@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const utf8 = require('utf8');
 
 // Load airport data
 const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'large-airports.json'), 'utf8'));
@@ -9,6 +10,11 @@ const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'lar
 // Airport data overrides
 // Data derived from Wikipedia
 const airportOverridesData = {
+    "dusseldorf": {
+        "code": "DUS",
+        "latitude": 51.289501, 
+        "longitude": 6.76678
+    },
     "zhongwei": {
         "code": "ZHY",
         "latitude": 37.572778,
@@ -316,7 +322,7 @@ const run = async () => {
     data.locations.forEach(l => {
         // Get location
         const location = createLocation(l);
-        const airport = lookupAirport(location.city);
+        const airport = lookupAirport(utf8.encode(location.city));
         if (airportOverridesData.hasOwnProperty(location.city.toLowerCase())) {
             const overrideData = airportOverridesData[location.city.toLowerCase()];
             location.code = overrideData.code;

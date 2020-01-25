@@ -124,10 +124,14 @@ SEA,Seattle,Washington,United States,3,47.448889,-122.309444,North America
 IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031,North America
 YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
+ATH,Athens,,Greece,1,37.9364013672,23.9444999695,Europe
 TXL,Berlin,,Germany,2,52.559722,13.287778,Europe
 BRU,Brussels,,Belgium,1,50.901401519800004,4.48443984985,Europe
+OTP,Bucharest,,Romania,1,44.5711111,26.085,Europe
+BUD,Budapest,,Hungary,1,47.42976,19.261093,Europe
 CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329,Europe
 DUB,Dublin,,Ireland,1,53.421299,-6.27007,Europe
+DUS,Dusseldorf,,Germany,1,51.289501,6.76678,Europe
 FRA,Frankfurt am Main,,Germany,10,50.033333,8.570556,Europe
 HEL,Helsinki,,Finland,1,60.317199707031,24.963300704956,Europe
 LIS,Lisbon,,Portugal,1,38.7813,-9.13592,Europe
@@ -142,6 +146,7 @@ PMO,Palermo,,Italy,1,38.175999,13.091,Europe
 CDG,Paris,,France,5,49.012798,2.55,Europe
 PRG,Prague,,Czech Republic,1,50.1008,14.26,Europe
 FCO,Rome,,Italy,1,41.8002778,12.2388889,Europe
+SOF,Sofia,,Bulgaria,1,42.696693420410156,23.411436080932617,Europe
 ARN,Stockholm,,Sweden,3,59.651901245117,17.918600082397,Europe
 VIE,Vienna,,Austria,1,48.110298156738,16.569700241089,Europe
 WMI,Warsaw,,Poland,1,52.451099,20.6518,Europe
@@ -171,8 +176,9 @@ DXB,Dubai,,United Arab Emirates,1,25.2527999878,55.3643989563,Middle East
 FJR,Fujairah,,United Arab Emirates,1,25.112222,56.324167,Middle East
 BAH,Manama,,Bahrain,1,26.27079963684082,50.63359832763672,Middle East
 TLV,Tel Aviv,,Israel,1,32.01139831542969,34.88669967651367,Middle East
-JNB,Johannesburg,,South Africa,1,-26.1392,28.246,Africa
 CPT,Cape Town,,South Africa,1,-33.9648017883,18.6016998291,Africa
+JNB,Johannesburg,,South Africa,1,-26.1392,28.246,Africa
+NBO,Nairobi,,Kenya,1,-1.31923997402,36.9277992249,Africa
 PEK,Beijing,,China,1,40.080101013183594,116.58499908447266,China
 SZX,Shenzhen,,China,1,22.639299392700195,113.81099700927734,China
 PVG,Shanghai,,China,1,31.143400192260742,121.80500030517578,China
@@ -409,6 +415,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 4.76389,
     "region": "Europe"
   },
+  "ATH": {
+    "city": "Athens",
+    "country": "Greece",
+    "count": 1,
+    "latitude": 37.9364013672,
+    "longitude": 23.9444999695,
+    "region": "Europe"
+  },
   "TXL": {
     "city": "Berlin",
     "country": "Germany",
@@ -425,6 +439,22 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 4.48443984985,
     "region": "Europe"
   },
+  "OTP": {
+    "city": "Bucharest",
+    "country": "Romania",
+    "count": 1,
+    "latitude": 44.5711111,
+    "longitude": 26.085,
+    "region": "Europe"
+  },
+  "BUD": {
+    "city": "Budapest",
+    "country": "Hungary",
+    "count": 1,
+    "latitude": 47.42976,
+    "longitude": 19.261093,
+    "region": "Europe"
+  },
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
@@ -439,6 +469,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 1,
     "latitude": 53.421299,
     "longitude": -6.27007,
+    "region": "Europe"
+  },
+  "DUS": {
+    "city": "Dusseldorf",
+    "country": "Germany",
+    "count": 1,
+    "latitude": 51.289501,
+    "longitude": 6.76678,
     "region": "Europe"
   },
   "FRA": {
@@ -551,6 +589,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 1,
     "latitude": 41.8002778,
     "longitude": 12.2388889,
+    "region": "Europe"
+  },
+  "SOF": {
+    "city": "Sofia",
+    "country": "Bulgaria",
+    "count": 1,
+    "latitude": 42.696693420410156,
+    "longitude": 23.411436080932617,
     "region": "Europe"
   },
   "ARN": {
@@ -785,6 +831,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 34.88669967651367,
     "region": "Middle East"
   },
+  "CPT": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "count": 1,
+    "latitude": -33.9648017883,
+    "longitude": 18.6016998291,
+    "region": "Africa"
+  },
   "JNB": {
     "city": "Johannesburg",
     "country": "South Africa",
@@ -793,12 +847,12 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 28.246,
     "region": "Africa"
   },
-  "CPT": {
-    "city": "Cape Town",
-    "country": "South Africa",
+  "NBO": {
+    "city": "Nairobi",
+    "country": "Kenya",
     "count": 1,
-    "latitude": -33.9648017883,
-    "longitude": 18.6016998291,
+    "latitude": -1.31923997402,
+    "longitude": 36.9277992249,
     "region": "Africa"
   },
   "PEK": {

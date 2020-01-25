@@ -223,6 +223,14 @@
     "longitude": 4.76389,
     "region": "Europe"
   },
+  "ATH": {
+    "city": "Athens",
+    "country": "Greece",
+    "count": 1,
+    "latitude": 37.9364013672,
+    "longitude": 23.9444999695,
+    "region": "Europe"
+  },
   "TXL": {
     "city": "Berlin",
     "country": "Germany",
@@ -239,6 +247,22 @@
     "longitude": 4.48443984985,
     "region": "Europe"
   },
+  "OTP": {
+    "city": "Bucharest",
+    "country": "Romania",
+    "count": 1,
+    "latitude": 44.5711111,
+    "longitude": 26.085,
+    "region": "Europe"
+  },
+  "BUD": {
+    "city": "Budapest",
+    "country": "Hungary",
+    "count": 1,
+    "latitude": 47.42976,
+    "longitude": 19.261093,
+    "region": "Europe"
+  },
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
@@ -253,6 +277,14 @@
     "count": 1,
     "latitude": 53.421299,
     "longitude": -6.27007,
+    "region": "Europe"
+  },
+  "DUS": {
+    "city": "Dusseldorf",
+    "country": "Germany",
+    "count": 1,
+    "latitude": 51.289501,
+    "longitude": 6.76678,
     "region": "Europe"
   },
   "FRA": {
@@ -365,6 +397,14 @@
     "count": 1,
     "latitude": 41.8002778,
     "longitude": 12.2388889,
+    "region": "Europe"
+  },
+  "SOF": {
+    "city": "Sofia",
+    "country": "Bulgaria",
+    "count": 1,
+    "latitude": 42.696693420410156,
+    "longitude": 23.411436080932617,
     "region": "Europe"
   },
   "ARN": {
@@ -599,6 +639,14 @@
     "longitude": 34.88669967651367,
     "region": "Middle East"
   },
+  "CPT": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "count": 1,
+    "latitude": -33.9648017883,
+    "longitude": 18.6016998291,
+    "region": "Africa"
+  },
   "JNB": {
     "city": "Johannesburg",
     "country": "South Africa",
@@ -607,12 +655,12 @@
     "longitude": 28.246,
     "region": "Africa"
   },
-  "CPT": {
-    "city": "Cape Town",
-    "country": "South Africa",
+  "NBO": {
+    "city": "Nairobi",
+    "country": "Kenya",
     "count": 1,
-    "latitude": -33.9648017883,
-    "longitude": 18.6016998291,
+    "latitude": -1.31923997402,
+    "longitude": 36.9277992249,
     "region": "Africa"
   },
   "PEK": {

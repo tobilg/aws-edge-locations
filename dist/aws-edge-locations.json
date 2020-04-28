@@ -94,8 +94,8 @@
     "state": "California",
     "country": "United States",
     "count": 5,
-    "latitude": 33.94250107,
-    "longitude": -118.4079971,
+    "latitude": 33.942501,
+    "longitude": -118.407997,
     "region": "North America"
   },
   "MIA": {
@@ -130,8 +130,8 @@
     "state": "New York",
     "country": "United States",
     "count": 2,
-    "latitude": 40.63980103,
-    "longitude": -73.77890015,
+    "latitude": 40.639801,
+    "longitude": -73.7789,
     "region": "North America"
   },
   "EWR": {
@@ -467,8 +467,8 @@
     "city": "Hyderabad",
     "country": "India",
     "count": 4,
-    "latitude": 17.2313175201,
-    "longitude": 78.4298553467,
+    "latitude": 17.231318,
+    "longitude": 78.429855,
     "region": "Asia"
   },
   "KUL": {

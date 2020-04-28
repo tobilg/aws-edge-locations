@@ -9,11 +9,11 @@ HWD,Hayward,California,United States,1,37.658889,-122.121667,North America
 HIO,Hillsboro,Oregon,United States,3,45.540394,-122.949825,North America
 HOU,Houston,Texas,United States,4,29.64539909,-95.27890015,North America
 JAX,Jacksonville,Florida,United States,1,30.49410057067871,-81.68789672851562,North America
-LAX,Los Angeles,California,United States,5,33.94250107,-118.4079971,North America
+LAX,Los Angeles,California,United States,5,33.942501,-118.407997,North America
 MIA,Miami,Florida,United States,4,25.79319953918457,-80.29060363769531,North America
 MSP,Minneapolis,Minnesota,United States,1,44.882,-93.221802,North America
 YUL,Montreal,Quebec,Canada,1,45.470556,-73.740833,North America
-JFK,New York,New York,United States,2,40.63980103,-73.77890015,North America
+JFK,New York,New York,United States,2,40.639801,-73.7789,North America
 EWR,Newark,New Jersey,United States,7,40.692501068115234,-74.168701171875,North America
 PAO,Palo Alto,California,United States,1,37.461111,-122.115,North America
 PHL,Philadelphia,Pennsylvania,United States,2,39.87189865112305,-75.24109649658203,North America
@@ -54,7 +54,7 @@ ZRH,Zurich,,Switzerland,2,47.464699,8.54917,Europe
 BLR,Bangalore,,India,3,13.1979,77.706299,Asia
 MAA,Chennai,,India,2,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,3,22.308901,113.915001,Asia
-HYD,Hyderabad,,India,4,17.2313175201,78.4298553467,Asia
+HYD,Hyderabad,,India,4,17.231318,78.429855,Asia
 KUL,Kuala Lumpur,,Malaysia,2,2.745579957962,101.70999908447,Asia
 BOM,Mumbai,,India,3,19.0886993408,72.8678970337,Asia
 MNL,Manila,,Philippines,1,14.5086,121.019997,Asia

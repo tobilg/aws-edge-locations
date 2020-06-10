@@ -21,7 +21,6 @@ PHX,Phoenix,Arizona,United States,2,33.43429946899414,-112.01200103759766,North 
 SLC,Salt Lake City,Utah,United States,1,40.78839874267578,-111.97799682617188,North America
 SJC,San Jose,California,United States,2,37.362598,-121.929001,North America
 SEA,Seattle,Washington,United States,3,47.448889,-122.309444,North America
-IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031,North America
 YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
 ATH,Athens,,Greece,1,37.9364013672,23.9444999695,Europe
@@ -33,6 +32,7 @@ CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329,Europe
 DUB,Dublin,,Ireland,1,53.421299,-6.27007,Europe
 DUS,Dusseldorf,,Germany,1,51.289501,6.76678,Europe
 FRA,Frankfurt am Main,,Germany,10,50.033333,8.570556,Europe
+HAM,Hamburg,,Germany,1,53.630401611328,9.9882297515869,Europe
 HEL,Helsinki,,Finland,1,60.317199707031,24.963300704956,Europe
 LIS,Lisbon,,Portugal,1,38.7813,-9.13592,Europe
 LHR,London,,England,9,51.4775,-0.461389,Europe
@@ -55,6 +55,7 @@ BLR,Bangalore,,India,3,13.1979,77.706299,Asia
 MAA,Chennai,,India,2,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,3,22.308901,113.915001,Asia
 HYD,Hyderabad,,India,4,17.231318,78.429855,Asia
+CCU,Kolkata,,India,1,22.654699325561523,88.44670104980469,Asia
 KUL,Kuala Lumpur,,Malaysia,2,2.745579957962,101.70999908447,Asia
 BOM,Mumbai,,India,3,19.0886993408,72.8678970337,Asia
 MNL,Manila,,Philippines,1,14.5086,121.019997,Asia

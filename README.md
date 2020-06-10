@@ -41,10 +41,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 77
+const locationCount = el.getLocationCount(); // returns 85
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 189
+const popCount = el.getPoPCount() // returns 206
 ```
 
 ### Browser
@@ -109,11 +109,11 @@ HWD,Hayward,California,United States,1,37.658889,-122.121667,North America
 HIO,Hillsboro,Oregon,United States,3,45.540394,-122.949825,North America
 HOU,Houston,Texas,United States,4,29.64539909,-95.27890015,North America
 JAX,Jacksonville,Florida,United States,1,30.49410057067871,-81.68789672851562,North America
-LAX,Los Angeles,California,United States,5,33.94250107,-118.4079971,North America
+LAX,Los Angeles,California,United States,5,33.942501,-118.407997,North America
 MIA,Miami,Florida,United States,4,25.79319953918457,-80.29060363769531,North America
 MSP,Minneapolis,Minnesota,United States,1,44.882,-93.221802,North America
 YUL,Montreal,Quebec,Canada,1,45.470556,-73.740833,North America
-JFK,New York,New York,United States,2,40.63980103,-73.77890015,North America
+JFK,New York,New York,United States,2,40.639801,-73.7789,North America
 EWR,Newark,New Jersey,United States,7,40.692501068115234,-74.168701171875,North America
 PAO,Palo Alto,California,United States,1,37.461111,-122.115,North America
 PHL,Philadelphia,Pennsylvania,United States,2,39.87189865112305,-75.24109649658203,North America
@@ -121,7 +121,6 @@ PHX,Phoenix,Arizona,United States,2,33.43429946899414,-112.01200103759766,North 
 SLC,Salt Lake City,Utah,United States,1,40.78839874267578,-111.97799682617188,North America
 SJC,San Jose,California,United States,2,37.362598,-121.929001,North America
 SEA,Seattle,Washington,United States,3,47.448889,-122.309444,North America
-IND,South Bend,Indiana,United States,1,39.7173004,-86.2944031,North America
 YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
 AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
 ATH,Athens,,Greece,1,37.9364013672,23.9444999695,Europe
@@ -133,6 +132,7 @@ CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329,Europe
 DUB,Dublin,,Ireland,1,53.421299,-6.27007,Europe
 DUS,Dusseldorf,,Germany,1,51.289501,6.76678,Europe
 FRA,Frankfurt am Main,,Germany,10,50.033333,8.570556,Europe
+HAM,Hamburg,,Germany,1,53.630401611328,9.9882297515869,Europe
 HEL,Helsinki,,Finland,1,60.317199707031,24.963300704956,Europe
 LIS,Lisbon,,Portugal,1,38.7813,-9.13592,Europe
 LHR,London,,England,9,51.4775,-0.461389,Europe
@@ -154,7 +154,8 @@ ZRH,Zurich,,Switzerland,2,47.464699,8.54917,Europe
 BLR,Bangalore,,India,3,13.1979,77.706299,Asia
 MAA,Chennai,,India,2,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,3,22.308901,113.915001,Asia
-HYD,Hyderabad,,India,4,17.2313175201,78.4298553467,Asia
+HYD,Hyderabad,,India,4,17.231318,78.429855,Asia
+CCU,Kolkata,,India,1,22.654699325561523,88.44670104980469,Asia
 KUL,Kuala Lumpur,,Malaysia,2,2.745579957962,101.70999908447,Asia
 BOM,Mumbai,,India,3,19.0886993408,72.8678970337,Asia
 MNL,Manila,,Philippines,1,14.5086,121.019997,Asia
@@ -286,8 +287,8 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "state": "California",
     "country": "United States",
     "count": 5,
-    "latitude": 33.94250107,
-    "longitude": -118.4079971,
+    "latitude": 33.942501,
+    "longitude": -118.407997,
     "region": "North America"
   },
   "MIA": {
@@ -322,8 +323,8 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "state": "New York",
     "country": "United States",
     "count": 2,
-    "latitude": 40.63980103,
-    "longitude": -73.77890015,
+    "latitude": 40.639801,
+    "longitude": -73.7789,
     "region": "North America"
   },
   "EWR": {
@@ -387,15 +388,6 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 3,
     "latitude": 47.448889,
     "longitude": -122.309444,
-    "region": "North America"
-  },
-  "IND": {
-    "city": "South Bend",
-    "state": "Indiana",
-    "country": "United States",
-    "count": 1,
-    "latitude": 39.7173004,
-    "longitude": -86.2944031,
     "region": "North America"
   },
   "YTO": {
@@ -485,6 +477,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
+    "region": "Europe"
+  },
+  "HAM": {
+    "city": "Hamburg",
+    "country": "Germany",
+    "count": 1,
+    "latitude": 53.630401611328,
+    "longitude": 9.9882297515869,
     "region": "Europe"
   },
   "HEL": {
@@ -659,8 +659,16 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Hyderabad",
     "country": "India",
     "count": 4,
-    "latitude": 17.2313175201,
-    "longitude": 78.4298553467,
+    "latitude": 17.231318,
+    "longitude": 78.429855,
+    "region": "Asia"
+  },
+  "CCU": {
+    "city": "Kolkata",
+    "country": "India",
+    "count": 1,
+    "latitude": 22.654699325561523,
+    "longitude": 88.44670104980469,
     "region": "Asia"
   },
   "KUL": {

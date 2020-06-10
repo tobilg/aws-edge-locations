@@ -200,15 +200,6 @@ module.exports={
     "longitude": -122.309444,
     "region": "North America"
   },
-  "IND": {
-    "city": "South Bend",
-    "state": "Indiana",
-    "country": "United States",
-    "count": 1,
-    "latitude": 39.7173004,
-    "longitude": -86.2944031,
-    "region": "North America"
-  },
   "YTO": {
     "city": "Toronto",
     "state": "Ontario",
@@ -296,6 +287,14 @@ module.exports={
     "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
+    "region": "Europe"
+  },
+  "HAM": {
+    "city": "Hamburg",
+    "country": "Germany",
+    "count": 1,
+    "latitude": 53.630401611328,
+    "longitude": 9.9882297515869,
     "region": "Europe"
   },
   "HEL": {
@@ -472,6 +471,14 @@ module.exports={
     "count": 4,
     "latitude": 17.231318,
     "longitude": 78.429855,
+    "region": "Asia"
+  },
+  "CCU": {
+    "city": "Kolkata",
+    "country": "India",
+    "count": 1,
+    "latitude": 22.654699325561523,
+    "longitude": 88.44670104980469,
     "region": "Asia"
   },
   "KUL": {

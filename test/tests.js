@@ -40,7 +40,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
 
             const el = new AWSEdgeLocations();
 
-            el.getLocationCount().should.eql(84);
+            el.getLocationCount().should.eql(85);
             done();
 
         });
@@ -49,7 +49,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
 
             const el = new AWSEdgeLocations();
 
-            el.getPoPCount().should.eql(205);
+            el.getPoPCount().should.eql(206);
             done();
 
         });

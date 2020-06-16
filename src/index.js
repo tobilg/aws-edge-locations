@@ -1,4 +1,4 @@
-const locations = require('./dist/aws-edge-locations.json');
+const locations = require('../dist/aws-edge-locations.json');
 
 class AWSEdgeLocations {
     constructor() {

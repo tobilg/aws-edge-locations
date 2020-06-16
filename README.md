@@ -31,6 +31,7 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
     "city": "Ashburn",
     "state": "Virginia",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 38.9445,
     "longitude": -77.4558029,
@@ -49,25 +50,17 @@ const popCount = el.getPoPCount() // returns 206
 
 ### Browser
 
-There's a [browserified](http://browserify.org/) version of this module in [dist/aws-edge-locations.js](dist/aws-edge-locations.js)
-
-If you copy it in your web project (assuming the file resides in `lib`), you can use it like this in your HTML files:
+This package is published as an UMD module, and can be used in the browser directly from [unpkg](https://unpkg.com/).
 
 ```html
 <html>
     <head>
-        <script src="lib/aws-edge-locations.js"></script>
-        <!-- 
-          Note: you can also drop it straight from unpkg CDN
-
-          <script src="https://unpkg.com/aws-edge-locations@x.x.x/dist/aws-edge-locations.js"></script> 
-        -->
+        <script src="https://unpkg.com/aws-edge-locations"></script> 
     </head>
     <body>
         <script>
-            var AWSEdgeLocations = require('aws-edge-locations');
-            var locations = new AWSEdgeLocations();
-            document.write('There are ' + locations.getLocationCount() + ' edge locations');
+            // Using the global variable
+            document.write('There are ' + awsEdgeLocations.getLocationCount() + ' edge locations');
         </script>
     </body>
 </html>
@@ -98,92 +91,92 @@ This project is considered as in the `alpha` stage, so there's **no guarantee th
 The CSV version of the data can be found at [dist/aws-edge-locations.csv](dist/aws-edge-locations.csv). The file is using `,` as field separator.
 
 ```csv
-code,city,state,country,count,latitude,longitude,region
-IAD,Ashburn,Virginia,United States,6,38.9445,-77.4558029,North America
-ATL,Atlanta,Georgia,United States,6,33.6367,-84.428101,North America
-BOS,Boston,Massachusetts,United States,3,42.36429977,-71.00520325,North America
-ORD,Chicago,Illinois,United States,6,41.978611,-87.904722,North America
-DFW,Dallas/Fort Worth,Texas,United States,6,32.896801,-97.038002,North America
-DEN,Denver,Colorado,United States,2,39.861698150635,-104.672996521,North America
-HWD,Hayward,California,United States,1,37.658889,-122.121667,North America
-HIO,Hillsboro,Oregon,United States,3,45.540394,-122.949825,North America
-HOU,Houston,Texas,United States,4,29.64539909,-95.27890015,North America
-JAX,Jacksonville,Florida,United States,1,30.49410057067871,-81.68789672851562,North America
-LAX,Los Angeles,California,United States,5,33.942501,-118.407997,North America
-MIA,Miami,Florida,United States,4,25.79319953918457,-80.29060363769531,North America
-MSP,Minneapolis,Minnesota,United States,1,44.882,-93.221802,North America
-YUL,Montreal,Quebec,Canada,1,45.470556,-73.740833,North America
-JFK,New York,New York,United States,2,40.639801,-73.7789,North America
-EWR,Newark,New Jersey,United States,7,40.692501068115234,-74.168701171875,North America
-PAO,Palo Alto,California,United States,1,37.461111,-122.115,North America
-PHL,Philadelphia,Pennsylvania,United States,2,39.87189865112305,-75.24109649658203,North America
-PHX,Phoenix,Arizona,United States,2,33.43429946899414,-112.01200103759766,North America
-SLC,Salt Lake City,Utah,United States,1,40.78839874267578,-111.97799682617188,North America
-SJC,San Jose,California,United States,2,37.362598,-121.929001,North America
-SEA,Seattle,Washington,United States,3,47.448889,-122.309444,North America
-YTO,Toronto,Ontario,Canada,2,43.6772003174,-79.63059997559999,North America
-AMS,Amsterdam,,The Netherlands,2,52.308601,4.76389,Europe
-ATH,Athens,,Greece,1,37.9364013672,23.9444999695,Europe
-TXL,Berlin,,Germany,2,52.559722,13.287778,Europe
-BRU,Brussels,,Belgium,1,50.901401519800004,4.48443984985,Europe
-OTP,Bucharest,,Romania,1,44.5711111,26.085,Europe
-BUD,Budapest,,Hungary,1,47.42976,19.261093,Europe
-CPH,Copenhagen,,Denmark,1,55.617900848389,12.656000137329,Europe
-DUB,Dublin,,Ireland,1,53.421299,-6.27007,Europe
-DUS,Dusseldorf,,Germany,1,51.289501,6.76678,Europe
-FRA,Frankfurt am Main,,Germany,10,50.033333,8.570556,Europe
-HAM,Hamburg,,Germany,1,53.630401611328,9.9882297515869,Europe
-HEL,Helsinki,,Finland,1,60.317199707031,24.963300704956,Europe
-LIS,Lisbon,,Portugal,1,38.7813,-9.13592,Europe
-LHR,London,,England,9,51.4775,-0.461389,Europe
-MAD,Madrid,,Spain,2,40.471926,-3.56264,Europe
-MAN,Manchester,,England,2,53.35369873046875,-2.2749500274658203,Europe
-MRS,Marseille,,France,1,43.439271922,5.22142410278,Europe
-MXP,Milan,,Italy,3,45.6306,8.72811,Europe
-MUC,Munich,,Germany,2,48.353802,11.7861,Europe
-OSL,Oslo,,Norway,1,60.193901062012,11.100399971008,Europe
-PMO,Palermo,,Italy,1,38.175999,13.091,Europe
-CDG,Paris,,France,5,49.012798,2.55,Europe
-PRG,Prague,,Czech Republic,1,50.1008,14.26,Europe
-FCO,Rome,,Italy,1,41.8002778,12.2388889,Europe
-SOF,Sofia,,Bulgaria,1,42.696693420410156,23.411436080932617,Europe
-ARN,Stockholm,,Sweden,3,59.651901245117,17.918600082397,Europe
-VIE,Vienna,,Austria,1,48.110298156738,16.569700241089,Europe
-WMI,Warsaw,,Poland,1,52.451099,20.6518,Europe
-ZRH,Zurich,,Switzerland,2,47.464699,8.54917,Europe
-BLR,Bangalore,,India,3,13.1979,77.706299,Asia
-MAA,Chennai,,India,2,12.990005493164062,80.16929626464844,Asia
-HKG,Hong Kong,,China,3,22.308901,113.915001,Asia
-HYD,Hyderabad,,India,4,17.231318,78.429855,Asia
-CCU,Kolkata,,India,1,22.654699325561523,88.44670104980469,Asia
-KUL,Kuala Lumpur,,Malaysia,2,2.745579957962,101.70999908447,Asia
-BOM,Mumbai,,India,3,19.0886993408,72.8678970337,Asia
-MNL,Manila,,Philippines,1,14.5086,121.019997,Asia
-DEL,New Delhi,,India,4,28.5665,77.103104,Asia
-KIX,Osaka,,Japan,1,34.42729949951172,135.24400329589844,Asia
-ICN,Seoul,,South Korea,4,37.46910095214844,126.45099639892578,Asia
-SIN,Singapore,,Singapore,4,1.35019,103.994003,Asia
-TPE,Taipei,,Taiwan,3,25.0777,121.233002,Asia
-NRT,Tokyo,,Japan,16,35.7647018433,140.386001587,Asia
-MEL,Melbourne,,Australia,1,-37.673302,144.843002,Australia
-PER,Perth,,Australia,1,-31.94029998779297,115.96700286865234,Australia
-SYD,Sydney,,Australia,4,-33.94609832763672,151.177001953125,Australia
-BOG,Bogota,,Colombia,1,4.70159,-74.1469,South America
-EZE,Buenos Aires,,Argentina,1,-34.8222,-58.5358,South America
-GIG,Rio de Janeiro,,Brazil,2,-22.8099994659,-43.2505569458,South America
-SCL,Santiago,,Chile,1,-33.393001556396484,-70.78579711914062,South America
-GRU,Sao Paulo,,Brazil,2,-23.435556,-46.473056,South America
-DXB,Dubai,,United Arab Emirates,1,25.2527999878,55.3643989563,Middle East
-FJR,Fujairah,,United Arab Emirates,1,25.112222,56.324167,Middle East
-BAH,Manama,,Bahrain,1,26.27079963684082,50.63359832763672,Middle East
-TLV,Tel Aviv,,Israel,1,32.01139831542969,34.88669967651367,Middle East
-CPT,Cape Town,,South Africa,1,-33.9648017883,18.6016998291,Africa
-JNB,Johannesburg,,South Africa,1,-26.1392,28.246,Africa
-NBO,Nairobi,,Kenya,1,-1.31923997402,36.9277992249,Africa
-PEK,Beijing,,China,1,40.080101013183594,116.58499908447266,China
-SZX,Shenzhen,,China,1,22.639299392700195,113.81099700927734,China
-PVG,Shanghai,,China,1,31.143400192260742,121.80500030517578,China
-ZHY,Zhongwei,,China,1,37.572778,105.154444,China
+code,city,state,country,country_code,count,latitude,longitude,region
+IAD,Ashburn,Virginia,United States,US,6,38.9445,-77.4558029,North America
+ATL,Atlanta,Georgia,United States,US,6,33.6367,-84.428101,North America
+BOS,Boston,Massachusetts,United States,US,3,42.36429977,-71.00520325,North America
+ORD,Chicago,Illinois,United States,US,6,41.978611,-87.904722,North America
+DFW,Dallas/Fort Worth,Texas,United States,US,6,32.896801,-97.038002,North America
+DEN,Denver,Colorado,United States,US,2,39.861698150635,-104.672996521,North America
+HWD,Hayward,California,United States,US,1,37.658889,-122.121667,North America
+HIO,Hillsboro,Oregon,United States,US,3,45.540394,-122.949825,North America
+HOU,Houston,Texas,United States,US,4,29.64539909,-95.27890015,North America
+JAX,Jacksonville,Florida,United States,US,1,30.49410057067871,-81.68789672851562,North America
+LAX,Los Angeles,California,United States,US,5,33.942501,-118.407997,North America
+MIA,Miami,Florida,United States,US,4,25.79319953918457,-80.29060363769531,North America
+MSP,Minneapolis,Minnesota,United States,US,1,44.882,-93.221802,North America
+YUL,Montreal,Quebec,Canada,CA,1,45.470556,-73.740833,North America
+JFK,New York,New York,United States,US,2,40.639801,-73.7789,North America
+EWR,Newark,New Jersey,United States,US,7,40.692501068115234,-74.168701171875,North America
+PAO,Palo Alto,California,United States,US,1,37.461111,-122.115,North America
+PHL,Philadelphia,Pennsylvania,United States,US,2,39.87189865112305,-75.24109649658203,North America
+PHX,Phoenix,Arizona,United States,US,2,33.43429946899414,-112.01200103759766,North America
+SLC,Salt Lake City,Utah,United States,US,1,40.78839874267578,-111.97799682617188,North America
+SJC,San Jose,California,United States,US,2,37.362598,-121.929001,North America
+SEA,Seattle,Washington,United States,US,3,47.448889,-122.309444,North America
+YTO,Toronto,Ontario,Canada,CA,2,43.6772003174,-79.63059997559999,North America
+AMS,Amsterdam,,The Netherlands,NL,2,52.308601,4.76389,Europe
+ATH,Athens,,Greece,GR,1,37.9364013672,23.9444999695,Europe
+TXL,Berlin,,Germany,DE,2,52.559722,13.287778,Europe
+BRU,Brussels,,Belgium,BE,1,50.901401519800004,4.48443984985,Europe
+OTP,Bucharest,,Romania,RO,1,44.5711111,26.085,Europe
+BUD,Budapest,,Hungary,HU,1,47.42976,19.261093,Europe
+CPH,Copenhagen,,Denmark,DK,1,55.617900848389,12.656000137329,Europe
+DUB,Dublin,,Ireland,IE,1,53.421299,-6.27007,Europe
+DUS,Dusseldorf,,Germany,DE,1,51.289501,6.76678,Europe
+FRA,Frankfurt am Main,,Germany,DE,10,50.033333,8.570556,Europe
+HAM,Hamburg,,Germany,DE,1,53.630401611328,9.9882297515869,Europe
+HEL,Helsinki,,Finland,FI,1,60.317199707031,24.963300704956,Europe
+LIS,Lisbon,,Portugal,PT,1,38.7813,-9.13592,Europe
+LHR,London,,England,GB,9,51.4775,-0.461389,Europe
+MAD,Madrid,,Spain,ES,2,40.471926,-3.56264,Europe
+MAN,Manchester,,England,GB,2,53.35369873046875,-2.2749500274658203,Europe
+MRS,Marseille,,France,FR,1,43.439271922,5.22142410278,Europe
+MXP,Milan,,Italy,IT,3,45.6306,8.72811,Europe
+MUC,Munich,,Germany,DE,2,48.353802,11.7861,Europe
+OSL,Oslo,,Norway,NO,1,60.193901062012,11.100399971008,Europe
+PMO,Palermo,,Italy,IT,1,38.175999,13.091,Europe
+CDG,Paris,,France,FR,5,49.012798,2.55,Europe
+PRG,Prague,,Czech Republic,CZ,1,50.1008,14.26,Europe
+FCO,Rome,,Italy,IT,1,41.8002778,12.2388889,Europe
+SOF,Sofia,,Bulgaria,BG,1,42.696693420410156,23.411436080932617,Europe
+ARN,Stockholm,,Sweden,SE,3,59.651901245117,17.918600082397,Europe
+VIE,Vienna,,Austria,AT,1,48.110298156738,16.569700241089,Europe
+WMI,Warsaw,,Poland,PL,1,52.451099,20.6518,Europe
+ZRH,Zurich,,Switzerland,CH,2,47.464699,8.54917,Europe
+BLR,Bangalore,,India,IN,3,13.1979,77.706299,Asia
+MAA,Chennai,,India,IN,2,12.990005493164062,80.16929626464844,Asia
+HKG,Hong Kong,,China,HK,3,22.308901,113.915001,Asia
+HYD,Hyderabad,,India,IN,4,17.231318,78.429855,Asia
+CCU,Kolkata,,India,IN,1,22.654699325561523,88.44670104980469,Asia
+KUL,Kuala Lumpur,,Malaysia,MY,2,2.745579957962,101.70999908447,Asia
+BOM,Mumbai,,India,IN,3,19.0886993408,72.8678970337,Asia
+MNL,Manila,,Philippines,PH,1,14.5086,121.019997,Asia
+DEL,New Delhi,,India,IN,4,28.5665,77.103104,Asia
+KIX,Osaka,,Japan,JP,1,34.42729949951172,135.24400329589844,Asia
+ICN,Seoul,,South Korea,KR,4,37.46910095214844,126.45099639892578,Asia
+SIN,Singapore,,Singapore,SG,4,1.35019,103.994003,Asia
+TPE,Taipei,,Taiwan,TW,3,25.0777,121.233002,Asia
+NRT,Tokyo,,Japan,JP,16,35.7647018433,140.386001587,Asia
+MEL,Melbourne,,Australia,AU,1,-37.673302,144.843002,Australia
+PER,Perth,,Australia,AU,1,-31.94029998779297,115.96700286865234,Australia
+SYD,Sydney,,Australia,AU,4,-33.94609832763672,151.177001953125,Australia
+BOG,Bogota,,Colombia,CO,1,4.70159,-74.1469,South America
+EZE,Buenos Aires,,Argentina,AR,1,-34.8222,-58.5358,South America
+GIG,Rio de Janeiro,,Brazil,BR,2,-22.8099994659,-43.2505569458,South America
+SCL,Santiago,,Chile,CL,1,-33.393001556396484,-70.78579711914062,South America
+GRU,Sao Paulo,,Brazil,BR,2,-23.435556,-46.473056,South America
+DXB,Dubai,,United Arab Emirates,AE,1,25.2527999878,55.3643989563,Middle East
+FJR,Fujairah,,United Arab Emirates,AE,1,25.112222,56.324167,Middle East
+BAH,Manama,,Bahrain,BH,1,26.27079963684082,50.63359832763672,Middle East
+TLV,Tel Aviv,,Israel,IL,1,32.01139831542969,34.88669967651367,Middle East
+CPT,Cape Town,,South Africa,ZA,1,-33.9648017883,18.6016998291,Africa
+JNB,Johannesburg,,South Africa,ZA,1,-26.1392,28.246,Africa
+NBO,Nairobi,,Kenya,KE,1,-1.31923997402,36.9277992249,Africa
+PEK,Beijing,,China,CN,1,40.080101013183594,116.58499908447266,China
+SZX,Shenzhen,,China,CN,1,22.639299392700195,113.81099700927734,China
+PVG,Shanghai,,China,CN,1,31.143400192260742,121.80500030517578,China
+ZHY,Zhongwei,,China,CN,1,37.572778,105.154444,China
 ```
 
 ### JSON lookup
@@ -196,6 +189,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Ashburn",
     "state": "Virginia",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 38.9445,
     "longitude": -77.4558029,
@@ -205,6 +199,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Atlanta",
     "state": "Georgia",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 33.6367,
     "longitude": -84.428101,
@@ -214,6 +209,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Boston",
     "state": "Massachusetts",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 42.36429977,
     "longitude": -71.00520325,
@@ -223,6 +219,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Chicago",
     "state": "Illinois",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 41.978611,
     "longitude": -87.904722,
@@ -232,6 +229,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Dallas/Fort Worth",
     "state": "Texas",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 32.896801,
     "longitude": -97.038002,
@@ -241,6 +239,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Denver",
     "state": "Colorado",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 39.861698150635,
     "longitude": -104.672996521,
@@ -250,6 +249,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Hayward",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 37.658889,
     "longitude": -122.121667,
@@ -259,6 +259,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Hillsboro",
     "state": "Oregon",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 45.540394,
     "longitude": -122.949825,
@@ -268,6 +269,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Houston",
     "state": "Texas",
     "country": "United States",
+    "countryCode": "US",
     "count": 4,
     "latitude": 29.64539909,
     "longitude": -95.27890015,
@@ -277,6 +279,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Jacksonville",
     "state": "Florida",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 30.49410057067871,
     "longitude": -81.68789672851562,
@@ -286,6 +289,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Los Angeles",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 5,
     "latitude": 33.942501,
     "longitude": -118.407997,
@@ -295,6 +299,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Miami",
     "state": "Florida",
     "country": "United States",
+    "countryCode": "US",
     "count": 4,
     "latitude": 25.79319953918457,
     "longitude": -80.29060363769531,
@@ -304,6 +309,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Minneapolis",
     "state": "Minnesota",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 44.882,
     "longitude": -93.221802,
@@ -313,6 +319,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Montreal",
     "state": "Quebec",
     "country": "Canada",
+    "countryCode": "CA",
     "count": 1,
     "latitude": 45.470556,
     "longitude": -73.740833,
@@ -322,6 +329,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "New York",
     "state": "New York",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 40.639801,
     "longitude": -73.7789,
@@ -331,6 +339,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Newark",
     "state": "New Jersey",
     "country": "United States",
+    "countryCode": "US",
     "count": 7,
     "latitude": 40.692501068115234,
     "longitude": -74.168701171875,
@@ -340,6 +349,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Palo Alto",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 37.461111,
     "longitude": -122.115,
@@ -349,6 +359,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Philadelphia",
     "state": "Pennsylvania",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 39.87189865112305,
     "longitude": -75.24109649658203,
@@ -358,6 +369,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Phoenix",
     "state": "Arizona",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 33.43429946899414,
     "longitude": -112.01200103759766,
@@ -367,6 +379,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Salt Lake City",
     "state": "Utah",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 40.78839874267578,
     "longitude": -111.97799682617188,
@@ -376,6 +389,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "San Jose",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 37.362598,
     "longitude": -121.929001,
@@ -385,6 +399,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Seattle",
     "state": "Washington",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 47.448889,
     "longitude": -122.309444,
@@ -394,6 +409,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Toronto",
     "state": "Ontario",
     "country": "Canada",
+    "countryCode": "CA",
     "count": 2,
     "latitude": 43.6772003174,
     "longitude": -79.63059997559999,
@@ -402,6 +418,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "AMS": {
     "city": "Amsterdam",
     "country": "The Netherlands",
+    "countryCode": "NL",
     "count": 2,
     "latitude": 52.308601,
     "longitude": 4.76389,
@@ -410,6 +427,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "ATH": {
     "city": "Athens",
     "country": "Greece",
+    "countryCode": "GR",
     "count": 1,
     "latitude": 37.9364013672,
     "longitude": 23.9444999695,
@@ -418,6 +436,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "TXL": {
     "city": "Berlin",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 2,
     "latitude": 52.559722,
     "longitude": 13.287778,
@@ -426,6 +445,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BRU": {
     "city": "Brussels",
     "country": "Belgium",
+    "countryCode": "BE",
     "count": 1,
     "latitude": 50.901401519800004,
     "longitude": 4.48443984985,
@@ -434,6 +454,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "OTP": {
     "city": "Bucharest",
     "country": "Romania",
+    "countryCode": "RO",
     "count": 1,
     "latitude": 44.5711111,
     "longitude": 26.085,
@@ -442,6 +463,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BUD": {
     "city": "Budapest",
     "country": "Hungary",
+    "countryCode": "HU",
     "count": 1,
     "latitude": 47.42976,
     "longitude": 19.261093,
@@ -450,6 +472,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
+    "countryCode": "DK",
     "count": 1,
     "latitude": 55.617900848389,
     "longitude": 12.656000137329,
@@ -458,6 +481,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "DUB": {
     "city": "Dublin",
     "country": "Ireland",
+    "countryCode": "IE",
     "count": 1,
     "latitude": 53.421299,
     "longitude": -6.27007,
@@ -466,6 +490,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "DUS": {
     "city": "Dusseldorf",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 1,
     "latitude": 51.289501,
     "longitude": 6.76678,
@@ -474,6 +499,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "FRA": {
     "city": "Frankfurt am Main",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
@@ -482,6 +508,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "HAM": {
     "city": "Hamburg",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 1,
     "latitude": 53.630401611328,
     "longitude": 9.9882297515869,
@@ -490,6 +517,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "HEL": {
     "city": "Helsinki",
     "country": "Finland",
+    "countryCode": "FI",
     "count": 1,
     "latitude": 60.317199707031,
     "longitude": 24.963300704956,
@@ -498,6 +526,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "LIS": {
     "city": "Lisbon",
     "country": "Portugal",
+    "countryCode": "PT",
     "count": 1,
     "latitude": 38.7813,
     "longitude": -9.13592,
@@ -506,6 +535,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "LHR": {
     "city": "London",
     "country": "England",
+    "countryCode": "GB",
     "count": 9,
     "latitude": 51.4775,
     "longitude": -0.461389,
@@ -514,6 +544,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MAD": {
     "city": "Madrid",
     "country": "Spain",
+    "countryCode": "ES",
     "count": 2,
     "latitude": 40.471926,
     "longitude": -3.56264,
@@ -522,6 +553,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MAN": {
     "city": "Manchester",
     "country": "England",
+    "countryCode": "GB",
     "count": 2,
     "latitude": 53.35369873046875,
     "longitude": -2.2749500274658203,
@@ -530,6 +562,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MRS": {
     "city": "Marseille",
     "country": "France",
+    "countryCode": "FR",
     "count": 1,
     "latitude": 43.439271922,
     "longitude": 5.22142410278,
@@ -538,6 +571,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MXP": {
     "city": "Milan",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 3,
     "latitude": 45.6306,
     "longitude": 8.72811,
@@ -546,6 +580,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MUC": {
     "city": "Munich",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 2,
     "latitude": 48.353802,
     "longitude": 11.7861,
@@ -554,6 +589,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "OSL": {
     "city": "Oslo",
     "country": "Norway",
+    "countryCode": "NO",
     "count": 1,
     "latitude": 60.193901062012,
     "longitude": 11.100399971008,
@@ -562,6 +598,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "PMO": {
     "city": "Palermo",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 1,
     "latitude": 38.175999,
     "longitude": 13.091,
@@ -570,6 +607,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "CDG": {
     "city": "Paris",
     "country": "France",
+    "countryCode": "FR",
     "count": 5,
     "latitude": 49.012798,
     "longitude": 2.55,
@@ -578,6 +616,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "PRG": {
     "city": "Prague",
     "country": "Czech Republic",
+    "countryCode": "CZ",
     "count": 1,
     "latitude": 50.1008,
     "longitude": 14.26,
@@ -586,6 +625,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "FCO": {
     "city": "Rome",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 1,
     "latitude": 41.8002778,
     "longitude": 12.2388889,
@@ -594,6 +634,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "SOF": {
     "city": "Sofia",
     "country": "Bulgaria",
+    "countryCode": "BG",
     "count": 1,
     "latitude": 42.696693420410156,
     "longitude": 23.411436080932617,
@@ -602,6 +643,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "ARN": {
     "city": "Stockholm",
     "country": "Sweden",
+    "countryCode": "SE",
     "count": 3,
     "latitude": 59.651901245117,
     "longitude": 17.918600082397,
@@ -610,6 +652,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "VIE": {
     "city": "Vienna",
     "country": "Austria",
+    "countryCode": "AT",
     "count": 1,
     "latitude": 48.110298156738,
     "longitude": 16.569700241089,
@@ -618,6 +661,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "WMI": {
     "city": "Warsaw",
     "country": "Poland",
+    "countryCode": "PL",
     "count": 1,
     "latitude": 52.451099,
     "longitude": 20.6518,
@@ -626,6 +670,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "ZRH": {
     "city": "Zurich",
     "country": "Switzerland",
+    "countryCode": "CH",
     "count": 2,
     "latitude": 47.464699,
     "longitude": 8.54917,
@@ -634,6 +679,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BLR": {
     "city": "Bangalore",
     "country": "India",
+    "countryCode": "IN",
     "count": 3,
     "latitude": 13.1979,
     "longitude": 77.706299,
@@ -642,6 +688,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MAA": {
     "city": "Chennai",
     "country": "India",
+    "countryCode": "IN",
     "count": 2,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
@@ -650,6 +697,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "HKG": {
     "city": "Hong Kong",
     "country": "China",
+    "countryCode": "HK",
     "count": 3,
     "latitude": 22.308901,
     "longitude": 113.915001,
@@ -658,6 +706,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "HYD": {
     "city": "Hyderabad",
     "country": "India",
+    "countryCode": "IN",
     "count": 4,
     "latitude": 17.231318,
     "longitude": 78.429855,
@@ -666,6 +715,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "CCU": {
     "city": "Kolkata",
     "country": "India",
+    "countryCode": "IN",
     "count": 1,
     "latitude": 22.654699325561523,
     "longitude": 88.44670104980469,
@@ -674,6 +724,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "KUL": {
     "city": "Kuala Lumpur",
     "country": "Malaysia",
+    "countryCode": "MY",
     "count": 2,
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
@@ -682,6 +733,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BOM": {
     "city": "Mumbai",
     "country": "India",
+    "countryCode": "IN",
     "count": 3,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
@@ -690,6 +742,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MNL": {
     "city": "Manila",
     "country": "Philippines",
+    "countryCode": "PH",
     "count": 1,
     "latitude": 14.5086,
     "longitude": 121.019997,
@@ -698,6 +751,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "DEL": {
     "city": "New Delhi",
     "country": "India",
+    "countryCode": "IN",
     "count": 4,
     "latitude": 28.5665,
     "longitude": 77.103104,
@@ -706,6 +760,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "KIX": {
     "city": "Osaka",
     "country": "Japan",
+    "countryCode": "JP",
     "count": 1,
     "latitude": 34.42729949951172,
     "longitude": 135.24400329589844,
@@ -714,6 +769,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "ICN": {
     "city": "Seoul",
     "country": "South Korea",
+    "countryCode": "KR",
     "count": 4,
     "latitude": 37.46910095214844,
     "longitude": 126.45099639892578,
@@ -722,6 +778,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "SIN": {
     "city": "Singapore",
     "country": "Singapore",
+    "countryCode": "SG",
     "count": 4,
     "latitude": 1.35019,
     "longitude": 103.994003,
@@ -730,6 +787,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "TPE": {
     "city": "Taipei",
     "country": "Taiwan",
+    "countryCode": "TW",
     "count": 3,
     "latitude": 25.0777,
     "longitude": 121.233002,
@@ -738,6 +796,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "NRT": {
     "city": "Tokyo",
     "country": "Japan",
+    "countryCode": "JP",
     "count": 16,
     "latitude": 35.7647018433,
     "longitude": 140.386001587,
@@ -746,6 +805,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "MEL": {
     "city": "Melbourne",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 1,
     "latitude": -37.673302,
     "longitude": 144.843002,
@@ -754,6 +814,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "PER": {
     "city": "Perth",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 1,
     "latitude": -31.94029998779297,
     "longitude": 115.96700286865234,
@@ -762,6 +823,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "SYD": {
     "city": "Sydney",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 4,
     "latitude": -33.94609832763672,
     "longitude": 151.177001953125,
@@ -770,6 +832,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BOG": {
     "city": "Bogota",
     "country": "Colombia",
+    "countryCode": "CO",
     "count": 1,
     "latitude": 4.70159,
     "longitude": -74.1469,
@@ -778,6 +841,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "EZE": {
     "city": "Buenos Aires",
     "country": "Argentina",
+    "countryCode": "AR",
     "count": 1,
     "latitude": -34.8222,
     "longitude": -58.5358,
@@ -786,6 +850,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "GIG": {
     "city": "Rio de Janeiro",
     "country": "Brazil",
+    "countryCode": "BR",
     "count": 2,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
@@ -794,6 +859,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "SCL": {
     "city": "Santiago",
     "country": "Chile",
+    "countryCode": "CL",
     "count": 1,
     "latitude": -33.393001556396484,
     "longitude": -70.78579711914062,
@@ -802,6 +868,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "GRU": {
     "city": "Sao Paulo",
     "country": "Brazil",
+    "countryCode": "BR",
     "count": 2,
     "latitude": -23.435556,
     "longitude": -46.473056,
@@ -810,6 +877,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "DXB": {
     "city": "Dubai",
     "country": "United Arab Emirates",
+    "countryCode": "AE",
     "count": 1,
     "latitude": 25.2527999878,
     "longitude": 55.3643989563,
@@ -818,6 +886,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "FJR": {
     "city": "Fujairah",
     "country": "United Arab Emirates",
+    "countryCode": "AE",
     "count": 1,
     "latitude": 25.112222,
     "longitude": 56.324167,
@@ -826,6 +895,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "BAH": {
     "city": "Manama",
     "country": "Bahrain",
+    "countryCode": "BH",
     "count": 1,
     "latitude": 26.27079963684082,
     "longitude": 50.63359832763672,
@@ -834,6 +904,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "TLV": {
     "city": "Tel Aviv",
     "country": "Israel",
+    "countryCode": "IL",
     "count": 1,
     "latitude": 32.01139831542969,
     "longitude": 34.88669967651367,
@@ -842,6 +913,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "CPT": {
     "city": "Cape Town",
     "country": "South Africa",
+    "countryCode": "ZA",
     "count": 1,
     "latitude": -33.9648017883,
     "longitude": 18.6016998291,
@@ -850,6 +922,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "JNB": {
     "city": "Johannesburg",
     "country": "South Africa",
+    "countryCode": "ZA",
     "count": 1,
     "latitude": -26.1392,
     "longitude": 28.246,
@@ -858,6 +931,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "NBO": {
     "city": "Nairobi",
     "country": "Kenya",
+    "countryCode": "KE",
     "count": 1,
     "latitude": -1.31923997402,
     "longitude": 36.9277992249,
@@ -866,6 +940,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "PEK": {
     "city": "Beijing",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 40.080101013183594,
     "longitude": 116.58499908447266,
@@ -874,6 +949,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "SZX": {
     "city": "Shenzhen",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 22.639299392700195,
     "longitude": 113.81099700927734,
@@ -882,6 +958,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "PVG": {
     "city": "Shanghai",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 31.143400192260742,
     "longitude": 121.80500030517578,
@@ -890,6 +967,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
   "ZHY": {
     "city": "Zhongwei",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 37.572778,
     "longitude": 105.154444,

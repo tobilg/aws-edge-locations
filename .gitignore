@@ -64,3 +64,5 @@ typings/
 data/
 
 .DS_Store
+
+umd/

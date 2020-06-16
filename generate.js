@@ -12,86 +12,103 @@ const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'lar
 const airportOverridesData = {
     "dusseldorf": {
         "code": "DUS",
+        "countryCode": "DE",
         "latitude": 51.289501, 
         "longitude": 6.76678
     },
     "zhongwei": {
         "code": "ZHY",
+        "countryCode": "CN",
         "latitude": 37.572778,
         "longitude": 105.154444
     },
     "toronto": {
         "code": "YTO",
+        "countryCode": "CA",
         "latitude": 43.6772003174,
         "longitude": -79.63059997559999
     },
     "fujairah": {
         "code": "FJR",
+        "countryCode": "AE",
         "latitude": 25.112222,
         "longitude": 56.324167
     },
     "ashburn": {
         "code": "IAD",
+        "countryCode": "US",
         "latitude": 38.9445,
         "longitude": -77.4558029,
     },
     "dallas/fort worth": {
         "code": "DFW",
+        "countryCode": "US",
         "latitude": 32.896801,
         "longitude": -97.038002
     },
     "hayward": {
         "code": "HWD",
+        "countryCode": "US",
         "latitude": 37.658889,
         "longitude": -122.121667
     },
     "hillsboro": {
         "code": "HIO",
+        "countryCode": "US",
         "latitude": 45.540394,
         "longitude": -122.949825
     },
     "montreal": {
         "code": "YUL",
+        "countryCode": "CA",
         "latitude": 45.470556,
         "longitude": -73.740833
     },
     "palo alto": {
         "code": "PAO",
+        "countryCode": "US",
         "latitude": 37.461111,
         "longitude": -122.115
     },
     "seattle": {
         "code": "SEA",
+        "countryCode": "US",
         "latitude": 47.448889,
         "longitude": -122.309444
     },
     "london": {
         "code": "LHR",
+        "countryCode": "GB",
         "latitude": 51.4775,
         "longitude": -0.461389
     },
     "sao paulo": {
         "code": "GRU",
+        "countryCode": "BR",
         "latitude": -23.435556,
         "longitude": -46.473056
     },
     "berlin": {
         "code": "TXL",
+        "countryCode": "DE",
         "latitude": 52.559722,
         "longitude": 13.287778
     },
     "south bend": {
         "code": "IND",
+        "countryCode": "US",
         "latitude": 39.7173004,
         "longitude": -86.2944031
     },
     "chicago": {
         "code": "ORD",
+        "countryCode": "US",
         "latitude": 41.978611,
         "longitude": -87.904722
     },
     "rome": {
         "code": "FCO",
+        "countryCode": "IT",
         "latitude": 41.8002778,
         "longitude": 12.2388889
     }
@@ -99,9 +116,9 @@ const airportOverridesData = {
 
 const writeCSV = locations => {
     const csvPath = path.join(__dirname, 'dist', 'aws-edge-locations.csv');
-    const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.count},${e.latitude},${e.longitude},${e.region}` });
+    const data = locations.map(e => { return `${e.code},${e.city},${e.state || ''},${e.country},${e.countryCode},${e.count},${e.latitude},${e.longitude},${e.region}` });
     // Add header
-    data.unshift('code,city,state,country,count,latitude,longitude,region');
+    data.unshift('code,city,state,country,country_code,count,latitude,longitude,region');
     fs.writeFileSync(csvPath, data.join(os.EOL), 'utf8');
 }
 
@@ -113,6 +130,7 @@ const writeJSON = locations => {
             city: location.city,
             state: location.state,
             country: location.country,
+            countryCode: location.countryCode,
             count: location.count,
             latitude: location.latitude,
             longitude: location.longitude,
@@ -226,9 +244,7 @@ const run = async () => {
         const regions = extractRegions();
 
         let locations = [];
-        let caches = [];
         const edgeLocations = [];
-        const edgeCaches = [];
 
         // Extraction / categorization
         result.forEach(r => {
@@ -326,10 +342,12 @@ const run = async () => {
         if (airportOverridesData.hasOwnProperty(location.city.toLowerCase())) {
             const overrideData = airportOverridesData[location.city.toLowerCase()];
             location.code = overrideData.code;
+            location.countryCode = overrideData.countryCode;
             location.latitude = overrideData.latitude;
             location.longitude = overrideData.longitude;
         } else if (airport) {
             location.code = airport.iata_code;
+            location.countryCode = airport.iso_country;
             const coordinate = airport.coordinates.split(', ');
             location.latitude = parseFloat(coordinate[1]);
             location.longitude = parseFloat(coordinate[0]);

@@ -3,6 +3,7 @@
     "city": "Ashburn",
     "state": "Virginia",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 38.9445,
     "longitude": -77.4558029,
@@ -12,6 +13,7 @@
     "city": "Atlanta",
     "state": "Georgia",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 33.6367,
     "longitude": -84.428101,
@@ -21,6 +23,7 @@
     "city": "Boston",
     "state": "Massachusetts",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 42.36429977,
     "longitude": -71.00520325,
@@ -30,6 +33,7 @@
     "city": "Chicago",
     "state": "Illinois",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 41.978611,
     "longitude": -87.904722,
@@ -39,6 +43,7 @@
     "city": "Dallas/Fort Worth",
     "state": "Texas",
     "country": "United States",
+    "countryCode": "US",
     "count": 6,
     "latitude": 32.896801,
     "longitude": -97.038002,
@@ -48,6 +53,7 @@
     "city": "Denver",
     "state": "Colorado",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 39.861698150635,
     "longitude": -104.672996521,
@@ -57,6 +63,7 @@
     "city": "Hayward",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 37.658889,
     "longitude": -122.121667,
@@ -66,6 +73,7 @@
     "city": "Hillsboro",
     "state": "Oregon",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 45.540394,
     "longitude": -122.949825,
@@ -75,6 +83,7 @@
     "city": "Houston",
     "state": "Texas",
     "country": "United States",
+    "countryCode": "US",
     "count": 4,
     "latitude": 29.64539909,
     "longitude": -95.27890015,
@@ -84,6 +93,7 @@
     "city": "Jacksonville",
     "state": "Florida",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 30.49410057067871,
     "longitude": -81.68789672851562,
@@ -93,6 +103,7 @@
     "city": "Los Angeles",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 5,
     "latitude": 33.942501,
     "longitude": -118.407997,
@@ -102,6 +113,7 @@
     "city": "Miami",
     "state": "Florida",
     "country": "United States",
+    "countryCode": "US",
     "count": 4,
     "latitude": 25.79319953918457,
     "longitude": -80.29060363769531,
@@ -111,6 +123,7 @@
     "city": "Minneapolis",
     "state": "Minnesota",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 44.882,
     "longitude": -93.221802,
@@ -120,6 +133,7 @@
     "city": "Montreal",
     "state": "Quebec",
     "country": "Canada",
+    "countryCode": "CA",
     "count": 1,
     "latitude": 45.470556,
     "longitude": -73.740833,
@@ -129,6 +143,7 @@
     "city": "New York",
     "state": "New York",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 40.639801,
     "longitude": -73.7789,
@@ -138,6 +153,7 @@
     "city": "Newark",
     "state": "New Jersey",
     "country": "United States",
+    "countryCode": "US",
     "count": 7,
     "latitude": 40.692501068115234,
     "longitude": -74.168701171875,
@@ -147,6 +163,7 @@
     "city": "Palo Alto",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 37.461111,
     "longitude": -122.115,
@@ -156,6 +173,7 @@
     "city": "Philadelphia",
     "state": "Pennsylvania",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 39.87189865112305,
     "longitude": -75.24109649658203,
@@ -165,6 +183,7 @@
     "city": "Phoenix",
     "state": "Arizona",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 33.43429946899414,
     "longitude": -112.01200103759766,
@@ -174,6 +193,7 @@
     "city": "Salt Lake City",
     "state": "Utah",
     "country": "United States",
+    "countryCode": "US",
     "count": 1,
     "latitude": 40.78839874267578,
     "longitude": -111.97799682617188,
@@ -183,6 +203,7 @@
     "city": "San Jose",
     "state": "California",
     "country": "United States",
+    "countryCode": "US",
     "count": 2,
     "latitude": 37.362598,
     "longitude": -121.929001,
@@ -192,6 +213,7 @@
     "city": "Seattle",
     "state": "Washington",
     "country": "United States",
+    "countryCode": "US",
     "count": 3,
     "latitude": 47.448889,
     "longitude": -122.309444,
@@ -201,6 +223,7 @@
     "city": "Toronto",
     "state": "Ontario",
     "country": "Canada",
+    "countryCode": "CA",
     "count": 2,
     "latitude": 43.6772003174,
     "longitude": -79.63059997559999,
@@ -209,6 +232,7 @@
   "AMS": {
     "city": "Amsterdam",
     "country": "The Netherlands",
+    "countryCode": "NL",
     "count": 2,
     "latitude": 52.308601,
     "longitude": 4.76389,
@@ -217,6 +241,7 @@
   "ATH": {
     "city": "Athens",
     "country": "Greece",
+    "countryCode": "GR",
     "count": 1,
     "latitude": 37.9364013672,
     "longitude": 23.9444999695,
@@ -225,6 +250,7 @@
   "TXL": {
     "city": "Berlin",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 2,
     "latitude": 52.559722,
     "longitude": 13.287778,
@@ -233,6 +259,7 @@
   "BRU": {
     "city": "Brussels",
     "country": "Belgium",
+    "countryCode": "BE",
     "count": 1,
     "latitude": 50.901401519800004,
     "longitude": 4.48443984985,
@@ -241,6 +268,7 @@
   "OTP": {
     "city": "Bucharest",
     "country": "Romania",
+    "countryCode": "RO",
     "count": 1,
     "latitude": 44.5711111,
     "longitude": 26.085,
@@ -249,6 +277,7 @@
   "BUD": {
     "city": "Budapest",
     "country": "Hungary",
+    "countryCode": "HU",
     "count": 1,
     "latitude": 47.42976,
     "longitude": 19.261093,
@@ -257,6 +286,7 @@
   "CPH": {
     "city": "Copenhagen",
     "country": "Denmark",
+    "countryCode": "DK",
     "count": 1,
     "latitude": 55.617900848389,
     "longitude": 12.656000137329,
@@ -265,6 +295,7 @@
   "DUB": {
     "city": "Dublin",
     "country": "Ireland",
+    "countryCode": "IE",
     "count": 1,
     "latitude": 53.421299,
     "longitude": -6.27007,
@@ -273,6 +304,7 @@
   "DUS": {
     "city": "Dusseldorf",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 1,
     "latitude": 51.289501,
     "longitude": 6.76678,
@@ -281,6 +313,7 @@
   "FRA": {
     "city": "Frankfurt am Main",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
@@ -289,6 +322,7 @@
   "HAM": {
     "city": "Hamburg",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 1,
     "latitude": 53.630401611328,
     "longitude": 9.9882297515869,
@@ -297,6 +331,7 @@
   "HEL": {
     "city": "Helsinki",
     "country": "Finland",
+    "countryCode": "FI",
     "count": 1,
     "latitude": 60.317199707031,
     "longitude": 24.963300704956,
@@ -305,6 +340,7 @@
   "LIS": {
     "city": "Lisbon",
     "country": "Portugal",
+    "countryCode": "PT",
     "count": 1,
     "latitude": 38.7813,
     "longitude": -9.13592,
@@ -313,6 +349,7 @@
   "LHR": {
     "city": "London",
     "country": "England",
+    "countryCode": "GB",
     "count": 9,
     "latitude": 51.4775,
     "longitude": -0.461389,
@@ -321,6 +358,7 @@
   "MAD": {
     "city": "Madrid",
     "country": "Spain",
+    "countryCode": "ES",
     "count": 2,
     "latitude": 40.471926,
     "longitude": -3.56264,
@@ -329,6 +367,7 @@
   "MAN": {
     "city": "Manchester",
     "country": "England",
+    "countryCode": "GB",
     "count": 2,
     "latitude": 53.35369873046875,
     "longitude": -2.2749500274658203,
@@ -337,6 +376,7 @@
   "MRS": {
     "city": "Marseille",
     "country": "France",
+    "countryCode": "FR",
     "count": 1,
     "latitude": 43.439271922,
     "longitude": 5.22142410278,
@@ -345,6 +385,7 @@
   "MXP": {
     "city": "Milan",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 3,
     "latitude": 45.6306,
     "longitude": 8.72811,
@@ -353,6 +394,7 @@
   "MUC": {
     "city": "Munich",
     "country": "Germany",
+    "countryCode": "DE",
     "count": 2,
     "latitude": 48.353802,
     "longitude": 11.7861,
@@ -361,6 +403,7 @@
   "OSL": {
     "city": "Oslo",
     "country": "Norway",
+    "countryCode": "NO",
     "count": 1,
     "latitude": 60.193901062012,
     "longitude": 11.100399971008,
@@ -369,6 +412,7 @@
   "PMO": {
     "city": "Palermo",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 1,
     "latitude": 38.175999,
     "longitude": 13.091,
@@ -377,6 +421,7 @@
   "CDG": {
     "city": "Paris",
     "country": "France",
+    "countryCode": "FR",
     "count": 5,
     "latitude": 49.012798,
     "longitude": 2.55,
@@ -385,6 +430,7 @@
   "PRG": {
     "city": "Prague",
     "country": "Czech Republic",
+    "countryCode": "CZ",
     "count": 1,
     "latitude": 50.1008,
     "longitude": 14.26,
@@ -393,6 +439,7 @@
   "FCO": {
     "city": "Rome",
     "country": "Italy",
+    "countryCode": "IT",
     "count": 1,
     "latitude": 41.8002778,
     "longitude": 12.2388889,
@@ -401,6 +448,7 @@
   "SOF": {
     "city": "Sofia",
     "country": "Bulgaria",
+    "countryCode": "BG",
     "count": 1,
     "latitude": 42.696693420410156,
     "longitude": 23.411436080932617,
@@ -409,6 +457,7 @@
   "ARN": {
     "city": "Stockholm",
     "country": "Sweden",
+    "countryCode": "SE",
     "count": 3,
     "latitude": 59.651901245117,
     "longitude": 17.918600082397,
@@ -417,6 +466,7 @@
   "VIE": {
     "city": "Vienna",
     "country": "Austria",
+    "countryCode": "AT",
     "count": 1,
     "latitude": 48.110298156738,
     "longitude": 16.569700241089,
@@ -425,6 +475,7 @@
   "WMI": {
     "city": "Warsaw",
     "country": "Poland",
+    "countryCode": "PL",
     "count": 1,
     "latitude": 52.451099,
     "longitude": 20.6518,
@@ -433,6 +484,7 @@
   "ZRH": {
     "city": "Zurich",
     "country": "Switzerland",
+    "countryCode": "CH",
     "count": 2,
     "latitude": 47.464699,
     "longitude": 8.54917,
@@ -441,6 +493,7 @@
   "BLR": {
     "city": "Bangalore",
     "country": "India",
+    "countryCode": "IN",
     "count": 3,
     "latitude": 13.1979,
     "longitude": 77.706299,
@@ -449,6 +502,7 @@
   "MAA": {
     "city": "Chennai",
     "country": "India",
+    "countryCode": "IN",
     "count": 2,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
@@ -457,6 +511,7 @@
   "HKG": {
     "city": "Hong Kong",
     "country": "China",
+    "countryCode": "HK",
     "count": 3,
     "latitude": 22.308901,
     "longitude": 113.915001,
@@ -465,6 +520,7 @@
   "HYD": {
     "city": "Hyderabad",
     "country": "India",
+    "countryCode": "IN",
     "count": 4,
     "latitude": 17.231318,
     "longitude": 78.429855,
@@ -473,6 +529,7 @@
   "CCU": {
     "city": "Kolkata",
     "country": "India",
+    "countryCode": "IN",
     "count": 1,
     "latitude": 22.654699325561523,
     "longitude": 88.44670104980469,
@@ -481,6 +538,7 @@
   "KUL": {
     "city": "Kuala Lumpur",
     "country": "Malaysia",
+    "countryCode": "MY",
     "count": 2,
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
@@ -489,6 +547,7 @@
   "BOM": {
     "city": "Mumbai",
     "country": "India",
+    "countryCode": "IN",
     "count": 3,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
@@ -497,6 +556,7 @@
   "MNL": {
     "city": "Manila",
     "country": "Philippines",
+    "countryCode": "PH",
     "count": 1,
     "latitude": 14.5086,
     "longitude": 121.019997,
@@ -505,6 +565,7 @@
   "DEL": {
     "city": "New Delhi",
     "country": "India",
+    "countryCode": "IN",
     "count": 4,
     "latitude": 28.5665,
     "longitude": 77.103104,
@@ -513,6 +574,7 @@
   "KIX": {
     "city": "Osaka",
     "country": "Japan",
+    "countryCode": "JP",
     "count": 1,
     "latitude": 34.42729949951172,
     "longitude": 135.24400329589844,
@@ -521,6 +583,7 @@
   "ICN": {
     "city": "Seoul",
     "country": "South Korea",
+    "countryCode": "KR",
     "count": 4,
     "latitude": 37.46910095214844,
     "longitude": 126.45099639892578,
@@ -529,6 +592,7 @@
   "SIN": {
     "city": "Singapore",
     "country": "Singapore",
+    "countryCode": "SG",
     "count": 4,
     "latitude": 1.35019,
     "longitude": 103.994003,
@@ -537,6 +601,7 @@
   "TPE": {
     "city": "Taipei",
     "country": "Taiwan",
+    "countryCode": "TW",
     "count": 3,
     "latitude": 25.0777,
     "longitude": 121.233002,
@@ -545,6 +610,7 @@
   "NRT": {
     "city": "Tokyo",
     "country": "Japan",
+    "countryCode": "JP",
     "count": 16,
     "latitude": 35.7647018433,
     "longitude": 140.386001587,
@@ -553,6 +619,7 @@
   "MEL": {
     "city": "Melbourne",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 1,
     "latitude": -37.673302,
     "longitude": 144.843002,
@@ -561,6 +628,7 @@
   "PER": {
     "city": "Perth",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 1,
     "latitude": -31.94029998779297,
     "longitude": 115.96700286865234,
@@ -569,6 +637,7 @@
   "SYD": {
     "city": "Sydney",
     "country": "Australia",
+    "countryCode": "AU",
     "count": 4,
     "latitude": -33.94609832763672,
     "longitude": 151.177001953125,
@@ -577,6 +646,7 @@
   "BOG": {
     "city": "Bogota",
     "country": "Colombia",
+    "countryCode": "CO",
     "count": 1,
     "latitude": 4.70159,
     "longitude": -74.1469,
@@ -585,6 +655,7 @@
   "EZE": {
     "city": "Buenos Aires",
     "country": "Argentina",
+    "countryCode": "AR",
     "count": 1,
     "latitude": -34.8222,
     "longitude": -58.5358,
@@ -593,6 +664,7 @@
   "GIG": {
     "city": "Rio de Janeiro",
     "country": "Brazil",
+    "countryCode": "BR",
     "count": 2,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
@@ -601,6 +673,7 @@
   "SCL": {
     "city": "Santiago",
     "country": "Chile",
+    "countryCode": "CL",
     "count": 1,
     "latitude": -33.393001556396484,
     "longitude": -70.78579711914062,
@@ -609,6 +682,7 @@
   "GRU": {
     "city": "Sao Paulo",
     "country": "Brazil",
+    "countryCode": "BR",
     "count": 2,
     "latitude": -23.435556,
     "longitude": -46.473056,
@@ -617,6 +691,7 @@
   "DXB": {
     "city": "Dubai",
     "country": "United Arab Emirates",
+    "countryCode": "AE",
     "count": 1,
     "latitude": 25.2527999878,
     "longitude": 55.3643989563,
@@ -625,6 +700,7 @@
   "FJR": {
     "city": "Fujairah",
     "country": "United Arab Emirates",
+    "countryCode": "AE",
     "count": 1,
     "latitude": 25.112222,
     "longitude": 56.324167,
@@ -633,6 +709,7 @@
   "BAH": {
     "city": "Manama",
     "country": "Bahrain",
+    "countryCode": "BH",
     "count": 1,
     "latitude": 26.27079963684082,
     "longitude": 50.63359832763672,
@@ -641,6 +718,7 @@
   "TLV": {
     "city": "Tel Aviv",
     "country": "Israel",
+    "countryCode": "IL",
     "count": 1,
     "latitude": 32.01139831542969,
     "longitude": 34.88669967651367,
@@ -649,6 +727,7 @@
   "CPT": {
     "city": "Cape Town",
     "country": "South Africa",
+    "countryCode": "ZA",
     "count": 1,
     "latitude": -33.9648017883,
     "longitude": 18.6016998291,
@@ -657,6 +736,7 @@
   "JNB": {
     "city": "Johannesburg",
     "country": "South Africa",
+    "countryCode": "ZA",
     "count": 1,
     "latitude": -26.1392,
     "longitude": 28.246,
@@ -665,6 +745,7 @@
   "NBO": {
     "city": "Nairobi",
     "country": "Kenya",
+    "countryCode": "KE",
     "count": 1,
     "latitude": -1.31923997402,
     "longitude": 36.9277992249,
@@ -673,6 +754,7 @@
   "PEK": {
     "city": "Beijing",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 40.080101013183594,
     "longitude": 116.58499908447266,
@@ -681,6 +763,7 @@
   "SZX": {
     "city": "Shenzhen",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 22.639299392700195,
     "longitude": 113.81099700927734,
@@ -689,6 +772,7 @@
   "PVG": {
     "city": "Shanghai",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 31.143400192260742,
     "longitude": 121.80500030517578,
@@ -697,6 +781,7 @@
   "ZHY": {
     "city": "Zhongwei",
     "country": "China",
+    "countryCode": "CN",
     "count": 1,
     "latitude": 37.572778,
     "longitude": 105.154444,

@@ -1,7 +1,7 @@
 const chai = require('chai');
 const should = chai.should();
 
-const AWSEdgeLocations = require('../index');
+const AWSEdgeLocations = require('../src/index');
 
 chai.config.includeStack = false;
 
@@ -18,6 +18,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
                 "city": "Ashburn",
                 "state": "Virginia",
                 "country": "United States",
+                "countryCode": "US",
                 "count": 6,
                 "latitude": 38.9445,
                 "longitude": -77.4558029,

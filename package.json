@@ -1,20 +1,24 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "List of AWS edge location code prefixes",
-  "main": "index.js",
-  "browser": "dist/aws-edge-locations.js",
+  "main": "umd/aws-edge-locations.min.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "mocha",
     "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",
     "filter-airports": "cat data/airport-codes.json  | jq -c '[ .[] | select( .type | contains(\"large_airport\")) ]' > data/large-airports.json",
-    "generate": "npm run download-airports && npm run filter-airports && node generate.js && npm run browserify",
-    "browserify": "node_modules/.bin/browserify index.js -r ./dist/aws-edge-locations.json:./dist/aws-edge-locations.json --s aws-edge-locations > dist/aws-edge-locations.js"
+    "generate": "npm run download-airports && npm run filter-airports && node generate.js && npm run bundle",
+    "bundle": "node_modules/.bin/webpack-cli",
+    "prepack": "npm run bundle"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tobilg/aws-edge-locations.git"
   },
+  "files": [
+    "umd/*.js"
+  ],
   "keywords": [
     "aws",
     "edge",
@@ -34,10 +38,11 @@
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
   "dependencies": {},
   "devDependencies": {
-    "browserify": "^16.5.0",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "puppeteer": "^1.18.1",
-    "utf8": "^3.0.0"
+    "mocha": "^8.0.1",
+    "puppeteer": "^4.0.0",
+    "utf8": "^3.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }

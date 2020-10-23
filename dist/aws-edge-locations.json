@@ -612,18 +612,27 @@
     "country": "Japan",
     "countryCode": "JP",
     "count": 16,
-    "latitude": 35.7647018433,
-    "longitude": 140.386001587,
+    "latitude": 35.764702,
+    "longitude": 140.386002,
     "region": "Asia"
+  },
+  "AKL": {
+    "city": "Auckland",
+    "country": "New Zealand",
+    "countryCode": "NZ",
+    "count": 2,
+    "latitude": -37.008098602299995,
+    "longitude": 174.792007446,
+    "region": "Australia & New Zealand"
   },
   "MEL": {
     "city": "Melbourne",
     "country": "Australia",
     "countryCode": "AU",
-    "count": 1,
+    "count": 2,
     "latitude": -37.673302,
     "longitude": 144.843002,
-    "region": "Australia"
+    "region": "Australia & New Zealand"
   },
   "PER": {
     "city": "Perth",
@@ -632,7 +641,7 @@
     "count": 1,
     "latitude": -31.94029998779297,
     "longitude": 115.96700286865234,
-    "region": "Australia"
+    "region": "Australia & New Zealand"
   },
   "SYD": {
     "city": "Sydney",
@@ -641,7 +650,7 @@
     "count": 4,
     "latitude": -33.94609832763672,
     "longitude": 151.177001953125,
-    "region": "Australia"
+    "region": "Australia & New Zealand"
   },
   "BOG": {
     "city": "Bogota",

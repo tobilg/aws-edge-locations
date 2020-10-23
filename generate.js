@@ -111,6 +111,18 @@ const airportOverridesData = {
         "countryCode": "IT",
         "latitude": 41.8002778,
         "longitude": 12.2388889
+    },
+    "tokyo": {
+        "code": "NRT",
+        "countryCode": "JP",
+        "latitude": 35.764702,
+        "longitude": 140.386002
+    },
+    "manila": {
+        "code": "MNL",
+        "countryCode": "PH",
+        "latitude": 14.5086,
+        "longitude": 121.019997
     }
 }
 
@@ -170,6 +182,7 @@ const lookupAirport = city => {
 const createLocation = location => {
     const locationObj = {};
     const temp = location.split(',');
+    console.log(temp)
     // RegEx
     const regExp = /\(([^)]+)\)/;
     // Check for Americas states
@@ -292,14 +305,8 @@ const run = async () => {
 
         // Australia (missing country)
         const australiaFixTemp = edgeLocations[3].split('; ');
-        const australiaFixArray = [];
-        australiaFixTemp.forEach(af => {
-            if(af.indexOf(' (') > -1) {
-                const temp = af.split(' (');
-                australiaFixArray.push(`${temp[0]}, Australia (${temp[1]}`);
-            } else {
-                australiaFixArray.push(`${af}, Australia`);
-            }
+        const australiaFixArray = australiaFixTemp.map(af => {
+            return af.replace('NZ', 'New Zealand').replace('AU', 'Australia');
         })
         edgeLocations[3] = australiaFixArray.join('; ');
 

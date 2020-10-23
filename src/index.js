@@ -17,6 +17,10 @@ class AWSEdgeLocations {
         return count;
     }
 
+    getLocations () {
+        return locations;
+    }
+
     lookup (code) {
         if (locations.hasOwnProperty(code.toUpperCase())) {
             return locations[code.toUpperCase()];

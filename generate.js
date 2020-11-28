@@ -244,7 +244,7 @@ const run = async () => {
          */
         const extractRegions = () => {
             const $contentContainer = document
-                .getElementById('Amazon_CloudFront_Infrastructure')
+                .getElementById('Global_Edge_Network')
                 .parentElement;
             const $locationsSets = Array.from($contentContainer.querySelectorAll('.lb-rtxt'))
                 .slice(1, -1); // false positives first and last matches
@@ -267,6 +267,7 @@ const run = async () => {
                 edgeLocations.push(locationString);
             }
         });
+        console.log(edgeLocations)
 
         // Fixes for edge locations
         // Americas (missing country, add state)

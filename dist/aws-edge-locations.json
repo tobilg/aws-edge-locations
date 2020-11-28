@@ -359,7 +359,7 @@
     "city": "Madrid",
     "country": "Spain",
     "countryCode": "ES",
-    "count": 2,
+    "count": 3,
     "latitude": 40.471926,
     "longitude": -3.56264,
     "region": "Europe"
@@ -497,6 +497,15 @@
     "count": 3,
     "latitude": 13.1979,
     "longitude": 77.706299,
+    "region": "Asia"
+  },
+  "DMK": {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "count": 2,
+    "latitude": 13.9125995636,
+    "longitude": 100.607002258,
     "region": "Asia"
   },
   "MAA": {

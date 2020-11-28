@@ -129,7 +129,7 @@ HAM,Hamburg,,Germany,DE,1,53.630401611328,9.9882297515869,Europe
 HEL,Helsinki,,Finland,FI,1,60.317199707031,24.963300704956,Europe
 LIS,Lisbon,,Portugal,PT,1,38.7813,-9.13592,Europe
 LHR,London,,England,GB,9,51.4775,-0.461389,Europe
-MAD,Madrid,,Spain,ES,2,40.471926,-3.56264,Europe
+MAD,Madrid,,Spain,ES,3,40.471926,-3.56264,Europe
 MAN,Manchester,,England,GB,2,53.35369873046875,-2.2749500274658203,Europe
 MRS,Marseille,,France,FR,1,43.439271922,5.22142410278,Europe
 MXP,Milan,,Italy,IT,3,45.6306,8.72811,Europe
@@ -145,6 +145,7 @@ VIE,Vienna,,Austria,AT,1,48.110298156738,16.569700241089,Europe
 WMI,Warsaw,,Poland,PL,1,52.451099,20.6518,Europe
 ZRH,Zurich,,Switzerland,CH,2,47.464699,8.54917,Europe
 BLR,Bangalore,,India,IN,3,13.1979,77.706299,Asia
+DMK,Bangkok,,Thailand,TH,2,13.9125995636,100.607002258,Asia
 MAA,Chennai,,India,IN,2,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,HK,3,22.308901,113.915001,Asia
 HYD,Hyderabad,,India,IN,4,17.231318,78.429855,Asia
@@ -546,7 +547,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Madrid",
     "country": "Spain",
     "countryCode": "ES",
-    "count": 2,
+    "count": 3,
     "latitude": 40.471926,
     "longitude": -3.56264,
     "region": "Europe"
@@ -684,6 +685,15 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 3,
     "latitude": 13.1979,
     "longitude": 77.706299,
+    "region": "Asia"
+  },
+  "DMK": {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "count": 2,
+    "latitude": 13.9125995636,
+    "longitude": 100.607002258,
     "region": "Asia"
   },
   "MAA": {

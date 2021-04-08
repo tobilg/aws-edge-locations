@@ -481,6 +481,15 @@
     "longitude": 20.6518,
     "region": "Europe"
   },
+  "ZAG": {
+    "city": "Zagreb",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "count": 1,
+    "latitude": 45.7429008484,
+    "longitude": 16.0687999725,
+    "region": "Europe"
+  },
   "ZRH": {
     "city": "Zurich",
     "country": "Switzerland",
@@ -512,7 +521,7 @@
     "city": "Chennai",
     "country": "India",
     "countryCode": "IN",
-    "count": 2,
+    "count": 4,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
     "region": "Asia"
@@ -530,16 +539,25 @@
     "city": "Hyderabad",
     "country": "India",
     "countryCode": "IN",
-    "count": 4,
+    "count": 3,
     "latitude": 17.231318,
     "longitude": 78.429855,
+    "region": "Asia"
+  },
+  "CGK": {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "count": 1,
+    "latitude": -6.1255698204,
+    "longitude": 106.65599823,
     "region": "Asia"
   },
   "CCU": {
     "city": "Kolkata",
     "country": "India",
     "countryCode": "IN",
-    "count": 1,
+    "count": 2,
     "latitude": 22.654699325561523,
     "longitude": 88.44670104980469,
     "region": "Asia"
@@ -557,7 +575,7 @@
     "city": "Mumbai",
     "country": "India",
     "countryCode": "IN",
-    "count": 3,
+    "count": 4,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
     "region": "Asia"
@@ -575,7 +593,7 @@
     "city": "New Delhi",
     "country": "India",
     "countryCode": "IN",
-    "count": 4,
+    "count": 5,
     "latitude": 28.5665,
     "longitude": 77.103104,
     "region": "Asia"

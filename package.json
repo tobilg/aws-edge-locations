@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "List of AWS edge location code prefixes",
   "main": "umd/aws-edge-locations.min.js",
   "module": "src/index.js",
@@ -8,7 +8,8 @@
     "test": "mocha",
     "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",
     "filter-airports": "cat data/airport-codes.json  | jq -c '[ .[] | select( .type | contains(\"large_airport\")) ]' > data/large-airports.json",
-    "generate": "npm run download-airports && npm run filter-airports && node generate.js && npm run bundle",
+    "generate": "node generate.js",
+    "build": "npm run download-airports && npm run filter-airports && npm run generate && npm run bundle",
     "bundle": "node_modules/.bin/webpack-cli",
     "prepack": "npm run bundle"
   },

@@ -42,10 +42,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 85
+const locationCount = el.getLocationCount(); // returns 89
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 206
+const popCount = el.getPoPCount() // returns 218
 ```
 
 ### Browser
@@ -143,17 +143,19 @@ SOF,Sofia,,Bulgaria,BG,1,42.696693420410156,23.411436080932617,Europe
 ARN,Stockholm,,Sweden,SE,3,59.651901245117,17.918600082397,Europe
 VIE,Vienna,,Austria,AT,1,48.110298156738,16.569700241089,Europe
 WMI,Warsaw,,Poland,PL,1,52.451099,20.6518,Europe
+ZAG,Zagreb,,Croatia,HR,1,45.7429008484,16.0687999725,Europe
 ZRH,Zurich,,Switzerland,CH,2,47.464699,8.54917,Europe
 BLR,Bangalore,,India,IN,3,13.1979,77.706299,Asia
 DMK,Bangkok,,Thailand,TH,2,13.9125995636,100.607002258,Asia
-MAA,Chennai,,India,IN,2,12.990005493164062,80.16929626464844,Asia
+MAA,Chennai,,India,IN,4,12.990005493164062,80.16929626464844,Asia
 HKG,Hong Kong,,China,HK,3,22.308901,113.915001,Asia
-HYD,Hyderabad,,India,IN,4,17.231318,78.429855,Asia
-CCU,Kolkata,,India,IN,1,22.654699325561523,88.44670104980469,Asia
+HYD,Hyderabad,,India,IN,3,17.231318,78.429855,Asia
+CGK,Jakarta,,Indonesia,ID,1,-6.1255698204,106.65599823,Asia
+CCU,Kolkata,,India,IN,2,22.654699325561523,88.44670104980469,Asia
 KUL,Kuala Lumpur,,Malaysia,MY,2,2.745579957962,101.70999908447,Asia
-BOM,Mumbai,,India,IN,3,19.0886993408,72.8678970337,Asia
+BOM,Mumbai,,India,IN,4,19.0886993408,72.8678970337,Asia
 MNL,Manila,,Philippines,PH,1,14.5086,121.019997,Asia
-DEL,New Delhi,,India,IN,4,28.5665,77.103104,Asia
+DEL,New Delhi,,India,IN,5,28.5665,77.103104,Asia
 KIX,Osaka,,Japan,JP,1,34.42729949951172,135.24400329589844,Asia
 ICN,Seoul,,South Korea,KR,4,37.46910095214844,126.45099639892578,Asia
 SIN,Singapore,,Singapore,SG,4,1.35019,103.994003,Asia
@@ -669,6 +671,15 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 20.6518,
     "region": "Europe"
   },
+  "ZAG": {
+    "city": "Zagreb",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "count": 1,
+    "latitude": 45.7429008484,
+    "longitude": 16.0687999725,
+    "region": "Europe"
+  },
   "ZRH": {
     "city": "Zurich",
     "country": "Switzerland",
@@ -700,7 +711,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Chennai",
     "country": "India",
     "countryCode": "IN",
-    "count": 2,
+    "count": 4,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
     "region": "Asia"
@@ -718,16 +729,25 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Hyderabad",
     "country": "India",
     "countryCode": "IN",
-    "count": 4,
+    "count": 3,
     "latitude": 17.231318,
     "longitude": 78.429855,
+    "region": "Asia"
+  },
+  "CGK": {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "countryCode": "ID",
+    "count": 1,
+    "latitude": -6.1255698204,
+    "longitude": 106.65599823,
     "region": "Asia"
   },
   "CCU": {
     "city": "Kolkata",
     "country": "India",
     "countryCode": "IN",
-    "count": 1,
+    "count": 2,
     "latitude": 22.654699325561523,
     "longitude": 88.44670104980469,
     "region": "Asia"
@@ -745,7 +765,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "Mumbai",
     "country": "India",
     "countryCode": "IN",
-    "count": 3,
+    "count": 4,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
     "region": "Asia"
@@ -763,7 +783,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "city": "New Delhi",
     "country": "India",
     "countryCode": "IN",
-    "count": 4,
+    "count": 5,
     "latitude": 28.5665,
     "longitude": 77.103104,
     "region": "Asia"

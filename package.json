@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "List of AWS edge location code prefixes",
   "main": "umd/aws-edge-locations.min.js",
   "module": "src/index.js",
@@ -37,13 +37,12 @@
     "url": "https://github.com/tobilg/aws-edge-locations/issues"
   },
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
-  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
-    "puppeteer": "^5.5.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "puppeteer": "^8.0.0",
     "utf8": "^3.0.0",
-    "webpack": "^5.8.0",
-    "webpack-cli": "^4.2.0"
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0"
   }
 }

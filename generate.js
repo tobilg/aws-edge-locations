@@ -10,6 +10,12 @@ const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'lar
 // Airport data overrides
 // Data derived from Wikipedia
 const airportOverridesData = {
+    "houston": {
+        "code": "IAH",
+        "countryCode": "US",
+        "latitude": 29.984399795532227,
+        "longitude": -95.34140014648438
+    },
     "dusseldorf": {
         "code": "DUS",
         "countryCode": "DE",

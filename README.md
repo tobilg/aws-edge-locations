@@ -100,7 +100,7 @@ DFW,Dallas/Fort Worth,Texas,United States,US,6,32.896801,-97.038002,North Americ
 DEN,Denver,Colorado,United States,US,2,39.861698150635,-104.672996521,North America
 HWD,Hayward,California,United States,US,1,37.658889,-122.121667,North America
 HIO,Hillsboro,Oregon,United States,US,3,45.540394,-122.949825,North America
-HOU,Houston,Texas,United States,US,4,29.64539909,-95.27890015,North America
+IAH,Houston,Texas,United States,US,4,29.984399795532227,-95.34140014648438,North America
 JAX,Jacksonville,Florida,United States,US,1,30.49410057067871,-81.68789672851562,North America
 LAX,Los Angeles,California,United States,US,5,33.942501,-118.407997,North America
 MIA,Miami,Florida,United States,US,4,25.79319953918457,-80.29060363769531,North America
@@ -269,14 +269,14 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": -122.949825,
     "region": "North America"
   },
-  "HOU": {
+  "IAH": {
     "city": "Houston",
     "state": "Texas",
     "country": "United States",
     "countryCode": "US",
     "count": 4,
-    "latitude": 29.64539909,
-    "longitude": -95.27890015,
+    "latitude": 29.984399795532227,
+    "longitude": -95.34140014648438,
     "region": "North America"
   },
   "JAX": {

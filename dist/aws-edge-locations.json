@@ -7,7 +7,8 @@
     "count": 6,
     "latitude": 38.9445,
     "longitude": -77.4558029,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "ATL": {
     "city": "Atlanta",
@@ -17,7 +18,8 @@
     "count": 6,
     "latitude": 33.6367,
     "longitude": -84.428101,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "BOS": {
     "city": "Boston",
@@ -27,7 +29,8 @@
     "count": 3,
     "latitude": 42.36429977,
     "longitude": -71.00520325,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "ORD": {
     "city": "Chicago",
@@ -37,7 +40,8 @@
     "count": 6,
     "latitude": 41.978611,
     "longitude": -87.904722,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "DFW": {
     "city": "Dallas/Fort Worth",
@@ -47,7 +51,8 @@
     "count": 6,
     "latitude": 32.896801,
     "longitude": -97.038002,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "DEN": {
     "city": "Denver",
@@ -57,7 +62,8 @@
     "count": 2,
     "latitude": 39.861698150635,
     "longitude": -104.672996521,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "HWD": {
     "city": "Hayward",
@@ -67,7 +73,8 @@
     "count": 1,
     "latitude": 37.658889,
     "longitude": -122.121667,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "HIO": {
     "city": "Hillsboro",
@@ -77,7 +84,8 @@
     "count": 3,
     "latitude": 45.540394,
     "longitude": -122.949825,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "IAH": {
     "city": "Houston",
@@ -87,7 +95,8 @@
     "count": 4,
     "latitude": 29.984399795532227,
     "longitude": -95.34140014648438,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "JAX": {
     "city": "Jacksonville",
@@ -97,7 +106,8 @@
     "count": 1,
     "latitude": 30.49410057067871,
     "longitude": -81.68789672851562,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "LAX": {
     "city": "Los Angeles",
@@ -107,7 +117,8 @@
     "count": 5,
     "latitude": 33.942501,
     "longitude": -118.407997,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "MIA": {
     "city": "Miami",
@@ -117,7 +128,8 @@
     "count": 4,
     "latitude": 25.79319953918457,
     "longitude": -80.29060363769531,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "MSP": {
     "city": "Minneapolis",
@@ -127,7 +139,8 @@
     "count": 1,
     "latitude": 44.882,
     "longitude": -93.221802,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "YUL": {
     "city": "Montreal",
@@ -137,7 +150,8 @@
     "count": 1,
     "latitude": 45.470556,
     "longitude": -73.740833,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "JFK": {
     "city": "New York",
@@ -147,7 +161,8 @@
     "count": 2,
     "latitude": 40.639801,
     "longitude": -73.7789,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "EWR": {
     "city": "Newark",
@@ -157,7 +172,8 @@
     "count": 7,
     "latitude": 40.692501068115234,
     "longitude": -74.168701171875,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "PAO": {
     "city": "Palo Alto",
@@ -167,7 +183,8 @@
     "count": 1,
     "latitude": 37.461111,
     "longitude": -122.115,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "PHL": {
     "city": "Philadelphia",
@@ -177,7 +194,8 @@
     "count": 2,
     "latitude": 39.87189865112305,
     "longitude": -75.24109649658203,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "PHX": {
     "city": "Phoenix",
@@ -187,7 +205,8 @@
     "count": 2,
     "latitude": 33.43429946899414,
     "longitude": -112.01200103759766,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "SLC": {
     "city": "Salt Lake City",
@@ -197,7 +216,8 @@
     "count": 1,
     "latitude": 40.78839874267578,
     "longitude": -111.97799682617188,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "SJC": {
     "city": "San Jose",
@@ -207,7 +227,8 @@
     "count": 2,
     "latitude": 37.362598,
     "longitude": -121.929001,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "SEA": {
     "city": "Seattle",
@@ -217,7 +238,8 @@
     "count": 3,
     "latitude": 47.448889,
     "longitude": -122.309444,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "YTO": {
     "city": "Toronto",
@@ -227,7 +249,8 @@
     "count": 2,
     "latitude": 43.6772003174,
     "longitude": -79.63059997559999,
-    "region": "North America"
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "AMS": {
     "city": "Amsterdam",
@@ -236,7 +259,8 @@
     "count": 2,
     "latitude": 52.308601,
     "longitude": 4.76389,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "ATH": {
     "city": "Athens",
@@ -245,7 +269,8 @@
     "count": 1,
     "latitude": 37.9364013672,
     "longitude": 23.9444999695,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "TXL": {
     "city": "Berlin",
@@ -254,7 +279,8 @@
     "count": 2,
     "latitude": 52.559722,
     "longitude": 13.287778,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "BRU": {
     "city": "Brussels",
@@ -263,7 +289,8 @@
     "count": 1,
     "latitude": 50.901401519800004,
     "longitude": 4.48443984985,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "OTP": {
     "city": "Bucharest",
@@ -272,7 +299,8 @@
     "count": 1,
     "latitude": 44.5711111,
     "longitude": 26.085,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "BUD": {
     "city": "Budapest",
@@ -281,7 +309,8 @@
     "count": 1,
     "latitude": 47.42976,
     "longitude": 19.261093,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "CPH": {
     "city": "Copenhagen",
@@ -290,7 +319,8 @@
     "count": 1,
     "latitude": 55.617900848389,
     "longitude": 12.656000137329,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "DUB": {
     "city": "Dublin",
@@ -299,7 +329,8 @@
     "count": 1,
     "latitude": 53.421299,
     "longitude": -6.27007,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "DUS": {
     "city": "Dusseldorf",
@@ -308,7 +339,8 @@
     "count": 1,
     "latitude": 51.289501,
     "longitude": 6.76678,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "FRA": {
     "city": "Frankfurt am Main",
@@ -317,7 +349,8 @@
     "count": 10,
     "latitude": 50.033333,
     "longitude": 8.570556,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "HAM": {
     "city": "Hamburg",
@@ -326,7 +359,8 @@
     "count": 1,
     "latitude": 53.630401611328,
     "longitude": 9.9882297515869,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "HEL": {
     "city": "Helsinki",
@@ -335,7 +369,8 @@
     "count": 1,
     "latitude": 60.317199707031,
     "longitude": 24.963300704956,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "LIS": {
     "city": "Lisbon",
@@ -344,7 +379,8 @@
     "count": 1,
     "latitude": 38.7813,
     "longitude": -9.13592,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "LHR": {
     "city": "London",
@@ -353,7 +389,8 @@
     "count": 9,
     "latitude": 51.4775,
     "longitude": -0.461389,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "MAD": {
     "city": "Madrid",
@@ -362,7 +399,8 @@
     "count": 3,
     "latitude": 40.471926,
     "longitude": -3.56264,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "MAN": {
     "city": "Manchester",
@@ -371,7 +409,8 @@
     "count": 2,
     "latitude": 53.35369873046875,
     "longitude": -2.2749500274658203,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "MRS": {
     "city": "Marseille",
@@ -380,7 +419,8 @@
     "count": 1,
     "latitude": 43.439271922,
     "longitude": 5.22142410278,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "MXP": {
     "city": "Milan",
@@ -389,7 +429,8 @@
     "count": 3,
     "latitude": 45.6306,
     "longitude": 8.72811,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "MUC": {
     "city": "Munich",
@@ -398,7 +439,8 @@
     "count": 2,
     "latitude": 48.353802,
     "longitude": 11.7861,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "OSL": {
     "city": "Oslo",
@@ -407,7 +449,8 @@
     "count": 1,
     "latitude": 60.193901062012,
     "longitude": 11.100399971008,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "PMO": {
     "city": "Palermo",
@@ -416,7 +459,8 @@
     "count": 1,
     "latitude": 38.175999,
     "longitude": 13.091,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "CDG": {
     "city": "Paris",
@@ -425,7 +469,8 @@
     "count": 5,
     "latitude": 49.012798,
     "longitude": 2.55,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "PRG": {
     "city": "Prague",
@@ -434,7 +479,8 @@
     "count": 1,
     "latitude": 50.1008,
     "longitude": 14.26,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "FCO": {
     "city": "Rome",
@@ -443,7 +489,8 @@
     "count": 1,
     "latitude": 41.8002778,
     "longitude": 12.2388889,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "SOF": {
     "city": "Sofia",
@@ -452,7 +499,8 @@
     "count": 1,
     "latitude": 42.696693420410156,
     "longitude": 23.411436080932617,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "ARN": {
     "city": "Stockholm",
@@ -461,7 +509,8 @@
     "count": 3,
     "latitude": 59.651901245117,
     "longitude": 17.918600082397,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "VIE": {
     "city": "Vienna",
@@ -470,7 +519,8 @@
     "count": 1,
     "latitude": 48.110298156738,
     "longitude": 16.569700241089,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "WMI": {
     "city": "Warsaw",
@@ -479,7 +529,8 @@
     "count": 1,
     "latitude": 52.451099,
     "longitude": 20.6518,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "ZAG": {
     "city": "Zagreb",
@@ -488,7 +539,8 @@
     "count": 1,
     "latitude": 45.7429008484,
     "longitude": 16.0687999725,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "ZRH": {
     "city": "Zurich",
@@ -497,7 +549,8 @@
     "count": 2,
     "latitude": 47.464699,
     "longitude": 8.54917,
-    "region": "Europe"
+    "region": "Europe",
+    "pricingRegion": "Europe & Israel"
   },
   "BLR": {
     "city": "Bangalore",
@@ -506,7 +559,8 @@
     "count": 3,
     "latitude": 13.1979,
     "longitude": 77.706299,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "DMK": {
     "city": "Bangkok",
@@ -515,7 +569,8 @@
     "count": 2,
     "latitude": 13.9125995636,
     "longitude": 100.607002258,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MAA": {
     "city": "Chennai",
@@ -524,7 +579,8 @@
     "count": 4,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "HKG": {
     "city": "Hong Kong",
@@ -533,7 +589,8 @@
     "count": 3,
     "latitude": 22.308901,
     "longitude": 113.915001,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "China"
   },
   "HYD": {
     "city": "Hyderabad",
@@ -542,7 +599,8 @@
     "count": 3,
     "latitude": 17.231318,
     "longitude": 78.429855,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "CGK": {
     "city": "Jakarta",
@@ -551,7 +609,8 @@
     "count": 1,
     "latitude": -6.1255698204,
     "longitude": 106.65599823,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "CCU": {
     "city": "Kolkata",
@@ -560,7 +619,8 @@
     "count": 2,
     "latitude": 22.654699325561523,
     "longitude": 88.44670104980469,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "KUL": {
     "city": "Kuala Lumpur",
@@ -569,7 +629,8 @@
     "count": 2,
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": null
   },
   "BOM": {
     "city": "Mumbai",
@@ -578,7 +639,8 @@
     "count": 4,
     "latitude": 19.0886993408,
     "longitude": 72.8678970337,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "MNL": {
     "city": "Manila",
@@ -587,7 +649,8 @@
     "count": 1,
     "latitude": 14.5086,
     "longitude": 121.019997,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "DEL": {
     "city": "New Delhi",
@@ -596,7 +659,8 @@
     "count": 5,
     "latitude": 28.5665,
     "longitude": 77.103104,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "India"
   },
   "KIX": {
     "city": "Osaka",
@@ -605,7 +669,8 @@
     "count": 1,
     "latitude": 34.42729949951172,
     "longitude": 135.24400329589844,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Japan"
   },
   "ICN": {
     "city": "Seoul",
@@ -614,7 +679,8 @@
     "count": 4,
     "latitude": 37.46910095214844,
     "longitude": 126.45099639892578,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "SIN": {
     "city": "Singapore",
@@ -623,7 +689,8 @@
     "count": 4,
     "latitude": 1.35019,
     "longitude": 103.994003,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "TPE": {
     "city": "Taipei",
@@ -632,7 +699,8 @@
     "count": 3,
     "latitude": 25.0777,
     "longitude": 121.233002,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "NRT": {
     "city": "Tokyo",
@@ -641,7 +709,8 @@
     "count": 16,
     "latitude": 35.764702,
     "longitude": 140.386002,
-    "region": "Asia"
+    "region": "Asia",
+    "pricingRegion": "Japan"
   },
   "AKL": {
     "city": "Auckland",
@@ -650,7 +719,8 @@
     "count": 2,
     "latitude": -37.008098602299995,
     "longitude": 174.792007446,
-    "region": "Australia & New Zealand"
+    "region": "Australia & New Zealand",
+    "pricingRegion": "Australia & New Zealand"
   },
   "MEL": {
     "city": "Melbourne",
@@ -659,7 +729,8 @@
     "count": 2,
     "latitude": -37.673302,
     "longitude": 144.843002,
-    "region": "Australia & New Zealand"
+    "region": "Australia & New Zealand",
+    "pricingRegion": "Australia & New Zealand"
   },
   "PER": {
     "city": "Perth",
@@ -668,7 +739,8 @@
     "count": 1,
     "latitude": -31.94029998779297,
     "longitude": 115.96700286865234,
-    "region": "Australia & New Zealand"
+    "region": "Australia & New Zealand",
+    "pricingRegion": "Australia & New Zealand"
   },
   "SYD": {
     "city": "Sydney",
@@ -677,7 +749,8 @@
     "count": 4,
     "latitude": -33.94609832763672,
     "longitude": 151.177001953125,
-    "region": "Australia & New Zealand"
+    "region": "Australia & New Zealand",
+    "pricingRegion": "Australia & New Zealand"
   },
   "BOG": {
     "city": "Bogota",
@@ -686,7 +759,8 @@
     "count": 1,
     "latitude": 4.70159,
     "longitude": -74.1469,
-    "region": "South America"
+    "region": "South America",
+    "pricingRegion": "South America"
   },
   "EZE": {
     "city": "Buenos Aires",
@@ -695,7 +769,8 @@
     "count": 1,
     "latitude": -34.8222,
     "longitude": -58.5358,
-    "region": "South America"
+    "region": "South America",
+    "pricingRegion": "South America"
   },
   "GIG": {
     "city": "Rio de Janeiro",
@@ -704,7 +779,8 @@
     "count": 2,
     "latitude": -22.8099994659,
     "longitude": -43.2505569458,
-    "region": "South America"
+    "region": "South America",
+    "pricingRegion": "South America"
   },
   "SCL": {
     "city": "Santiago",
@@ -713,7 +789,8 @@
     "count": 1,
     "latitude": -33.393001556396484,
     "longitude": -70.78579711914062,
-    "region": "South America"
+    "region": "South America",
+    "pricingRegion": "South America"
   },
   "GRU": {
     "city": "Sao Paulo",
@@ -722,7 +799,8 @@
     "count": 2,
     "latitude": -23.435556,
     "longitude": -46.473056,
-    "region": "South America"
+    "region": "South America",
+    "pricingRegion": "South America"
   },
   "DXB": {
     "city": "Dubai",
@@ -731,7 +809,8 @@
     "count": 1,
     "latitude": 25.2527999878,
     "longitude": 55.3643989563,
-    "region": "Middle East"
+    "region": "Middle East",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "FJR": {
     "city": "Fujairah",
@@ -740,7 +819,8 @@
     "count": 1,
     "latitude": 25.112222,
     "longitude": 56.324167,
-    "region": "Middle East"
+    "region": "Middle East",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "BAH": {
     "city": "Manama",
@@ -749,7 +829,8 @@
     "count": 1,
     "latitude": 26.27079963684082,
     "longitude": 50.63359832763672,
-    "region": "Middle East"
+    "region": "Middle East",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "TLV": {
     "city": "Tel Aviv",
@@ -758,7 +839,8 @@
     "count": 1,
     "latitude": 32.01139831542969,
     "longitude": 34.88669967651367,
-    "region": "Middle East"
+    "region": "Middle East",
+    "pricingRegion": "Europe & Israel"
   },
   "CPT": {
     "city": "Cape Town",
@@ -767,7 +849,8 @@
     "count": 1,
     "latitude": -33.9648017883,
     "longitude": 18.6016998291,
-    "region": "Africa"
+    "region": "Africa",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "JNB": {
     "city": "Johannesburg",
@@ -776,7 +859,8 @@
     "count": 1,
     "latitude": -26.1392,
     "longitude": 28.246,
-    "region": "Africa"
+    "region": "Africa",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "NBO": {
     "city": "Nairobi",
@@ -785,7 +869,8 @@
     "count": 1,
     "latitude": -1.31923997402,
     "longitude": 36.9277992249,
-    "region": "Africa"
+    "region": "Africa",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "PEK": {
     "city": "Beijing",
@@ -794,7 +879,8 @@
     "count": 1,
     "latitude": 40.080101013183594,
     "longitude": 116.58499908447266,
-    "region": "China"
+    "region": "China",
+    "pricingRegion": "China"
   },
   "SZX": {
     "city": "Shenzhen",
@@ -803,7 +889,8 @@
     "count": 1,
     "latitude": 22.639299392700195,
     "longitude": 113.81099700927734,
-    "region": "China"
+    "region": "China",
+    "pricingRegion": "China"
   },
   "PVG": {
     "city": "Shanghai",
@@ -812,7 +899,8 @@
     "count": 1,
     "latitude": 31.143400192260742,
     "longitude": 121.80500030517578,
-    "region": "China"
+    "region": "China",
+    "pricingRegion": "China"
   },
   "ZHY": {
     "city": "Zhongwei",
@@ -821,6 +909,7 @@
     "count": 1,
     "latitude": 37.572778,
     "longitude": 105.154444,
-    "region": "China"
+    "region": "China",
+    "pricingRegion": "China"
   }
 }

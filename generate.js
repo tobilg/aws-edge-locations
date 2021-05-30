@@ -15,7 +15,7 @@ const writeCSV = locations => {
       return `${e.code},${e.city},${e.state || ''},${e.country},${e.countryCode},${e.count},${e.latitude},${e.longitude},${e.region},"${e.pricingRegion}"`
     });
     // Add header
-    data.unshift('code,city,state,country,country_code,count,latitude,longitude,region');
+    data.unshift('code,city,state,country,country_code,count,latitude,longitude,region,pricing_region');
     fs.writeFileSync(csvPath, data.join(os.EOL), 'utf8');
 }
 

@@ -91,7 +91,7 @@ This project is considered as in the `alpha` stage, so there's **no guarantee th
 The CSV version of the data can be found at [dist/aws-edge-locations.csv](dist/aws-edge-locations.csv). The file is using `,` as field separator.
 
 ```csv
-code,city,state,country,country_code,count,latitude,longitude,region
+code,city,state,country,country_code,count,latitude,longitude,region,pricing_region
 IAD,Ashburn,Virginia,United States,US,6,38.9445,-77.4558029,North America,"United States, Mexico, & Canada"
 ATL,Atlanta,Georgia,United States,US,6,33.6367,-84.428101,North America,"United States, Mexico, & Canada"
 BOS,Boston,Massachusetts,United States,US,3,42.36429977,-71.00520325,North America,"United States, Mexico, & Canada"

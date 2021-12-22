@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "List of AWS edge location code prefixes",
   "main": "umd/aws-edge-locations.min.js",
   "module": "src/index.js",

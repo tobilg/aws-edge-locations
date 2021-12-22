@@ -6,56 +6,44 @@ const AWSEdgeLocations = require('../src/index');
 chai.config.includeStack = false;
 
 describe("# Testing the aws-edge-locations functionality", function() {
+  describe("## Basic functionality testing", function () {
+    it("should return the data for IAD", function (done) {
+      const el = new AWSEdgeLocations();
 
-    describe("## Basic functionality testing", function () {
-
-        it("should return the data for IAD", function (done) {
-
-            const el = new AWSEdgeLocations();
-
-            el.lookup('IAD').should.be.a('object');
-            el.lookup('IAD').should.eql({
-                "city": "Ashburn",
-                "state": "Virginia",
-                "country": "United States",
-                "countryCode": "US",
-                "count": 6,
-                "latitude": 38.9445,
-                "longitude": -77.4558029,
-                "region": "North America",
-                "pricingRegion": "United States, Mexico, & Canada"
-            });
-            done();
-
-        });
-
-        it("should return 'false' if code isn't found", function (done) {
-
-            const el = new AWSEdgeLocations();
-
-            el.lookup('FOO').should.eql(false);
-            done();
-
-        });
-
-        it("should return the correct count of locations", function (done) {
-
-            const el = new AWSEdgeLocations();
-
-            el.getLocationCount().should.eql(89);
-            done();
-
-        });
-
-        it("should return the correct count of Point of Presences", function (done) {
-
-            const el = new AWSEdgeLocations();
-
-            el.getPoPCount().should.eql(218);
-            done();
-
-        });
-
+      el.lookup('IAD').should.be.a('object');
+      el.lookup('IAD').should.eql({
+        "city": "Washington",
+        "state": "District of Columbia",
+        "country": "United States",
+        "countryCode": "US",
+        "count": 11,
+        "latitude": 38.94449997,
+        "longitude": -77.45580292,
+        "region": "North America",
+        "pricingRegion": "United States, Mexico, & Canada"
+      });
+      done();
     });
 
+    it("should return 'false' if code isn't found", function (done) {
+      const el = new AWSEdgeLocations();
+
+      el.lookup('FOO').should.eql(false);
+      done();
+    });
+
+    it("should return the correct count of locations", function (done) {
+      const el = new AWSEdgeLocations();
+
+      el.getLocationCount().should.eql(87);
+      done();
+    });
+
+    it("should return the correct count of Point of Presences", function (done) {
+        const el = new AWSEdgeLocations();
+
+        el.getPoPCount().should.eql(307);
+        done();
+    });
+  });
 });

@@ -1,33 +1,31 @@
 const locations = require('../dist/aws-edge-locations.json');
 
 class AWSEdgeLocations {
-    constructor() {
+  constructor() {}
 
-    }
+  getLocationCount () {
+    return Object.getOwnPropertyNames(locations).length;
+  }
 
-    getLocationCount () {
-        return Object.getOwnPropertyNames(locations).length;
-    }
+  getPoPCount () {
+    let count = 0;
+    Object.getOwnPropertyNames(locations).forEach(location => {
+      count += locations[location].count;
+    });
+    return count;
+  }
 
-    getPoPCount () {
-        let count = 0;
-        Object.getOwnPropertyNames(locations).forEach(location => {
-            count += locations[location].count;
-        });
-        return count;
-    }
+  getLocations () {
+    return locations;
+  }
 
-    getLocations () {
-        return locations;
+  lookup (code) {
+    if (locations.hasOwnProperty(code.toUpperCase())) {
+      return locations[code.toUpperCase()];
+    } else {
+      return false;
     }
-
-    lookup (code) {
-        if (locations.hasOwnProperty(code.toUpperCase())) {
-            return locations[code.toUpperCase()];
-        } else {
-            return false;
-        }
-    }
+  }
 }
 
 module.exports = AWSEdgeLocations;

@@ -113,6 +113,8 @@ const run = async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
+    page.on('console', consoleObj => console.log(consoleObj.text()));
+
     await page.goto('https://aws.amazon.com/cloudfront/features/')
 
     const data = await page.evaluate(() => {
@@ -166,32 +168,35 @@ const run = async () => {
                   .replace('Taiwan(3)', 'Taiwan (3)')
                   .replace('Utah', 'UT')
                   .replace('Singapore', 'Singapore, Singapore')
-                  .replace('Frankfurt', 'Frankfurt am Main')
                   .replace('São Paulo', 'Sao Paulo')
-                  .replace('Querétaro', 'Queretaro');
+                  .replace('Querétaro', 'Queretaro')
+                  .replace('CHINA', 'China');
                 edgeLocations.push(locationString);
             }
         });
-        console.log(edgeLocations)
 
         // Fixes for edge locations
         // Americas (missing country, add state)
         const usCountries = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","FL":"Florida","GA":"Georgia","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AS":"American Samoa","DC":"District of Columbia","FM":"Federated States of Micronesia","GU":"Guam","MH":"Marshall Islands","MP":"Northern Mariana Islands","PW":"Palau","PR":"Puerto Rico","VI":"Virgin Islands"};
         const canadaCountries = {"AB": "Alberta", "BC": "British Columbia", "MB": "Manitoba", "NB": "New Brunswick", "NL": "Newfoundland and Labrador", "NS": "Nova Scotia", "NT": "Northwest Territories", "NU": "Nunavut", "ON": "Ontario", "PE": "Prince Edward Island", "QC": "Quebec", "SK": "Saskatchewan", "YT": "Yukon"};
-        const americasFixTemp = edgeLocations[0].replace(/ ; /g, '; ').split('; ');
+        const americasFixTemp = edgeLocations[0].toString().replace(/ ; /g, '; ').split('; ');
         const americasFixArray = [];
         americasFixTemp.forEach(location => {
             const locationTemp = location.split(', ');
             if (locationTemp[1].length > 2) { // Contains count
                 const countTemp = locationTemp[1].split(' ');
+                console.log(JSON.stringify(locationTemp))
                 let countCountry = null;
                 let countState = null;
                 if (usCountries.hasOwnProperty(countTemp[0])) {
                     countState = usCountries[countTemp[0]];
                     countCountry = 'United States';
-                } else if (canadaCountries.hasOwnProperty(countTemp[0])) {
-                    countState = canadaCountries[countTemp[0]];
+                } else if (countTemp[0] === 'Canada') {
+                    countState = 'Canada';
                     countCountry = 'Canada';
+                } else if (countTemp[0] === 'Mexico') {
+                  countState = 'Mexico';
+                  countCountry = 'Mexico';
                 }
                 americasFixArray.push(`${locationTemp[0]} (${countState}), ${countCountry} ${countTemp[1]}`);
             } else { // No count
@@ -216,9 +221,11 @@ const run = async () => {
         })
         edgeLocations[3] = australiaFixArray.join('; ');
 
-        // China (missing country)
-        const chinaFix = edgeLocations[7].trim().split('; ').join(', China; ');
-        edgeLocations[7] = `${chinaFix}, China`;
+        // China (formatting fixes)
+        const chinaFix = edgeLocations[7].trim().replace(/,/g, '').replace(/ China/g, ', China');
+        edgeLocations[7] = chinaFix;
+
+        console.log(JSON.stringify(edgeLocations))
 
         // Generate edge location array
         // [0] get each region location set string
@@ -236,6 +243,8 @@ const run = async () => {
                 locations.push(locationList);
             }
         });
+
+        console.log(JSON.stringify(locations))
 
         return {
             locations: locations,
@@ -273,7 +282,6 @@ const run = async () => {
 
     writeJSON(edgeLocations);
     writeCSV(edgeLocations);
-
 }
 
 run();

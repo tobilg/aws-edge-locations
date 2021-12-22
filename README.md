@@ -28,24 +28,25 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 
 /* returns
 {
-    "city": "Ashburn",
-    "state": "Virginia",
-    "country": "United States",
-    "countryCode": "US",
-    "count": 6,
-    "latitude": 38.9445,
-    "longitude": -77.4558029,
-    "region": "North America"
+  "city": "Washington",
+  "state": "District of Columbia",
+  "country": "United States",
+  "countryCode": "US",
+  "count": 11,
+  "latitude": 38.94449997,
+  "longitude": -77.45580292,
+  "region": "North America",
+  "pricingRegion": "United States, Mexico, & Canada"
 }
 */
 
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 89
+const locationCount = el.getLocationCount(); // returns 87
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 218
+const popCount = el.getPoPCount() // returns 307
 ```
 
 ### Browser

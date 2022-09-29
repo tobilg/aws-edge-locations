@@ -81,6 +81,7 @@ const lookupPricingRegion = (location) => {
 const createLocation = location => {
   const locationObj = {};
   const temp = location.split(',');
+
   // RegEx
   const regExp = /\(([^)]+)\)/;
   // Check for Americas states
@@ -104,7 +105,7 @@ const createLocation = location => {
   // region is the third detail in string
   locationObj.region = temp[2].trim();
 
-  // region
+  // return location object
   return locationObj;
 }
 
@@ -184,7 +185,6 @@ const run = async () => {
       const locationTemp = location.split(', ');
       if (locationTemp[1].length > 2) { // Contains count
         const countTemp = locationTemp[1].split(' ');
-        console.log(JSON.stringify(locationTemp))
         let countCountry = null;
         let countState = null;
         if (usCountries.hasOwnProperty(countTemp[0])) {
@@ -220,30 +220,18 @@ const run = async () => {
     })
     edgeLocations[3] = australiaFixArray.join('; ');
 
-    // China (formatting fixes)
-    const chinaFix = edgeLocations[7].trim().replace(/,/g, '').replace(/ China/g, ', China');
-    edgeLocations[7] = chinaFix;
-
-    console.log(JSON.stringify(edgeLocations))
-
     // Generate edge location array
     // [0] get each region location set string
     // [1] append region to each location details string
     // @todo [0] - I don't think it ever enters here, since split 
     //  of a string is always an Array?
     edgeLocations.forEach((locationList, index) => {
-      const details = locationList
-        .split('; ') // [0]
-        .map(l => l.concat(`, ${regions[index]}`)); // [1]
-
-      if (Array.isArray(details)) {
-        locations = locations.concat(details);
-      } else { // @todo [0]            
-        locations.push(locationList);
-      }
+      locationList
+        .split(';')
+        .forEach(l => {
+          locations.push(`${l.trim()}, ${regions[index]}`);
+        });
     });
-
-    console.log(JSON.stringify(locations))
 
     return {
       locations: locations,

@@ -522,13 +522,13 @@
     "region": "Europe",
     "pricingRegion": "Europe & Israel"
   },
-  "WMI": {
+  "WAW": {
     "city": "Warsaw",
     "country": "Poland",
     "countryCode": "PL",
     "count": 1,
-    "latitude": 52.451099,
-    "longitude": 20.6518,
+    "latitude": 52.165833,
+    "longitude": 20.967222,
     "region": "Europe",
     "pricingRegion": "Europe & Israel"
   },
@@ -580,7 +580,7 @@
     "latitude": 37.46910095214844,
     "longitude": 126.45099639892578,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MAA": {
     "city": "Chennai",
@@ -589,8 +589,18 @@
     "count": 7,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
-    "region": "Singapore (6)",
+    "region": "Asia",
     "pricingRegion": "India"
+  },
+  "SIN": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "count": 6,
+    "latitude": 1.35019,
+    "longitude": 103.994003,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "KIX": {
     "city": "Osaka",
@@ -640,7 +650,7 @@
     "latitude": 25.0777,
     "longitude": 121.233002,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "DMK": {
     "city": "Bangkok",
@@ -650,7 +660,7 @@
     "latitude": 13.9125995636,
     "longitude": 100.607002258,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "CCU": {
     "city": "Kolkata",
@@ -670,7 +680,7 @@
     "latitude": -6.1255698204,
     "longitude": 106.65599823,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "KUL": {
     "city": "Kuala Lumpur",
@@ -680,7 +690,7 @@
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MNL": {
     "city": "Manila",
@@ -690,7 +700,27 @@
     "latitude": 14.5086,
     "longitude": 121.019997,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+  },
+  "HAN": {
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "count": 1,
+    "latitude": 21.221200942993164,
+    "longitude": 105.80699920654297,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+  },
+  "SGN": {
+    "city": "Ho Chi Minh",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "count": 1,
+    "latitude": 10.818889,
+    "longitude": 106.651944,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "SYD": {
     "city": "Sydney",

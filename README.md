@@ -43,10 +43,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 87
+const locationCount = el.getLocationCount(); // returns 91
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 307
+const popCount = el.getPoPCount() // returns 385
 ```
 
 ### Browser
@@ -143,23 +143,26 @@ OTP,Bucharest,,Romania,RO,1,44.5711111,26.085,Europe,"Europe & Israel"
 PMO,Palermo,,Italy,IT,1,38.175999,13.091,Europe,"Europe & Israel"
 PRG,Prague,,Czech,CZ,1,50.1008,14.26,Europe,"Europe & Israel"
 SOF,Sofia,,Bulgaria,BG,1,42.696693420410156,23.411436080932617,Europe,"Europe & Israel"
-WMI,Warsaw,,Poland,PL,1,52.451099,20.6518,Europe,"Europe & Israel"
+WAW,Warsaw,,Poland,PL,1,52.165833,20.967222,Europe,"Europe & Israel"
 ZAG,Zagreb,,Croatia,HR,1,45.7429008484,16.0687999725,Europe,"Europe & Israel"
 ZRH,Zurich,,Switzerland,CH,1,47.464699,8.54917,Europe,"Europe & Israel"
 NRT,Tokyo,,Japan,JP,20,35.764702,140.386002,Asia,"Japan"
 DEL,New Delhi,,India,IN,7,28.5665,77.103104,Asia,"India"
-ICN,Seoul,,Korea,KR,6,37.46910095214844,126.45099639892578,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
-MAA,Chennai,,India,IN,7,12.990005493164062,80.16929626464844,Singapore (6),"India"
+ICN,Seoul,,Korea,KR,6,37.46910095214844,126.45099639892578,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+MAA,Chennai,,India,IN,7,12.990005493164062,80.16929626464844,Asia,"India"
+SIN,Singapore,,Singapore,SG,6,1.35019,103.994003,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
 KIX,Osaka,,Japan,JP,7,34.42729949951172,135.24400329589844,Asia,"Japan"
 BOM,Mumbai,,India,IN,10,19.0886993408,72.8678970337,Asia,"India"
 BLR,Bangalore,,India,IN,4,13.1979,77.706299,Asia,"India"
 HYD,Hyderabad,,India,IN,3,17.231318,78.429855,Asia,"India"
-TPE,Taipei,,Taiwan,TW,3,25.0777,121.233002,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
-DMK,Bangkok,,Thailand,TH,10,13.9125995636,100.607002258,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+TPE,Taipei,,Taiwan,TW,3,25.0777,121.233002,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+DMK,Bangkok,,Thailand,TH,10,13.9125995636,100.607002258,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
 CCU,Kolkata,,India,IN,2,22.654699325561523,88.44670104980469,Asia,"India"
-CGK,Jakarta,,Indonesia,ID,2,-6.1255698204,106.65599823,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
-KUL,Kuala Lumpur,,Malaysia,MY,2,2.745579957962,101.70999908447,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
-MNL,Manila,,Philippines,PH,1,14.5086,121.019997,Asia,"Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+CGK,Jakarta,,Indonesia,ID,2,-6.1255698204,106.65599823,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+KUL,Kuala Lumpur,,Malaysia,MY,2,2.745579957962,101.70999908447,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+MNL,Manila,,Philippines,PH,1,14.5086,121.019997,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+HAN,Hanoi,,Vietnam,VN,1,21.221200942993164,105.80699920654297,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+SGN,Ho Chi Minh,,Vietnam,VN,1,10.818889,106.651944,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
 SYD,Sydney,,Australia,AU,6,-33.94609832763672,151.177001953125,Australia & New Zealand,"Australia & New Zealand"
 AKL,Auckland,,New Zealand,NZ,3,-37.008098602299995,174.792007446,Australia & New Zealand,"Australia & New Zealand"
 MEL,Melbourne,,Australia,AU,2,-37.673302,144.843002,Australia & New Zealand,"Australia & New Zealand"
@@ -712,13 +715,13 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "region": "Europe",
     "pricingRegion": "Europe & Israel"
   },
-  "WMI": {
+  "WAW": {
     "city": "Warsaw",
     "country": "Poland",
     "countryCode": "PL",
     "count": 1,
-    "latitude": 52.451099,
-    "longitude": 20.6518,
+    "latitude": 52.165833,
+    "longitude": 20.967222,
     "region": "Europe",
     "pricingRegion": "Europe & Israel"
   },
@@ -770,7 +773,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": 37.46910095214844,
     "longitude": 126.45099639892578,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MAA": {
     "city": "Chennai",
@@ -779,8 +782,18 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 7,
     "latitude": 12.990005493164062,
     "longitude": 80.16929626464844,
-    "region": "Singapore (6)",
+    "region": "Asia",
     "pricingRegion": "India"
+  },
+  "SIN": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "count": 6,
+    "latitude": 1.35019,
+    "longitude": 103.994003,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "KIX": {
     "city": "Osaka",
@@ -830,7 +843,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": 25.0777,
     "longitude": 121.233002,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "DMK": {
     "city": "Bangkok",
@@ -840,7 +853,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": 13.9125995636,
     "longitude": 100.607002258,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "CCU": {
     "city": "Kolkata",
@@ -860,7 +873,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": -6.1255698204,
     "longitude": 106.65599823,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "KUL": {
     "city": "Kuala Lumpur",
@@ -870,7 +883,7 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": 2.745579957962,
     "longitude": 101.70999908447,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MNL": {
     "city": "Manila",
@@ -880,7 +893,27 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "latitude": 14.5086,
     "longitude": 121.019997,
     "region": "Asia",
-    "pricingRegion": "Hong Kong, Indonesia,  Philippines, Singapore, South Korea, Taiwan, & Thailand"
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+  },
+  "HAN": {
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "count": 1,
+    "latitude": 21.221200942993164,
+    "longitude": 105.80699920654297,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+  },
+  "SGN": {
+    "city": "Ho Chi Minh",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "count": 1,
+    "latitude": 10.818889,
+    "longitude": 106.651944,
+    "region": "Asia",
+    "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "SYD": {
     "city": "Sydney",

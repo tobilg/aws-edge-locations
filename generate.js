@@ -120,7 +120,7 @@ const run = async () => {
   const data = await page.evaluate(() => {
     const result = [];
     // Selector
-    const rawLocations = document.evaluate('//*[@id="aws-page-content"]/main/div[1]/div/div/div[@class="lb-rtxt"]/p[*]', document);
+    const rawLocations = document.evaluate('//*[@id="aws-page-content-main"]/div[2]/div/div/div[@class="lb-rtxt"]/p[*]', document);
 
     // First iterator
     let iterator = rawLocations.iterateNext();

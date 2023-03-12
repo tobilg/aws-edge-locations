@@ -156,7 +156,7 @@ BOM,Mumbai,,India,IN,10,19.0886993408,72.8678970337,Asia,"India"
 BLR,Bangalore,,India,IN,4,13.1979,77.706299,Asia,"India"
 HYD,Hyderabad,,India,IN,3,17.231318,78.429855,Asia,"India"
 TPE,Taipei,,Taiwan,TW,3,25.0777,121.233002,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
-DMK,Bangkok,,Thailand,TH,10,13.9125995636,100.607002258,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
+BKK,Bangkok,,Thailand,TH,10,13.689999,100.750114,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
 CCU,Kolkata,,India,IN,2,22.654699325561523,88.44670104980469,Asia,"India"
 CGK,Jakarta,,Indonesia,ID,2,-6.1255698204,106.65599823,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
 KUL,Kuala Lumpur,,Malaysia,MY,2,2.745579957962,101.70999908447,Asia,"Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
@@ -184,6 +184,11 @@ SZX,Shenzhen,,China,CN,1,22.639299392700195,113.81099700927734,China,"China"
 ZHY,Zhongwei,,China,CN,1,37.572778,105.154444,China,"China"
 PEK,Beijing,,China,CN,1,40.080101013183594,116.58499908447266,China,"China"
 HKG,Hong Kong,,China,HK,4,22.308901,113.915001,China,"China"
+CMH,Columbus,Ohio,United States,US,1,39.998056,-82.891944,North America,"United States, Mexico, & Canada"
+HIO,Hillsboro,Oregon,United States,US,1,45.540394,-122.949825,North America,"United States, Mexico, & Canada"
+TPA,Tampa,Florida,United States,US,1,27.979722,-82.534722,North America,"United States, Mexico, & Canada"
+PNQ,Pune,Maharashtra,India,IN,1,18.582222,73.919722,Asia,"India"
+MCT,Muscat,Muscat,Oman,OM,1,23.6015386,58.2899376,Middle East,"South Africa, Kenya, & Middle East"
 ```
 
 ### JSON lookup
@@ -845,13 +850,13 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "region": "Asia",
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
-  "DMK": {
+  "BKK": {
     "city": "Bangkok",
     "country": "Thailand",
     "countryCode": "TH",
     "count": 10,
-    "latitude": 13.9125995636,
-    "longitude": 100.607002258,
+    "latitude": 13.689999,
+    "longitude": 100.750114,
     "region": "Asia",
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
@@ -1124,6 +1129,61 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "longitude": 113.915001,
     "region": "China",
     "pricingRegion": "China"
+  },
+  "CMH": {
+    "city": "Columbus",
+    "state": "Ohio",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 39.998056,
+    "longitude": -82.891944,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "HIO": {
+    "city": "Hillsboro",
+    "state": "Oregon",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 45.540394,
+    "longitude": -122.949825,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "TPA": {
+    "city": "Tampa",
+    "state": "Florida",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 27.979722,
+    "longitude": -82.534722,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "PNQ": {
+    "city": "Pune",
+    "state": "Maharashtra",
+    "country": "India",
+    "countryCode": "IN",
+    "count": 1,
+    "latitude": 18.582222,
+    "longitude": 73.919722,
+    "region": "Asia",
+    "pricingRegion": "India"
+  },
+  "MCT": {
+    "city": "Muscat",
+    "state": "Muscat",
+    "country": "Oman",
+    "countryCode": "OM",
+    "count": 1,
+    "latitude": 23.6015386,
+    "longitude": 58.2899376,
+    "region": "Middle East",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   }
 }
 ```

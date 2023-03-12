@@ -652,13 +652,13 @@
     "region": "Asia",
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
-  "DMK": {
+  "BKK": {
     "city": "Bangkok",
     "country": "Thailand",
     "countryCode": "TH",
     "count": 10,
-    "latitude": 13.9125995636,
-    "longitude": 100.607002258,
+    "latitude": 13.689999,
+    "longitude": 100.750114,
     "region": "Asia",
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
@@ -931,5 +931,60 @@
     "longitude": 113.915001,
     "region": "China",
     "pricingRegion": "China"
+  },
+  "CMH": {
+    "city": "Columbus",
+    "state": "Ohio",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 39.998056,
+    "longitude": -82.891944,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "HIO": {
+    "city": "Hillsboro",
+    "state": "Oregon",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 45.540394,
+    "longitude": -122.949825,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "TPA": {
+    "city": "Tampa",
+    "state": "Florida",
+    "country": "United States",
+    "countryCode": "US",
+    "count": 1,
+    "latitude": 27.979722,
+    "longitude": -82.534722,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "PNQ": {
+    "city": "Pune",
+    "state": "Maharashtra",
+    "country": "India",
+    "countryCode": "IN",
+    "count": 1,
+    "latitude": 18.582222,
+    "longitude": 73.919722,
+    "region": "Asia",
+    "pricingRegion": "India"
+  },
+  "MCT": {
+    "city": "Muscat",
+    "state": "Muscat",
+    "country": "Oman",
+    "countryCode": "OM",
+    "count": 1,
+    "latitude": 23.6015386,
+    "longitude": 58.2899376,
+    "region": "Middle East",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
   }
 }

@@ -5,6 +5,7 @@ const os = require('os');
 const utf8 = require('utf8');
 const pricingRegionMapping = require('./lib/pricingRegionMapping');
 const airportOverridesData = require('./lib/airportOverrides');
+const regionalEdgeCaches = require('./lib/regionalEdgeCaches');
 
 // Load airport data
 const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'large-airports.json'), 'utf8'));
@@ -241,7 +242,7 @@ const run = async () => {
 
   await browser.close();
 
-  const edgeLocations = [];
+  let edgeLocations = [];
 
   data.locations.forEach(l => {
     // Get location
@@ -265,6 +266,8 @@ const run = async () => {
     // Push to array
     edgeLocations.push(location);
   });
+
+  edgeLocations = edgeLocations.concat(regionalEdgeCaches);
 
   writeJSON(edgeLocations);
   writeCSV(edgeLocations);

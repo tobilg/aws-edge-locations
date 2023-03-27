@@ -229,6 +229,7 @@ const run = async () => {
     edgeLocations.forEach((locationList, index) => {
       locationList
         .split(';')
+        .filter(l => l.length > 0)
         .forEach(l => {
           locations.push(`${l.trim()}, ${regions[index]}`);
         });

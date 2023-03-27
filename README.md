@@ -43,10 +43,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
-const locationCount = el.getLocationCount(); // returns 91
+const locationCount = el.getLocationCount(); // returns 97
 
 // Get PoP count
-const popCount = el.getPoPCount() // returns 385
+const popCount = el.getPoPCount() // returns 392
 ```
 
 ### Browser
@@ -172,6 +172,7 @@ GIG,Rio De Janeiro,,Brazil,BR,2,-22.8099994659,-43.2505569458,South America,"Sou
 BOG,Bogota,,Colombia,CO,2,4.70159,-74.1469,South America,"South America"
 EZE,Buenos Aires,,Argentina,AR,2,-34.8222,-58.5358,South America,"South America"
 SCL,Santiago,,Chile,CL,1,-33.393001556396484,-70.78579711914062,South America,"South America"
+LIM,Lima,,Peru,PE,2,-12.0219,-77.114305,South America,"South America"
 TLV,Tel Aviv,,Israel,IL,2,32.01139831542969,34.88669967651367,Middle East,"Europe & Israel"
 BAH,Manama,,Bahrain,BH,2,26.27079963684082,50.63359832763672,Middle East,"South Africa, Kenya, & Middle East"
 DXB,Dubai,,UAE,AE,1,25.2527999878,55.3643989563,Middle East,"South Africa, Kenya, & Middle East"
@@ -1007,6 +1008,16 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 1,
     "latitude": -33.393001556396484,
     "longitude": -70.78579711914062,
+    "region": "South America",
+    "pricingRegion": "South America"
+  },
+  "LIM": {
+    "city": "Lima",
+    "country": "Peru",
+    "countryCode": "PE",
+    "count": 2,
+    "latitude": -12.0219,
+    "longitude": -77.114305,
     "region": "South America",
     "pricingRegion": "South America"
   },

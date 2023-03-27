@@ -812,6 +812,16 @@
     "region": "South America",
     "pricingRegion": "South America"
   },
+  "LIM": {
+    "city": "Lima",
+    "country": "Peru",
+    "countryCode": "PE",
+    "count": 2,
+    "latitude": -12.0219,
+    "longitude": -77.114305,
+    "region": "South America",
+    "pricingRegion": "South America"
+  },
   "TLV": {
     "city": "Tel Aviv",
     "country": "Israel",

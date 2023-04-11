@@ -16,7 +16,7 @@ describe("# Testing the aws-edge-locations functionality", function() {
         "state": "District of Columbia",
         "country": "United States",
         "countryCode": "US",
-        "count": 11,
+        "count": 20,
         "latitude": 38.94449997,
         "longitude": -77.45580292,
         "region": "North America",
@@ -35,14 +35,14 @@ describe("# Testing the aws-edge-locations functionality", function() {
     it("should return the correct count of locations", function (done) {
       const el = new AWSEdgeLocations();
 
-      el.getLocationCount().should.eql(97);
+      el.getLocationCount().should.eql(99);
       done();
     });
 
     it("should return the correct count of Point of Presences", function (done) {
         const el = new AWSEdgeLocations();
 
-        el.getPoPCount().should.eql(392);
+        el.getPoPCount().should.eql(479);
         done();
     });
   });

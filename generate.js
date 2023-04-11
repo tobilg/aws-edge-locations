@@ -3,12 +3,48 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const utf8 = require('utf8');
+const parquet = require('parquetjs');
 const pricingRegionMapping = require('./lib/pricingRegionMapping');
 const airportOverridesData = require('./lib/airportOverrides');
 const regionalEdgeCaches = require('./lib/regionalEdgeCaches');
 
 // Load airport data
 const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'large-airports.json'), 'utf8'));
+
+const parquetSchema = new parquet.ParquetSchema({
+  code: { type: 'UTF8' },
+  city: { type: 'UTF8' },
+  state: { type: 'UTF8', optional: true },
+  country: { type: 'UTF8' },
+  countryCode: { type: 'UTF8' },
+  count: { type: 'INT64' },
+  latitude: { type: 'DOUBLE' },
+  longitude: { type: 'DOUBLE' },
+  region: { type: 'UTF8', optional: true },
+  pricingRegion: { type: 'UTF8', optional: true },
+});
+
+const writeParquet = async locations => {
+  const parquetPath = path.join(__dirname, 'dist', 'aws-edge-locations.parquet');
+  const writer = await parquet.ParquetWriter.openFile(parquetSchema, parquetPath);
+
+  locations.forEach(async location => {
+    await writer.appendRow({
+      code: location.code,
+      city: location.city,
+      state: location.state,
+      country: location.country,
+      countryCode: location.countryCode,
+      count: location.count,
+      latitude: location.latitude,
+      longitude: location.longitude,
+      region: location.region,
+      pricingRegion: location.pricingRegion,
+    })
+  });
+
+  await writer.close();
+}
 
 const writeCSV = locations => {
   const csvPath = path.join(__dirname, 'dist', 'aws-edge-locations.csv');
@@ -104,7 +140,7 @@ const createLocation = location => {
   }
 
   // region is the third detail in string
-  locationObj.region = temp[2].trim();
+  locationObj.region = temp[2]?.trim();
 
   // return location object
   return locationObj;
@@ -166,12 +202,11 @@ const run = async () => {
         // Fixes
         const locationString = r.replace('Edge location:', '')
           .replace('Edge locations:', '').trim()
-          .replace('Taiwan(3)', 'Taiwan (3)')
           .replace('Utah', 'UT')
+          .replace('New York City', 'New York')
           .replace('Singapore', 'Singapore, Singapore')
           .replace('São Paulo', 'Sao Paulo')
-          .replace('Querétaro', 'Queretaro')
-          .replace('CHINA', 'China');
+          .replace('Querétaro', 'Queretaro');
         edgeLocations.push(locationString);
       }
     });
@@ -186,6 +221,7 @@ const run = async () => {
       const locationTemp = location.split(', ');
       if (locationTemp[1].length > 2) { // Contains count
         const countTemp = locationTemp[1].split(' ');
+        console.log(location, countTemp.toString())
         let countCountry = null;
         let countState = null;
         if (usCountries.hasOwnProperty(countTemp[0])) {
@@ -272,6 +308,7 @@ const run = async () => {
 
   writeJSON(edgeLocations);
   writeCSV(edgeLocations);
+  writeParquet(edgeLocations);
 }
 
 run();

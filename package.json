@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.4.13",
+  "version": "0.4.14",
   "description": "List of AWS edge location code prefixes",
   "main": "umd/aws-edge-locations.min.js",
   "module": "src/index.js",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
+    "parquetjs": "^0.11.2",
     "puppeteer": "^19.6.3",
     "utf8": "^3.0.0",
     "webpack": "^5.75.0",

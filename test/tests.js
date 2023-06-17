@@ -35,14 +35,14 @@ describe("# Testing the aws-edge-locations functionality", function() {
     it("should return the correct count of locations", function (done) {
       const el = new AWSEdgeLocations();
 
-      el.getLocationCount().should.eql(98);
+      el.getLocationCount().should.eql(99);
       done();
     });
 
     it("should return the correct count of Point of Presences", function (done) {
         const el = new AWSEdgeLocations();
 
-        el.getPoPCount().should.eql(475);
+        el.getPoPCount().should.eql(476);
         done();
     });
   });

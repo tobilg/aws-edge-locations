@@ -943,6 +943,16 @@
     "region": "Africa",
     "pricingRegion": "South Africa, Kenya, & Middle East"
   },
+  "LOS": {
+    "city": "Lagos",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "count": 1,
+    "latitude": 6.5773701667785645,
+    "longitude": 3.321160078048706,
+    "region": "Africa",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
+  },
   "PVG": {
     "city": "Shanghai",
     "country": "China",

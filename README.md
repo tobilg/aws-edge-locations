@@ -185,6 +185,7 @@ MCT,Muscat,,Oman,OM,1,23.593299865722656,58.284400939941406,Middle East,"South A
 CPT,Cape Town,,South Africa,ZA,1,-33.9648017883,18.6016998291,Africa,"South Africa, Kenya, & Middle East"
 JNB,Johannesburg,,South Africa,ZA,1,-26.1392,28.246,Africa,"South Africa, Kenya, & Middle East"
 NBO,Nairobi,,Kenya,KE,1,-1.31923997402,36.9277992249,Africa,"South Africa, Kenya, & Middle East"
+LOS,Lagos,,Nigeria,NG,1,6.5773701667785645,3.321160078048706,Africa,"South Africa, Kenya, & Middle East"
 PVG,Shanghai,,China,CN,1,31.143400192260742,121.80500030517578,China,"China"
 SZX,Shenzhen,,China,CN,1,22.639299392700195,113.81099700927734,China,"China"
 ZHY,Zhongwei,,China,CN,1,37.572778,105.154444,China,"China"
@@ -1144,6 +1145,16 @@ The JSON version of the data can be found at [dist/aws-edge-locations.json](dist
     "count": 1,
     "latitude": -1.31923997402,
     "longitude": 36.9277992249,
+    "region": "Africa",
+    "pricingRegion": "South Africa, Kenya, & Middle East"
+  },
+  "LOS": {
+    "city": "Lagos",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "count": 1,
+    "latitude": 6.5773701667785645,
+    "longitude": 3.321160078048706,
     "region": "Africa",
     "pricingRegion": "South Africa, Kenya, & Middle East"
   },

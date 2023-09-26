@@ -1,0 +1,29 @@
+{
+  "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc"]
+  },
+  "source": {
+      "include": ["dist", "package.json", "README.md"],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+      "plugins/markdown"
+  ],
+  "templates": {
+      "referenceTitle": "AWS IAM Managed Policies",
+      "disableSort": false,
+      "collapse": true,
+      "resources": {
+          "AWS managed policies": "https://docs.aws.amazon.com/aws-managed-policy/latest/reference/policy-list.html"
+      }
+  },
+  "opts": {
+      "destination": "./docs/",
+      "encoding": "utf8",
+      "private": true,
+      "recurse": true,
+      "template": "./node_modules/jsdoc-fresh"
+  }
+}

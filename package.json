@@ -2,13 +2,16 @@
   "name": "aws-edge-locations",
   "version": "0.4.17",
   "description": "List of AWS edge location code prefixes",
-  "main": "umd/aws-edge-locations.min.js",
-  "module": "src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "test": "mocha",
     "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",
     "filter-airports": "cat data/airport-codes.json  | jq -c '[ .[] | select( .type | contains(\"large_airport\")) ]' > data/large-airports.json",
-    "generate": "node generate.js",
+    "generate": "ts-node --transpile-only --log-error process/generate.ts",
     "build": "npm run download-airports && npm run filter-airports && npm run generate && npm run bundle",
     "bundle": "node_modules/.bin/webpack-cli",
     "prepack": "npm run bundle"
@@ -38,12 +41,19 @@
   },
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
   "devDependencies": {
+    "@types/node": "^20.4.9",
     "chai": "^4.3.7",
+    "jsdoc": "^4.0.2",
+    "jsdoc-fresh": "^3.0.0",
+    "mkdirp": "^3.0.1",
     "mocha": "^10.2.0",
     "parquetjs": "^0.11.2",
-    "puppeteer": "^19.6.3",
-    "utf8": "^3.0.0",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "utf8": "^3.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "node-html-parser": "^6.1.10"
   }
 }

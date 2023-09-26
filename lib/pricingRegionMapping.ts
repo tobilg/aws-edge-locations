@@ -1,4 +1,8 @@
-module.exports  = {
+export interface PricingRegionMapping {
+  [key: string]: string[];
+}
+
+export const pricingRegionMapping: PricingRegionMapping = {
   "United States, Mexico, & Canada": [
     "United States",
     "Mexico",

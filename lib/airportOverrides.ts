@@ -1,6 +1,18 @@
 // Airport data overrides
 // Data derived from Wikipedia
-module.exports = {
+
+interface AirportOverride {
+  code: string;
+  countryCode: string;
+  latitude: number;
+  longitude: number;
+}
+
+export interface AirportOverrides {
+  [key: string]: AirportOverride;
+}
+
+export const airportOverrides: AirportOverrides = {
   "queretaro": {
       "code": "QRO",
       "countryCode": "MX",

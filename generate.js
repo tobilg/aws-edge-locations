@@ -4,9 +4,9 @@ const path = require('path');
 const os = require('os');
 const utf8 = require('utf8');
 const parquet = require('parquetjs');
-const pricingRegionMapping = require('./lib/pricingRegionMapping');
-const airportOverridesData = require('./lib/airportOverrides');
-const regionalEdgeCaches = require('./lib/regionalEdgeCaches');
+const pricingRegionMapping = require('./process/utils/pricingRegionMapping');
+const airportOverridesData = require('./process/utils/airportOverrides');
+const regionalEdgeCaches = require('./process/utils/regionalEdgeCaches');
 
 // Load airport data
 const airportData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'large-airports.json'), 'utf8'));

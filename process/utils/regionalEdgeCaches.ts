@@ -1,4 +1,4 @@
-module.exports = [
+export const regionalEdgeCaches = [
   {
     code: 'CMH',
     city: 'Columbus',

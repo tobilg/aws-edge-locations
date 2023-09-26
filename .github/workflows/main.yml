@@ -1,0 +1,61 @@
+name: Update AWS Edge Location data
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # Run everyday at 4AM UTC
+    - cron:  '0 4 * * *'
+
+jobs:
+
+  gather_and_update_data:
+    name: Gather the latest AWS Edge Location data and if there is new data, publish a new package version to npm
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Gather data and check for changes
+        id: gatherData
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Install dependencies
+          npm i
+
+          # Build
+          npm run build
+
+          # Setup git repo
+          git config --global user.name 'TobiLG'
+          git config --global user.email 'tobilg@users.noreply.github.com'
+          git remote set-url --push origin https://tobilg:$GITHUB_TOKEN@github.com/tobilg/aws-edge-locations
+
+          # Add new files if there are any
+          git add .
+
+          # Check for changes and commit if there are any
+          git diff-index --cached --quiet HEAD || echo '::set-output name=changed::true'
+
+      - name: Eventually publish new package version
+        if: ${{ steps.gatherData.outputs.changed == 'true' }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # Increase package patch version \
+          npm --no-git-tag-version version patch && \
+          # Add new files \
+          git add . && \
+          # Commit changes \
+          git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
+          # Push to repo \
+          git push && \
+          # Publish new version to npm registry \
+          npm publish

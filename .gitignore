@@ -62,6 +62,6 @@ typings/
 
 # data
 .DS_Store
-umd/
 temp/
 dist/
+tsconfig.tsbuildinfo

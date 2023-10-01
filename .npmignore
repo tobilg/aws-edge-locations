@@ -1,3 +1,10 @@
 data/
+temp/
+process/
+src/
+docs/
 .github/
 .DS_Store
+.jsdoc.json
+tsconfig.json
+tsconfig.tsbuildinfo

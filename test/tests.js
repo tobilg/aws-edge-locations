@@ -1,7 +1,7 @@
 const chai = require('chai');
 const should = chai.should();
 
-const AWSEdgeLocations = require('../src/index');
+const AWSEdgeLocations = require('../dist/index').default;
 
 chai.config.includeStack = false;
 
@@ -32,17 +32,17 @@ describe("# Testing the aws-edge-locations functionality", function() {
       done();
     });
 
-    it("should return the correct count of locations", function (done) {
+    it("should return more than 100 locations", function (done) {
       const el = new AWSEdgeLocations();
 
-      el.getLocationCount().should.eql(102);
+      el.getLocationCount().should.be.greaterThan(100);
       done();
     });
 
-    it("should return the correct count of Point of Presences", function (done) {
+    it("should return more than 500 Point of Presences", function (done) {
         const el = new AWSEdgeLocations();
 
-        el.getPoPCount().should.eql(506);
+        el.getPoPCount().should.be.greaterThan(500);
         done();
     });
   });

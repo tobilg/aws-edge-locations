@@ -61,8 +61,7 @@ typings/
 .next
 
 # data
-data/
-
 .DS_Store
-
 umd/
+temp/
+dist/

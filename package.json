@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.4.17",
+  "version": "0.5.0",
   "description": "List of AWS edge location code prefixes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,20 +9,17 @@
   },
   "scripts": {
     "test": "mocha",
-    "download-airports": "mkdir -p data && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output data/airport-codes.json",
-    "filter-airports": "cat data/airport-codes.json  | jq -c '[ .[] | select( .type | contains(\"large_airport\")) ]' > data/large-airports.json",
-    "generate": "ts-node --transpile-only --log-error process/generate.ts",
-    "build": "npm run download-airports && npm run filter-airports && npm run generate && npm run bundle",
-    "bundle": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc --build src/ && rm -rf src/data",
-    "prepack": "npm run bundle"
+    "download-airports": "mkdir -p temp && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output temp/airport-codes.json",
+    "filter-airports": "ts-node --transpile-only --log-error process/filterAirports.ts",
+    "generate-data": "mkdir -p data && ts-node --transpile-only --log-error process/generate.ts",
+    "bundle": "rm -rf dist/ && mkdir -p src/data && cp data/*.json src/data && tsc --build src/",
+    "build": "npm run download-airports && npm run filter-airports && npm run generate-data && npm run bundle",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tobilg/aws-edge-locations.git"
   },
-  "files": [
-    "umd/*.js"
-  ],
   "keywords": [
     "aws",
     "edge",
@@ -42,8 +39,10 @@
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
   "devDependencies": {
     "@types/node": "^20.7.0",
+    "@types/utf8": "^3.0.1",
     "axios": "^1.5.0",
     "chai": "^4.3.8",
+    "iso-3166": "3.1.0",
     "jsdoc": "^4.0.2",
     "jsdoc-fresh": "^3.0.0",
     "mkdirp": "^3.0.1",

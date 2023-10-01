@@ -1,15 +1,65 @@
 import { EOL } from 'os';
 import { join } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
-//import utf8 from 'utf8';
+import iso31662 from 'iso-3166/2.json'
+import utf8 from 'utf8';
 import parquet from 'parquetjs';
 import { downloadAsHTML } from './utils/downloader';
 import { pricingRegionMapping } from './utils/pricingRegionMapping';
 import { airportOverrides } from './utils/airportOverrides';
-import { regionalEdgeCaches } from './utils/regionalEdgeCaches';
+import { EdgeLocations, EdgeLocation } from '../src';
+
+export interface LargeCityData {
+  continent:    string;
+  coordinates:  string;
+  elevation_ft: string;
+  gps_code:     string;
+  iata_code:    string;
+  ident:        string;
+  iso_country:  string;
+  iso_region:   string;
+  local_code:   string | null;
+  municipality: string;
+  name:         string;
+  type:         string;
+}
+
+export interface RegionalEdgeCache {
+  city: string | null;
+  state: string;
+  country: string;
+}
+
+export interface RawEdgeLocation {
+  city: string;
+  state: string | null;
+  country: string;
+  region?: string;
+  popCount: number;
+}
+
+export interface LocationByRegion {
+  region: string;
+  edgeLocations: RawEdgeLocation[];
+  regionalEdgeCaches: RegionalEdgeCache[];
+}
+
+// Define US states mapping
+const usStates = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","FL":"Florida","GA":"Georgia","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AS":"American Samoa","DC":"District of Columbia","FM":"Federated States of Micronesia","GU":"Guam","MH":"Marshall Islands","MP":"Northern Mariana Islands","PW":"Palau","PR":"Puerto Rico","VI":"Virgin Islands"};
 
 // Load airport data
-const airportData = JSON.parse(readFileSync(join(__dirname, '../', 'data', 'large-airports.json'), 'utf8'));
+const airportData: LargeCityData[] = JSON.parse(readFileSync(join(__dirname, '../', 'temp', 'large-airports.json'), 'utf8'));
+
+const getStateName = (regionCode: string): string | null => {
+  // Filter by region code
+  const filtered = iso31662.filter(r => r.code === regionCode);
+  // Check
+  if (filtered.length === 1) {
+    return filtered[0].name;
+  } else {
+    return null;
+  }
+}
 
 const parquetSchema = new parquet.ParquetSchema({
   code: { type: 'UTF8' },
@@ -25,7 +75,7 @@ const parquetSchema = new parquet.ParquetSchema({
 });
 
 const writeParquet = async locations => {
-  const parquetPath = join(__dirname, 'dist', 'aws-edge-locations.parquet');
+  const parquetPath = join(__dirname, '../', 'data', 'aws-edge-locations.parquet');
   const writer = await parquet.ParquetWriter.openFile(parquetSchema, parquetPath);
 
   locations.forEach(async location => {
@@ -47,7 +97,7 @@ const writeParquet = async locations => {
 }
 
 const writeCSV = locations => {
-  const csvPath = join(__dirname, 'dist', 'aws-edge-locations.csv');
+  const csvPath = join(__dirname, '../', 'data', 'aws-edge-locations.csv');
   const data = locations.map(e => {
     return `${e.code},${e.city},${e.state || ''},${e.country},${e.countryCode},${e.count},${e.latitude},${e.longitude},${e.region},"${e.pricingRegion}"`
   });
@@ -56,11 +106,11 @@ const writeCSV = locations => {
   writeFileSync(csvPath, data.join(EOL), 'utf8');
 }
 
-const writeJSON = locations => {
-  const jsonPath = join(__dirname, 'dist', 'aws-edge-locations.json');
-  const data = {};
+const writeJSON = (locations: EdgeLocation[], directory: string = 'data') => {
+  const jsonPath = join(__dirname, '../', directory, 'aws-edge-locations.json');
+  const data: EdgeLocations = {};
   locations.forEach(location => {
-    data[location.code] = {
+    data[location.code!] = {
       city: location.city,
       state: location.state,
       country: location.country,
@@ -76,8 +126,8 @@ const writeJSON = locations => {
 }
 
 const lookupAirport = city => {
-  const matches = [];
-  let match = null;
+  const matches: LargeCityData[] = [];
+  let match: LargeCityData | null = null;
   // Search for matches
   airportData.forEach(entry => {
     if (entry.municipality && entry.municipality.toLowerCase() === city.toLowerCase()) {
@@ -85,7 +135,7 @@ const lookupAirport = city => {
     }
   });
   if (matches.length > 1) { // Handle multiple matches
-    const tempMatches = [];
+    const tempMatches: LargeCityData[] = [];
     matches.forEach(m => {
       if (m.name.toLowerCase().indexOf('international') !== -1) {
         tempMatches.push(m);
@@ -115,11 +165,6 @@ const lookupPricingRegion = (location) => {
   return null;
 }
 
-interface RawLocationData {
-  data: string;
-  regionIndex: number;
-}
-
 // Start page for parsing
 const startPage = 'https://aws.amazon.com/cloudfront/features/';
 
@@ -141,7 +186,7 @@ const getLocations = (root: HTMLElement) => {
     // Get <p> tags for distinction between Edge Locations & Regional Edge Caches
     const ps = Array.from(rawLocationData.querySelectorAll('p'));
     
-    // Store cleaned Edge Location data
+    // Store cleaned Edge FullEdgeLocation data
     const rawEdgeLocations = ps[0]
       .innerText
       .replace(/&nbsp;/g, '')
@@ -166,7 +211,7 @@ const getLocations = (root: HTMLElement) => {
     }
 
     // Get region's edge locations
-    const edgeLocations = rawEdgeLocations
+    const edgeLocations: RawEdgeLocation[] = rawEdgeLocations
       .split(';')
       .filter(el => el.length > 0)
       .map(el => el.trim())
@@ -175,17 +220,17 @@ const getLocations = (root: HTMLElement) => {
         const temp = el.replace('Singapore', 'Singapore, Singapore').split(', ');
 
         // Define target properties with defaults
-        const city: string = temp[0];
+        const city: string = temp[0].replace('é', 'e').replace('New York City', 'New York');
         let country: string = 'United States';
         let state: string | null = null;
         let popCount: number = 1;
 
-        //Check if number of PoPs is present
+        // Check if number of PoPs is present
         if (temp[1].indexOf('(') > -1 && temp[1].indexOf('(') > -1) {
           const countryTemp = temp[1].split(' (');
           // Workaround for the US
           if (regionIndex === 0 && !['Mexico', 'Canada'].includes(countryTemp[0])) {
-            state = countryTemp[0];
+            state = usStates[countryTemp[0]];
           } else {
             country = countryTemp[0];
           }
@@ -203,7 +248,7 @@ const getLocations = (root: HTMLElement) => {
       });
 
     // Get region's regional edge caches
-    let regionalEdgeCaches = [];
+    let regionalEdgeCaches: RegionalEdgeCache[] = [];
 
     if (rawRegionalEdgeCaches) {
       regionalEdgeCaches = rawRegionalEdgeCaches
@@ -251,7 +296,7 @@ const getLocations = (root: HTMLElement) => {
       region: regions[regionIndex],
       edgeLocations,
       regionalEdgeCaches,
-    }
+    } as LocationByRegion
   })
 
   return locationsByRegion;
@@ -262,12 +307,59 @@ const run = async () => {
   const html = await downloadAsHTML(startPage);
 
   if (html) {
-    // Parse topics
-    const locations = getLocations(html);
-    console.log(JSON.stringify(locations, null, 2));
+    // Parse locations
+    const locationsByRegion = getLocations(html);
 
-    // Write metadata
-    //writeFileSync(join(__dirname, '../data/json', 'metadata.json'), JSON.stringify(metadata, null, 2), { encoding: 'utf-8' });
+    const fullEdgeLocations: EdgeLocation[] = [];
+
+    locationsByRegion
+      .map(r => r.edgeLocations
+        .map(el => ({
+          ...el,  
+          region: r.region,
+        }))
+      )
+      .flat()
+      .forEach((location: RawEdgeLocation)  => {
+        // Instatiate
+        let fullEdgeLocation: EdgeLocation = {
+          city: location.city,
+          state: location.state,
+          country: location.country,
+          countryCode: '',
+          count: location.popCount,
+          latitude: 0,
+          longitude: 0,
+          region: location.region!,
+          pricingRegion: ''
+        };
+        // Get location
+        const airport = lookupAirport(utf8.encode(location.city));
+        // Check for overrides
+        if (airportOverrides.hasOwnProperty(location.city.toLowerCase())) {
+          const overrideData = airportOverrides[location.city.toLowerCase()];
+          fullEdgeLocation.code = overrideData.code;
+          fullEdgeLocation.countryCode = overrideData.countryCode;
+          fullEdgeLocation.latitude = overrideData.latitude;
+          fullEdgeLocation.longitude = overrideData.longitude;
+        } else if (airport) {
+          fullEdgeLocation.code = airport.iata_code;
+          fullEdgeLocation.countryCode = airport.iso_country;
+          const coordinate = airport.coordinates.split(', ');
+          fullEdgeLocation.latitude = parseFloat(coordinate[1]);
+          fullEdgeLocation.longitude = parseFloat(coordinate[0]);
+          if (airport.iso_region) fullEdgeLocation.state = getStateName(airport.iso_region);
+        }
+        // Get pricing region
+        fullEdgeLocation.pricingRegion = lookupPricingRegion(location) || '';
+        // Push to array
+        fullEdgeLocations.push(fullEdgeLocation);
+      });
+
+    // Write to data
+    writeJSON(fullEdgeLocations);
+    writeCSV(fullEdgeLocations);
+    writeParquet(fullEdgeLocations);
   }
 };
 

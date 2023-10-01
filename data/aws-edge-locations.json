@@ -213,9 +213,9 @@
     "state": "Florida",
     "country": "United States",
     "countryCode": "US",
-    "count": 1,
-    "latitude": 27.979722,
-    "longitude": -82.534722,
+    "count": 2,
+    "latitude": 27.975500106811523,
+    "longitude": -82.533203125,
     "region": "North America",
     "pricingRegion": "United States, Mexico, & Canada"
   },
@@ -235,9 +235,9 @@
     "state": "Ohio",
     "country": "United States",
     "countryCode": "US",
-    "count": 1,
-    "latitude": 39.998056,
-    "longitude": -82.891944,
+    "count": 2,
+    "latitude": 39.998001,
+    "longitude": -82.891899,
     "region": "North America",
     "pricingRegion": "United States, Mexico, & Canada"
   },
@@ -265,7 +265,7 @@
   },
   "QRO": {
     "city": "Queretaro",
-    "state": "Mexico",
+    "state": null,
     "country": "Mexico",
     "countryCode": "MX",
     "count": 4,
@@ -276,15 +276,40 @@
   },
   "YTO": {
     "city": "Toronto",
-    "country": "North America",
+    "state": null,
+    "country": "Canada",
     "countryCode": "CA",
-    "count": 1,
+    "count": 5,
     "latitude": 43.6772003174,
     "longitude": -79.63059997559999,
-    "pricingRegion": null
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "YUL": {
+    "city": "Montreal",
+    "state": null,
+    "country": "Canada",
+    "countryCode": "CA",
+    "count": 2,
+    "latitude": 45.470556,
+    "longitude": -73.740833,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
+  },
+  "YVR": {
+    "city": "Vancouver",
+    "state": "British Columbia",
+    "country": "Canada",
+    "countryCode": "CA",
+    "count": 1,
+    "latitude": 49.193901062,
+    "longitude": -123.183998108,
+    "region": "North America",
+    "pricingRegion": "United States, Mexico, & Canada"
   },
   "FRA": {
     "city": "Frankfurt am Main",
+    "state": "Hessen",
     "country": "Germany",
     "countryCode": "DE",
     "count": 17,
@@ -295,6 +320,7 @@
   },
   "DUS": {
     "city": "Düsseldorf",
+    "state": "Nordrhein-Westfalen",
     "country": "Germany",
     "countryCode": "DE",
     "count": 5,
@@ -305,6 +331,7 @@
   },
   "HAM": {
     "city": "Hamburg",
+    "state": "Hamburg",
     "country": "Germany",
     "countryCode": "DE",
     "count": 6,
@@ -315,6 +342,7 @@
   },
   "MUC": {
     "city": "Munich",
+    "state": "Bayern",
     "country": "Germany",
     "countryCode": "DE",
     "count": 4,
@@ -325,6 +353,7 @@
   },
   "TXL": {
     "city": "Berlin",
+    "state": null,
     "country": "Germany",
     "countryCode": "DE",
     "count": 5,
@@ -335,6 +364,7 @@
   },
   "CDG": {
     "city": "Paris",
+    "state": "Île-de-France",
     "country": "France",
     "countryCode": "FR",
     "count": 11,
@@ -345,6 +375,7 @@
   },
   "MRS": {
     "city": "Marseille",
+    "state": "Provence-Alpes-Côte-d’Azur",
     "country": "France",
     "countryCode": "FR",
     "count": 6,
@@ -355,6 +386,7 @@
   },
   "MXP": {
     "city": "Milan",
+    "state": "Lombardia",
     "country": "Italy",
     "countryCode": "IT",
     "count": 9,
@@ -365,6 +397,7 @@
   },
   "FCO": {
     "city": "Rome",
+    "state": null,
     "country": "Italy",
     "countryCode": "IT",
     "count": 6,
@@ -375,6 +408,7 @@
   },
   "PMO": {
     "city": "Palermo",
+    "state": "Sicilia",
     "country": "Italy",
     "countryCode": "IT",
     "count": 1,
@@ -385,6 +419,7 @@
   },
   "AMS": {
     "city": "Amsterdam",
+    "state": "Noord-Holland",
     "country": "Netherlands",
     "countryCode": "NL",
     "count": 5,
@@ -395,6 +430,7 @@
   },
   "MAN": {
     "city": "Manchester",
+    "state": "England",
     "country": "UK",
     "countryCode": "GB",
     "count": 5,
@@ -405,6 +441,7 @@
   },
   "LHR": {
     "city": "London",
+    "state": null,
     "country": "UK",
     "countryCode": "GB",
     "count": 25,
@@ -415,6 +452,7 @@
   },
   "DUB": {
     "city": "Dublin",
+    "state": "Dublin",
     "country": "Ireland",
     "countryCode": "IE",
     "count": 2,
@@ -425,6 +463,7 @@
   },
   "VIE": {
     "city": "Vienna",
+    "state": "Wien",
     "country": "Austria",
     "countryCode": "AT",
     "count": 3,
@@ -435,6 +474,7 @@
   },
   "ARN": {
     "city": "Stockholm",
+    "state": "Stockholms län",
     "country": "Sweden",
     "countryCode": "SE",
     "count": 4,
@@ -445,6 +485,7 @@
   },
   "CPH": {
     "city": "Copenhagen",
+    "state": "Hovedstaden",
     "country": "Denmark",
     "countryCode": "DK",
     "count": 3,
@@ -455,6 +496,7 @@
   },
   "HEL": {
     "city": "Helsinki",
+    "state": null,
     "country": "Finland",
     "countryCode": "FI",
     "count": 4,
@@ -465,6 +507,7 @@
   },
   "ATH": {
     "city": "Athens",
+    "state": null,
     "country": "Greece",
     "countryCode": "GR",
     "count": 1,
@@ -475,6 +518,7 @@
   },
   "BRU": {
     "city": "Brussels",
+    "state": "Brussels Hoofdstedelijk Gewest",
     "country": "Belgium",
     "countryCode": "BE",
     "count": 1,
@@ -485,6 +529,7 @@
   },
   "BUD": {
     "city": "Budapest",
+    "state": "Pest",
     "country": "Hungary",
     "countryCode": "HU",
     "count": 1,
@@ -495,6 +540,7 @@
   },
   "LIS": {
     "city": "Lisbon",
+    "state": "Lisboa",
     "country": "Portugal",
     "countryCode": "PT",
     "count": 1,
@@ -505,6 +551,7 @@
   },
   "OSL": {
     "city": "Oslo",
+    "state": "Akershus",
     "country": "Norway",
     "countryCode": "NO",
     "count": 2,
@@ -515,6 +562,7 @@
   },
   "OTP": {
     "city": "Bucharest",
+    "state": "București",
     "country": "Romania",
     "countryCode": "RO",
     "count": 1,
@@ -525,6 +573,7 @@
   },
   "PRG": {
     "city": "Prague",
+    "state": null,
     "country": "Czech Republic",
     "countryCode": "CZ",
     "count": 1,
@@ -535,6 +584,7 @@
   },
   "SOF": {
     "city": "Sofia",
+    "state": "Sofia",
     "country": "Bulgaria",
     "countryCode": "BG",
     "count": 3,
@@ -545,6 +595,7 @@
   },
   "WAW": {
     "city": "Warsaw",
+    "state": null,
     "country": "Poland",
     "countryCode": "PL",
     "count": 5,
@@ -555,6 +606,7 @@
   },
   "ZAG": {
     "city": "Zagreb",
+    "state": "Grad Zagreb",
     "country": "Croatia",
     "countryCode": "HR",
     "count": 1,
@@ -565,6 +617,7 @@
   },
   "ZRH": {
     "city": "Zurich",
+    "state": "Zürich",
     "country": "Switzerland",
     "countryCode": "CH",
     "count": 2,
@@ -575,6 +628,7 @@
   },
   "BCN": {
     "city": "Barcelona",
+    "state": "Catalunya",
     "country": "Spain",
     "countryCode": "ES",
     "count": 2,
@@ -585,6 +639,7 @@
   },
   "MAD": {
     "city": "Madrid",
+    "state": "Madrid",
     "country": "Spain",
     "countryCode": "ES",
     "count": 10,
@@ -595,6 +650,7 @@
   },
   "DEL": {
     "city": "New Delhi",
+    "state": "Delhi",
     "country": "India",
     "countryCode": "IN",
     "count": 14,
@@ -605,6 +661,7 @@
   },
   "MAA": {
     "city": "Chennai",
+    "state": "Tamil Nadu",
     "country": "India",
     "countryCode": "IN",
     "count": 8,
@@ -615,6 +672,7 @@
   },
   "BOM": {
     "city": "Mumbai",
+    "state": null,
     "country": "India",
     "countryCode": "IN",
     "count": 8,
@@ -625,17 +683,18 @@
   },
   "PNQ": {
     "city": "Pune",
-    "state": "Maharashtra",
+    "state": null,
     "country": "India",
     "countryCode": "IN",
-    "count": 1,
-    "latitude": 18.582222,
-    "longitude": 73.919722,
+    "count": 4,
+    "latitude": 18.58209991455078,
+    "longitude": 73.9197006225586,
     "region": "Asia",
     "pricingRegion": "India"
   },
   "BLR": {
     "city": "Bangalore",
+    "state": "Karnataka",
     "country": "India",
     "countryCode": "IN",
     "count": 5,
@@ -646,6 +705,7 @@
   },
   "HYD": {
     "city": "Hyderabad",
+    "state": "Telangana",
     "country": "India",
     "countryCode": "IN",
     "count": 5,
@@ -656,6 +716,7 @@
   },
   "SIN": {
     "city": "Singapore",
+    "state": "South East",
     "country": "Singapore",
     "countryCode": "SG",
     "count": 7,
@@ -666,6 +727,7 @@
   },
   "KIX": {
     "city": "Osaka",
+    "state": "Ôsaka",
     "country": "Japan",
     "countryCode": "JP",
     "count": 5,
@@ -676,6 +738,7 @@
   },
   "NRT": {
     "city": "Tokyo",
+    "state": null,
     "country": "Japan",
     "countryCode": "JP",
     "count": 22,
@@ -686,6 +749,7 @@
   },
   "TPE": {
     "city": "Taoyuan",
+    "state": null,
     "country": "Taiwan",
     "countryCode": "TW",
     "count": 3,
@@ -696,6 +760,7 @@
   },
   "ICN": {
     "city": "Seoul",
+    "state": "Incheon",
     "country": "Korea",
     "countryCode": "KR",
     "count": 8,
@@ -706,6 +771,7 @@
   },
   "BKK": {
     "city": "Bangkok",
+    "state": null,
     "country": "Thailand",
     "countryCode": "TH",
     "count": 2,
@@ -716,6 +782,7 @@
   },
   "CCU": {
     "city": "Kolkata",
+    "state": "West Bengal",
     "country": "India",
     "countryCode": "IN",
     "count": 4,
@@ -726,6 +793,7 @@
   },
   "CGK": {
     "city": "Jakarta",
+    "state": "Banten",
     "country": "Indonesia",
     "countryCode": "ID",
     "count": 5,
@@ -736,6 +804,7 @@
   },
   "KUL": {
     "city": "Kuala Lumpur",
+    "state": "Wilayah Persekutuan Kuala Lumpur",
     "country": "Malaysia",
     "countryCode": "MY",
     "count": 2,
@@ -746,6 +815,7 @@
   },
   "MNL": {
     "city": "Manila",
+    "state": null,
     "country": "Philippines",
     "countryCode": "PH",
     "count": 2,
@@ -756,6 +826,7 @@
   },
   "HAN": {
     "city": "Hanoi",
+    "state": null,
     "country": "Vietnam",
     "countryCode": "VN",
     "count": 1,
@@ -766,6 +837,7 @@
   },
   "SGN": {
     "city": "Ho Chi Minh City",
+    "state": "Hà Tĩnh",
     "country": "Vietnam",
     "countryCode": "VN",
     "count": 1,
@@ -776,6 +848,7 @@
   },
   "SYD": {
     "city": "Sydney",
+    "state": "New South Wales",
     "country": "Australia",
     "countryCode": "AU",
     "count": 4,
@@ -786,6 +859,7 @@
   },
   "AKL": {
     "city": "Auckland",
+    "state": "Auckland",
     "country": "New Zealand",
     "countryCode": "NZ",
     "count": 2,
@@ -796,6 +870,7 @@
   },
   "MEL": {
     "city": "Melbourne",
+    "state": "Victoria",
     "country": "Australia",
     "countryCode": "AU",
     "count": 3,
@@ -806,6 +881,7 @@
   },
   "PER": {
     "city": "Perth",
+    "state": "Western Australia",
     "country": "Australia",
     "countryCode": "AU",
     "count": 1,
@@ -816,6 +892,7 @@
   },
   "BNE": {
     "city": "Brisbane",
+    "state": "Queensland",
     "country": "Australia",
     "countryCode": "AU",
     "count": 2,
@@ -826,6 +903,7 @@
   },
   "GRU": {
     "city": "Sao Paulo",
+    "state": null,
     "country": "Brazil",
     "countryCode": "BR",
     "count": 11,
@@ -836,6 +914,7 @@
   },
   "GIG": {
     "city": "Rio De Janeiro",
+    "state": "Rio de Janeiro",
     "country": "Brazil",
     "countryCode": "BR",
     "count": 6,
@@ -846,6 +925,7 @@
   },
   "FOR": {
     "city": "Fortaleza",
+    "state": null,
     "country": "Brazil",
     "countryCode": "BR",
     "count": 4,
@@ -856,6 +936,7 @@
   },
   "BOG": {
     "city": "Bogota",
+    "state": "Cundinamarca",
     "country": "Colombia",
     "countryCode": "CO",
     "count": 3,
@@ -866,6 +947,7 @@
   },
   "EZE": {
     "city": "Buenos Aires",
+    "state": "Buenos Aires",
     "country": "Argentina",
     "countryCode": "AR",
     "count": 3,
@@ -876,6 +958,7 @@
   },
   "SCL": {
     "city": "Santiago",
+    "state": "Región Metropolitana de Santiago",
     "country": "Chile",
     "countryCode": "CL",
     "count": 6,
@@ -886,6 +969,7 @@
   },
   "LIM": {
     "city": "Lima",
+    "state": "Lima",
     "country": "Peru",
     "countryCode": "PE",
     "count": 2,
@@ -896,6 +980,7 @@
   },
   "TLV": {
     "city": "Tel Aviv",
+    "state": "HaMerkaz",
     "country": "Israel",
     "countryCode": "IL",
     "count": 2,
@@ -906,6 +991,7 @@
   },
   "BAH": {
     "city": "Manama",
+    "state": "Al Muḩarraq",
     "country": "Bahrain",
     "countryCode": "BH",
     "count": 2,
@@ -916,6 +1002,7 @@
   },
   "DXB": {
     "city": "Dubai",
+    "state": "Dubayy",
     "country": "UAE",
     "countryCode": "AE",
     "count": 3,
@@ -926,6 +1013,7 @@
   },
   "FJR": {
     "city": "Fujairah",
+    "state": null,
     "country": "UAE",
     "countryCode": "AE",
     "count": 1,
@@ -936,17 +1024,18 @@
   },
   "MCT": {
     "city": "Muscat",
-    "state": "Muscat",
+    "state": "Masqaţ",
     "country": "Oman",
     "countryCode": "OM",
     "count": 1,
-    "latitude": 23.6015386,
-    "longitude": 58.2899376,
+    "latitude": 23.593299865722656,
+    "longitude": 58.284400939941406,
     "region": "Middle East",
     "pricingRegion": "South Africa, Kenya, & Middle East"
   },
   "CPT": {
     "city": "Cape Town",
+    "state": "Kapa-Vupeladyambu",
     "country": "South Africa",
     "countryCode": "ZA",
     "count": 1,
@@ -957,6 +1046,7 @@
   },
   "JNB": {
     "city": "Johannesburg",
+    "state": null,
     "country": "South Africa",
     "countryCode": "ZA",
     "count": 1,
@@ -967,6 +1057,7 @@
   },
   "NBO": {
     "city": "Nairobi",
+    "state": null,
     "country": "Kenya",
     "countryCode": "KE",
     "count": 1,
@@ -977,6 +1068,7 @@
   },
   "LOS": {
     "city": "Lagos",
+    "state": "Lagos",
     "country": "Nigeria",
     "countryCode": "NG",
     "count": 1,
@@ -987,6 +1079,7 @@
   },
   "PVG": {
     "city": "Shanghai",
+    "state": null,
     "country": "China",
     "countryCode": "CN",
     "count": 1,
@@ -997,6 +1090,7 @@
   },
   "SZX": {
     "city": "Shenzhen",
+    "state": null,
     "country": "China",
     "countryCode": "CN",
     "count": 1,
@@ -1007,6 +1101,7 @@
   },
   "ZHY": {
     "city": "Zhongwei",
+    "state": null,
     "country": "China",
     "countryCode": "CN",
     "count": 1,
@@ -1017,6 +1112,7 @@
   },
   "PEK": {
     "city": "Beijing",
+    "state": null,
     "country": "China",
     "countryCode": "CN",
     "count": 1,
@@ -1027,6 +1123,7 @@
   },
   "HKG": {
     "city": "Hong Kong",
+    "state": null,
     "country": "China",
     "countryCode": "HK",
     "count": 4,
@@ -1034,16 +1131,5 @@
     "longitude": 113.915001,
     "region": "China",
     "pricingRegion": "China"
-  },
-  "HIO": {
-    "city": "Hillsboro",
-    "state": "Oregon",
-    "country": "United States",
-    "countryCode": "US",
-    "count": 1,
-    "latitude": 45.540394,
-    "longitude": -122.949825,
-    "region": "North America",
-    "pricingRegion": "United States, Mexico, & Canada"
   }
 }

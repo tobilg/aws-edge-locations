@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../dist/",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "moduleResolution": "Node16",
+    "module": "Node16",
+    "declaration": true
+  },
+  "references": [
+    { "path": "../" }
+  ]
+}

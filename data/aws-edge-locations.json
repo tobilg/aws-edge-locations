@@ -120,14 +120,14 @@
     "region": "North America",
     "pricingRegion": "United States, Mexico, & Canada"
   },
-  "PDX": {
+  "HIO": {
     "city": "Portland",
     "state": "Oregon",
     "country": "United States",
     "countryCode": "US",
     "count": 5,
-    "latitude": 45.58869934,
-    "longitude": -122.5979996,
+    "latitude": 45.540394,
+    "longitude": -122.949825,
     "region": "North America",
     "pricingRegion": "United States, Mexico, & Canada"
   },
@@ -648,16 +648,16 @@
     "region": "Europe",
     "pricingRegion": "Europe & Israel"
   },
-  "ISL": {
+  "IST": {
     "city": "Istanbul",
-    "state": "İstanbul",
+    "state": null,
     "country": "Turkey",
     "countryCode": "TR",
     "count": 2,
-    "latitude": 40.976898,
-    "longitude": 28.8146,
+    "latitude": 41.262222,
+    "longitude": 28.727778,
     "region": "Europe",
-    "pricingRegion": ""
+    "pricingRegion": "Europe & Israel"
   },
   "DEL": {
     "city": "New Delhi",

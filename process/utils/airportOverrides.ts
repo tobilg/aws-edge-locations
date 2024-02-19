@@ -174,5 +174,17 @@ export const airportOverrides: AirportOverrides = {
     "countryCode": "TW",
     "latitude": 25.0777,
     "longitude": 121.233002
+  },
+  "portland": {
+    "code": "HIO",
+    "countryCode": "US",
+    "latitude": 45.540394,
+    "longitude": -122.949825
+  },
+  "istanbul": {
+    "code": "IST",
+    "countryCode": "TR",
+    "latitude": 41.262222,
+    "longitude": 28.727778
   }
 };

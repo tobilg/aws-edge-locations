@@ -36,7 +36,7 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
   "state": "District of Columbia",
   "country": "United States",
   "countryCode": "US",
-  "count": 20,
+  "count": 23,
   "latitude": 38.94449997,
   "longitude": -77.45580292,
   "region": "North America",

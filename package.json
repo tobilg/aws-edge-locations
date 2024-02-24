@@ -1,6 +1,6 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "List of AWS edge location code prefixes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "test:bundle": "npm run bundle && npx tsx test/testImports.ts",
     "download-airports": "mkdir -p temp && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output temp/airport-codes.json",
     "filter-airports": "ts-node --transpile-only --log-error process/filterAirports.ts",
     "generate-data": "mkdir -p data && ts-node --transpile-only --log-error process/generate.ts",

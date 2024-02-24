@@ -217,10 +217,13 @@ const getLocations = (root: HTMLElement) => {
       .map(el => el.trim())
       .map(el => {
         // Split string, workaround for Singapore
-        const temp = el.replace('Singapore', 'Singapore, Singapore').split(', ');
+        let temp = el.replace('Singapore', 'Singapore, Singapore').split(', ');
+
+        // Attempt to re-split
+        if (temp.length === 1) temp = el.split(',')
 
         // Define target properties with defaults
-        const city: string = temp[0].replace('é', 'e').replace('New York City', 'New York');
+        const city: string = temp[0].replace('é', 'e').replace('İ', 'I').replace('New York City', 'New York');
         let country: string = 'United States';
         let state: string | null = null;
         let popCount: number = 1;

@@ -33,7 +33,7 @@ export const pricingRegionMapping: PricingRegionMapping = {
     "Netherlands",
     "Israel",
     "UK",
-    "Turkey"
+    "Türkiye"
   ],
   "South Africa, Kenya, & Middle East": [
     "South Africa",

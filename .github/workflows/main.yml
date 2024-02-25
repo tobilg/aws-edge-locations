@@ -49,6 +49,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
+          git fetch
           # Increase package patch version \
           npm --no-git-tag-version version patch && \
           # Add new files \

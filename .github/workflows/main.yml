@@ -5,7 +5,7 @@ on:
 
   schedule:
     # Run everyday at 4AM UTC
-    - cron:  '0 4 * * *'
+    #- cron:  '0 4 * * *'
 
 jobs:
 

@@ -1,8 +1,12 @@
-data/
+data/aws-edge-locations.csv
+data/aws-edge-locations.json
+data/aws-edge-locations.parquet
+src-data/
 temp/
 process/
 src/
 docs/
+scripts/
 .github/
 .DS_Store
 .jsdoc.json

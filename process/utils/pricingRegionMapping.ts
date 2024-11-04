@@ -8,7 +8,7 @@ export const pricingRegionMapping: PricingRegionMapping = {
     "Mexico",
     "Canada"
   ],
-  "Europe & Israel": [
+  "Europe": [
     "Austria",
     "Belgium",
     "Bulgaria",
@@ -31,17 +31,21 @@ export const pricingRegionMapping: PricingRegionMapping = {
     "Sweden",
     "Switzerland",
     "Netherlands",
-    "Israel",
-    "UK",
-    "Türkiye"
+    "Great Britain",
+    "Turkey"
   ],
-  "South Africa, Kenya, & Middle East": [
-    "South Africa",
-    "Kenya",
+  "Middle East": [
+    "Isreal",
     "Bahrain",
-    "UAE",
+    "United Arab Emirates",
     "Oman",
-    "Nigeria"
+    "Qatar"
+  ],
+  "Africa": [
+    "South Africa",
+    "Egypt",
+    "Kenya",
+    "Nigeria",
   ],
   "South America": [
     "Argentina",

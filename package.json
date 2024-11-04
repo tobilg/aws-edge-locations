@@ -1,7 +1,7 @@
 {
   "name": "aws-edge-locations",
-  "version": "0.5.6",
-  "description": "List of AWS edge location code prefixes",
+  "version": "0.6.0",
+  "description": "AWS CloudFront edge location data",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -10,11 +10,11 @@
   "scripts": {
     "test": "mocha",
     "test:bundle": "npm run bundle && npx tsx test/testImports.ts",
-    "download-airports": "mkdir -p temp && curl -L --silent https://datahub.io/core/airport-codes/r/airport-codes.json --output temp/airport-codes.json",
-    "filter-airports": "ts-node --transpile-only --log-error process/filterAirports.ts",
-    "generate-data": "mkdir -p data && ts-node --transpile-only --log-error process/generate.ts",
-    "bundle": "rm -rf dist/ && mkdir -p src/data && cp data/*.json src/data && tsc --build src/",
-    "build": "npm run download-airports && npm run filter-airports && npm run generate-data && npm run bundle",
+    "install-duckdb": "./scripts/install-duckdb.sh",
+    "download": "rm -rf temp/ && mkdir -p temp && duckdb < scripts/load-airports.sql",
+    "generate-data": "mkdir -p data && tsx process/generate.ts",
+    "bundle": "rm -rf dist/ src/data/ && mkdir -p src/data && cp data/*.json src/data && tsc --build src/",
+    "build": "npm run download && npm run generate-data && npm run bundle",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "repository": {
@@ -39,20 +39,17 @@
   },
   "homepage": "https://github.com/tobilg/aws-edge-locations#readme",
   "devDependencies": {
+    "@dsnp/parquetjs": "^1.8.5",
     "@types/node": "^20.7.0",
-    "@types/utf8": "^3.0.1",
-    "axios": "^1.5.0",
+    "@types/utf8": "^3.0.3",
     "chai": "^4.3.8",
-    "iso-3166": "3.1.0",
-    "jsdoc": "^4.0.2",
+    "jsdoc": "^4.0.4",
     "jsdoc-fresh": "^3.0.0",
     "mkdirp": "^3.0.1",
-    "mocha": "^10.2.0",
-    "node-html-parser": "^6.1.10",
-    "parquetjs": "^0.11.2",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2",
+    "mocha": "^10.8.2",
+    "puppeteer": "^23.6.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
     "utf8": "^3.0.0"
-  },
-  "dependencies": {}
+  }
 }

@@ -33,13 +33,10 @@ const location = el.lookup('IAD12'.substr(0,3)); // Use only the first three cha
 /* returns
 {
   "city": "Washington",
-  "state": "District of Columbia",
   "country": "United States",
   "countryCode": "US",
-  "count": 23,
   "latitude": 38.94449997,
   "longitude": -77.45580292,
-  "region": "North America",
   "pricingRegion": "United States, Mexico, & Canada"
 }
 */
@@ -48,9 +45,6 @@ const invalid = el.lookup('FOO'); // returns false
 
 // Get edge location count
 const locationCount = el.getLocationCount(); // returns the current number of locations
-
-// Get PoP count
-const popCount = el.getPoPCount() // returns the current number of PoPs
 ```
 
 ### Browser
@@ -77,7 +71,7 @@ To prepare the data regeneration, please run `npm run download-airports && npm r
 
 The `npm run generate` script will regenerate the `csv`, `json` and `parquet` versions of the AWS CloudFront Edge Location list in the `data` folder.
 
-It does this by extracting the information from the [Amazon CloudFront Key Features page](https://aws.amazon.com/cloudfront/features/), cleaning and unifiying it, and merging it with [airport data](https://datahub.io/core/airport-codes/r/airport-codes.json) (the first three characters of the `location` field are IATA airport codes) to also get the latitude/longitude information.
+It does this by extracting the information from the [Amazon CloudFront Key Features page](https://aws.amazon.com/cloudfront/features/), cleaning and unifiying it, and merging it with [airport data](https://r2.datahub.io/clt98lrmc000fl708ilem2s44/master/raw/data/airport-codes.csv) (the first three characters of the `location` field are IATA airport codes) to also get the latitude/longitude information.
 
 Also, there are some manual overrides when it wasn't possible to automatically determine the correct IATA code from the city names.
 

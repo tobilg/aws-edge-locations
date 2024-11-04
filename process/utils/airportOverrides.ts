@@ -186,5 +186,17 @@ export const airportOverrides: AirportOverrides = {
     "countryCode": "TR",
     "latitude": 41.262222,
     "longitude": 28.727778
+  },
+  "qatar": {
+    "code": "DOH",
+    "countryCode": "QA",
+    "latitude": 25.273056,
+    "longitude": 51.608056
+  },
+  "bengaluru": {
+    "code": "BLR",
+    "countryCode": "IN",
+    "latitude": 13.198889,
+    "longitude": 77.705556
   }
 };

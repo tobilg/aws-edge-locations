@@ -3,7 +3,7 @@ name: Update AWS Edge Location data
 on:
   workflow_dispatch:
 
-  schedule:
+  #schedule:
     # Run everyday at 4AM UTC
     #- cron:  '0 4 * * *'
 
@@ -29,6 +29,9 @@ jobs:
         run: |
           # Install dependencies
           npm i
+
+          # Install DuckDB
+          npm run install-duckdb
 
           # Build
           npm run build

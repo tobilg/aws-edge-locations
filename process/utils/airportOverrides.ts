@@ -49,7 +49,7 @@ export const airportOverrides: AirportOverrides = {
       "latitude": 25.112222,
       "longitude": 56.324167
   },
-  "ashburn": {
+  "washington": {
       "code": "IAD",
       "countryCode": "US",
       "latitude": 38.9445,

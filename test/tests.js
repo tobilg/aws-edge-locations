@@ -15,8 +15,8 @@ describe("# Testing the aws-edge-locations functionality", function() {
         "city": "Washington",
         "country": "United States",
         "countryCode": "US",
-        "latitude": 38.94449997,
-        "longitude": -77.45580292,
+        "latitude": 38.9445,
+        "longitude": -77.4558029,
         "pricingRegion": "United States, Mexico, & Canada"
       });
       done();

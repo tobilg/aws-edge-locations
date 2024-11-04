@@ -11,8 +11,8 @@
     "city": "Boston",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 42.36429977,
-    "longitude": -71.00520325,
+    "latitude": 42.3643,
+    "longitude": -71.005203,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "ORD": {
@@ -31,12 +31,12 @@
     "longitude": -82.891899,
     "pricingRegion": "United States, Mexico, & Canada"
   },
-  "DAL": {
+  "DFW": {
     "city": "Dallas",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 32.847099,
-    "longitude": -96.851799,
+    "latitude": 32.896801,
+    "longitude": -97.038002,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "DEN": {
@@ -115,16 +115,16 @@
     "city": "New York",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 40.639801,
-    "longitude": -73.7789,
+    "latitude": 40.639447,
+    "longitude": -73.779317,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "EWR": {
     "city": "Newark",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 40.692501068115234,
-    "longitude": -74.168701171875,
+    "latitude": 40.692501,
+    "longitude": -74.168701,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "PHL": {
@@ -139,8 +139,8 @@
     "city": "Phoenix",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 33.43429946899414,
-    "longitude": -112.01200103759766,
+    "latitude": 33.435302,
+    "longitude": -112.005905,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "PIT": {
@@ -171,8 +171,8 @@
     "city": "Salt Lake City",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 40.78839874267578,
-    "longitude": -111.97799682617188,
+    "latitude": 40.785749,
+    "longitude": -111.979746,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "SFO": {
@@ -219,8 +219,8 @@
     "city": "Washington",
     "country": "United States",
     "countryCode": "US",
-    "latitude": 38.94449997,
-    "longitude": -77.45580292,
+    "latitude": 38.9445,
+    "longitude": -77.4558029,
     "pricingRegion": "United States, Mexico, & Canada"
   },
   "BOG": {
@@ -259,8 +259,8 @@
     "city": "Rio de Janeiro",
     "country": "Brazil",
     "countryCode": "BR",
-    "latitude": -22.8099994659,
-    "longitude": -43.2505569458,
+    "latitude": -22.809999,
+    "longitude": -43.250557,
     "pricingRegion": "South America"
   },
   "SCL": {
@@ -291,16 +291,16 @@
     "city": "Athens",
     "country": "Greece",
     "countryCode": "GR",
-    "latitude": 37.9364013672,
-    "longitude": 23.9444999695,
+    "latitude": 37.936401,
+    "longitude": 23.9445,
     "pricingRegion": "Europe"
   },
-  "BCN": {
+  "BLA": {
     "city": "Barcelona",
     "country": "Spain",
-    "countryCode": "ES",
-    "latitude": 41.2971,
-    "longitude": 2.07846,
+    "countryCode": "VE",
+    "latitude": 10.111111,
+    "longitude": -64.692222,
     "pricingRegion": "Europe"
   },
   "TXL": {
@@ -315,15 +315,15 @@
     "city": "Brussels",
     "country": "Belgium",
     "countryCode": "BE",
-    "latitude": 50.901401519800004,
-    "longitude": 4.48443984985,
+    "latitude": 50.901402,
+    "longitude": 4.48444,
     "pricingRegion": "Europe"
   },
   "OTP": {
     "city": "Bucharest",
     "country": "Romania",
     "countryCode": "RO",
-    "latitude": 44.5711111,
+    "latitude": 44.571111,
     "longitude": 26.085,
     "pricingRegion": "Europe"
   },
@@ -347,8 +347,8 @@
     "city": "Dublin",
     "country": "Ireland",
     "countryCode": "IE",
-    "latitude": 53.421299,
-    "longitude": -6.27007,
+    "latitude": 53.428713,
+    "longitude": -6.262121,
     "pricingRegion": "Europe"
   },
   "DUS": {
@@ -363,24 +363,24 @@
     "city": "Frankfurt am Main",
     "country": "Germany",
     "countryCode": "DE",
-    "latitude": 50.033333,
-    "longitude": 8.570556,
+    "latitude": 50.036521,
+    "longitude": 8.561268,
     "pricingRegion": "Europe"
   },
   "HAM": {
     "city": "Hamburg",
     "country": "Germany",
     "countryCode": "DE",
-    "latitude": 53.630401611328,
-    "longitude": 9.9882297515869,
+    "latitude": 53.630402,
+    "longitude": 9.98823,
     "pricingRegion": "Europe"
   },
   "HEL": {
     "city": "Helsinki",
     "country": "Finland",
     "countryCode": "FI",
-    "latitude": 60.317199707031,
-    "longitude": 24.963300704956,
+    "latitude": 60.3172,
+    "longitude": 24.963301,
     "pricingRegion": "Europe"
   },
   "LIS": {
@@ -411,8 +411,8 @@
     "city": "Manchester",
     "country": "Great Britain",
     "countryCode": "GB",
-    "latitude": 53.35369873046875,
-    "longitude": -2.2749500274658203,
+    "latitude": 53.349375,
+    "longitude": -2.279521,
     "pricingRegion": "Europe"
   },
   "MRS": {
@@ -443,8 +443,8 @@
     "city": "Oslo",
     "country": "Norway",
     "countryCode": "NO",
-    "latitude": 60.193901062012,
-    "longitude": 11.100399971008,
+    "latitude": 60.193901,
+    "longitude": 11.1004,
     "pricingRegion": "Europe"
   },
   "PMO": {
@@ -499,8 +499,8 @@
     "city": "Vienna",
     "country": "Austria",
     "countryCode": "AT",
-    "latitude": 48.110298156738,
-    "longitude": 16.569700241089,
+    "latitude": 48.110298,
+    "longitude": 16.5697,
     "pricingRegion": "Europe"
   },
   "WAW": {
@@ -523,8 +523,8 @@
     "city": "Zurich",
     "country": "Switzerland",
     "countryCode": "CH",
-    "latitude": 47.464699,
-    "longitude": 8.54917,
+    "latitude": 47.458056,
+    "longitude": 8.548056,
     "pricingRegion": "Europe"
   },
   "DXB": {
@@ -555,8 +555,8 @@
     "city": "Manama",
     "country": "Bahrain",
     "countryCode": "BH",
-    "latitude": 26.27079963684082,
-    "longitude": 50.63359832763672,
+    "latitude": 26.267295,
+    "longitude": 50.63764,
     "pricingRegion": "Middle East"
   },
   "MCT": {
@@ -587,8 +587,8 @@
     "city": "Cairo",
     "country": "Egypt",
     "countryCode": "EG",
-    "latitude": 30.12190055847168,
-    "longitude": 31.40559959411621,
+    "latitude": 30.111534,
+    "longitude": 31.396694,
     "pricingRegion": "Africa"
   },
   "CPT": {
@@ -651,32 +651,32 @@
     "city": "Chennai",
     "country": "India",
     "countryCode": "IN",
-    "latitude": 12.990005493164062,
-    "longitude": 80.16929626464844,
+    "latitude": 12.990005,
+    "longitude": 80.169296,
     "pricingRegion": "India"
   },
   "DEL": {
     "city": "New Delhi",
     "country": "India",
     "countryCode": "IN",
-    "latitude": 28.5665,
-    "longitude": 77.103104,
+    "latitude": 28.55563,
+    "longitude": 77.09519,
     "pricingRegion": "India"
   },
   "HAN": {
     "city": "Hanoi",
     "country": "Vietnam",
     "countryCode": "VN",
-    "latitude": 21.221200942993164,
-    "longitude": 105.80699920654297,
+    "latitude": 21.221201,
+    "longitude": 105.806999,
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "SGN": {
     "city": "Ho Chi Minh City",
     "country": "Vietnam",
     "countryCode": "VN",
-    "latitude": 10.8187999725,
-    "longitude": 106.652000427,
+    "latitude": 10.8188,
+    "longitude": 106.652,
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "HKG": {
@@ -715,8 +715,8 @@
     "city": "Kuala Lumpur",
     "country": "Malaysia",
     "countryCode": "MY",
-    "latitude": 2.745579957962,
-    "longitude": 101.70999908447,
+    "latitude": 2.74558,
+    "longitude": 101.709999,
     "pricingRegion": "Hong Kong, Indonesia, Philippines, Singapore, South Korea, Taiwan, & Thailand"
   },
   "MNL": {
@@ -739,8 +739,8 @@
     "city": "Osaka",
     "country": "Japan",
     "countryCode": "JP",
-    "latitude": 34.42729949951172,
-    "longitude": 135.24400329589844,
+    "latitude": 34.427299,
+    "longitude": 135.244003,
     "pricingRegion": "Japan"
   },
   "PNQ": {
@@ -763,16 +763,16 @@
     "city": "Shanghai",
     "country": "China",
     "countryCode": "CN",
-    "latitude": 31.143400192260742,
-    "longitude": 121.80500030517578,
+    "latitude": 31.1434,
+    "longitude": 121.805,
     "pricingRegion": "China"
   },
   "SZX": {
     "city": "Shenzhen",
     "country": "China",
     "countryCode": "CN",
-    "latitude": 22.639299392700195,
-    "longitude": 113.81099700927734,
+    "latitude": 22.639299,
+    "longitude": 113.810997,
     "pricingRegion": "China"
   },
   "SIN": {
@@ -811,8 +811,8 @@
     "city": "Auckland",
     "country": "New Zealand",
     "countryCode": "NZ",
-    "latitude": -37.008098602299995,
-    "longitude": 174.792007446,
+    "latitude": -37.01199,
+    "longitude": 174.786331,
     "pricingRegion": "Australia & New Zealand"
   },
   "BNE": {

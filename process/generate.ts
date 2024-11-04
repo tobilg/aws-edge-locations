@@ -192,8 +192,8 @@ const run = async () => {
       fullEdgeLocation.code = airport.iata_code;
       fullEdgeLocation.countryCode = airport.iso_country;
       const coordinate = airport.coordinates.split(', ');
-      fullEdgeLocation.latitude = parseFloat(coordinate[1]);
-      fullEdgeLocation.longitude = parseFloat(coordinate[0]);
+      fullEdgeLocation.latitude = parseFloat(coordinate[0]);
+      fullEdgeLocation.longitude = parseFloat(coordinate[1]);
     }
     // Get pricing region
     fullEdgeLocation.pricingRegion = lookupPricingRegion(location) || '';

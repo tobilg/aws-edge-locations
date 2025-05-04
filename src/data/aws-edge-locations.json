@@ -551,6 +551,14 @@
     "longitude": 28.727778,
     "pricingRegion": "Europe"
   },
+  "JED": {
+    "city": "Jeddah",
+    "country": "Kingdom of Saudi Arabia",
+    "countryCode": "SA",
+    "latitude": 21.6796,
+    "longitude": 39.156502,
+    "pricingRegion": ""
+  },
   "BAH": {
     "city": "Manama",
     "country": "Bahrain",
